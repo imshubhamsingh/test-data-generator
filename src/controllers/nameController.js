@@ -13,7 +13,7 @@ var nameController = function () {
     var fullNames = function (req,res) {
         nameList =[];
         for(i=0;i<req.query.n;i++)  {
-            nameList.push({"Name":firstNames[Math.floor(Math.random()*firstNames.length)].name+" "+lastNames[Math.floor(Math.random()*lastNames.length)]});
+            nameList.push(firstNames[Math.floor(Math.random()*firstNames.length)].name+" "+lastNames[Math.floor(Math.random()*lastNames.length)]);
         }
         res.json(nameList);
     } ;
