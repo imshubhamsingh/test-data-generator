@@ -3,21 +3,21 @@
  */
 
 var nameController = function () {
-    var names = require("../../plugins/names/names.json");
+    var names = require("../../plugins/human-data/names/names.json");
     var firstNames = names.firstName;
     var lastNames = names.lastName;
     var nameList =[];
     var i;
     var index;
 
-    var fullName = function (req,res) {
+    var fullNames = function (req,res) {
         nameList =[];
         for(i=0;i<req.query.n;i++)  {
             nameList.push(firstNames[Math.floor(Math.random()*firstNames.length)].name+" "+lastNames[Math.floor(Math.random()*lastNames.length)]);
         }
         res.json(nameList);
     } ;
-    var maleName = function (req,res) {
+    var maleNames = function (req,res) {
         nameList =[];
         i=0;
         while(i<req.query.n) {
@@ -29,7 +29,7 @@ var nameController = function () {
         }
         res.json(nameList);
     } ;
-    var femaleName = function (req,res) {
+    var femaleNames = function (req,res) {
         nameList =[];
         i=0;
         index = Math.floor(Math.random()*firstNames.length);
@@ -41,18 +41,27 @@ var nameController = function () {
         }
         res.json(nameList);
     };
-    var surname = function (req,res) {
+    var surnames = function (req,res) {
         nameList =[];
         for(i=0;i<req.query.n;i++)  {
             nameList.push(lastNames[Math.floor(Math.random()*lastNames.length)]);        }
         res.json(nameList);
     } ;
+    var middleNames = function (req,res) {
+        nameList =[];
+        var middleNamePossible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        for(i=0;i<req.query.n;i++)  {
+            nameList.push(firstNames[Math.floor(Math.random()*firstNames.length)].name+" "+ middleNamePossible[Math.floor(Math.random()*middleNamePossible.length)] +". "+lastNames[Math.floor(Math.random()*lastNames.length)]);
+        }
+        res.json(nameList);
+    };
 
     return {
-        maleName: maleName,
-        femaleName: femaleName,
-        fullName: fullName,
-        surname: surname
+        maleNames: maleNames,
+        femaleNames: femaleNames,
+        fullNames: fullNames,
+        surnames: surnames,
+        middleNames:middleNames
     }
 };
 
