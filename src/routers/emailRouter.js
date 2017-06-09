@@ -5,7 +5,7 @@
 var express = require('express');
 var emailRouter = express.Router();
 
-var router = function (req,res) {
+var router = function () {
     var emailController = require('../controllers/emailController')();
        emailRouter.route('/')
            .get(emailController.emailList);
