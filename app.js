@@ -13,7 +13,7 @@ var nameRouter = require('./src/routers/nameRouter')();
 var emailRouter = require('./src/routers/emailRouter')();
 
 app.use('/api/names',nameRouter);
-app.use('/api/email',emailRouter);
+app.use('/api/emails',emailRouter);
 
 app.listen(port,function () {
    console.log("Server running on port "+ port);
