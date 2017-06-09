@@ -3,7 +3,7 @@
  */
 
 var nameController = function () {
-    var names = require('../../plugins/human-data/names/names.json');
+    var names = require('../../data-plugins/human-data/names/names.json');
     var firstNames = names.firstName;
     var lastNames = names.lastName;
     var nameList =[];
