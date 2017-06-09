@@ -6,7 +6,7 @@ var express = require('express');
 var nameRouter = express.Router();
 
 var router = function () {
-    var nameController = require("../controllers/nameController")();
+    var nameController = require('../controllers/nameController')();
     nameRouter.route('/fullNames')
         .get(nameController.fullNames);
     nameRouter.route('/maleNames')

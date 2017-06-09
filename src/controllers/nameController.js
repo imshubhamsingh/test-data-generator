@@ -3,7 +3,7 @@
  */
 
 var nameController = function () {
-    var names = require("../../plugins/human-data/names/names.json");
+    var names = require('../../plugins/human-data/names/names.json');
     var firstNames = names.firstName;
     var lastNames = names.lastName;
     var nameList =[];
@@ -13,7 +13,7 @@ var nameController = function () {
     var fullNames = function (req,res) {
         nameList =[];
         for(i=0;i<req.query.n;i++)  {
-            nameList.push(firstNames[Math.floor(Math.random()*firstNames.length)].name+" "+lastNames[Math.floor(Math.random()*lastNames.length)]);
+            nameList.push({"Name":firstNames[Math.floor(Math.random()*firstNames.length)].name+" "+lastNames[Math.floor(Math.random()*lastNames.length)]});
         }
         res.json(nameList);
     } ;
