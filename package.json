@@ -1,0 +1,14 @@
+{
+  "name": "data-generator",
+  "version": "1.0.0",
+  "description": "A Simple fake data generator web app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shubham Singh",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
