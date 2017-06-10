@@ -1,7 +1,7 @@
 Data Generator
 ===================
 
-As of now I have created email and name generator api
+As of now I have created email, name and date generator api
 
 ### Name Generator Api
 >- [Full Name](https://node-data-generator.herokuapp.com/api/names/fullNames?n=20)
