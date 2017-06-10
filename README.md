@@ -1,7 +1,7 @@
 Data Generator
 ===================
 
-As of now I have created email, name and date generator api
+As of now I have created email, name, date, and company generator api
 
 ### Name Generator Api
 >- [Full Name](https://node-data-generator.herokuapp.com/api/names/fullNames?n=20)
@@ -20,3 +20,6 @@ As of now I have created email, name and date generator api
 >- [Format: Sat, Jun 10, 2017](https://node-data-generator.herokuapp.com/api/date?maxYear=2017&minYear=1997&format=Sat,%20Jun%2010,%202017&n=200)
 >- [Format: 4/10/2017](https://node-data-generator.herokuapp.com/api/date?maxYear=2017&minYear=1997&format=4/10/2017&n=200)
 >- [Format: 10/4/2017](https://node-data-generator.herokuapp.com/api/date?maxYear=2017&minYear=1997&format=10/4/2017&n=200)
+
+### Company Generator Api
+>- [Random companies](https://node-data-generator.herokuapp.com/api/companies?n=200)
