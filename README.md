@@ -14,12 +14,16 @@ As of now I have created email, name, date, and company generator api
 >- [Random valid Emails](https://node-data-generator.herokuapp.com/api/emails?n=20)
 
 ### Date Generator Api
->- [Format: Sat 10, 2017](https://node-data-generator.herokuapp.com/api/date?maxYear=2017&minYear=1997&format=Sat%2010,%202017&n=200)
->- [Format: Saturday 10 2017](https://node-data-generator.herokuapp.com/api/date?maxYear=2017&minYear=1997&format=Saturday%2010%202017&n=200)
->- [Format: Sat, Jun 10](https://node-data-generator.herokuapp.com/api/date?maxYear=2017&minYear=1997&format=Sat,%20Jun%2010&n=200)
->- [Format: Sat, Jun 10, 2017](https://node-data-generator.herokuapp.com/api/date?maxYear=2017&minYear=1997&format=Sat,%20Jun%2010,%202017&n=200)
->- [Format: 4/10/2017](https://node-data-generator.herokuapp.com/api/date?maxYear=2017&minYear=1997&format=4/10/2017&n=200)
->- [Format: 10/4/2017](https://node-data-generator.herokuapp.com/api/date?maxYear=2017&minYear=1997&format=10/4/2017&n=200)
+>- [Format: Jun 10, 2017](https://node-data-generator.herokuapp.com/api/dates?minYear=1997&maxYear=2018&format=m%20d,y&n=100)
+>- [Format: June 10th 2017](https://node-data-generator.herokuapp.com/api/dates?minYear=1997&maxYear=2018&format=M%20ds,%20y&n=100)
+>- [Format: June 10 2017](https://node-data-generator.herokuapp.com/api/dates?minYear=1997&maxYear=2018&format=M%20d%20y&n=100)
+>- [Format: Sat, Jun 10](https://node-data-generator.herokuapp.com/api/dates?minYear=1997&maxYear=2018&format=D,%20m%20d&n=100)
+>- [Format: Sat, Jun 10](https://node-data-generator.herokuapp.com/api/dates?minYear=1997&maxYear=2018&format=D,%20m%20d&n=100)
+>- [Format: Sat, Jun 10th, 2017](https://node-data-generator.herokuapp.com/api/dates?minYear=1997&maxYear=2018&format=D,%20m%20ds%20y&n=100)
+>- [Format: 06/10/2017](https://node-data-generator.herokuapp.com/api/dates?minYear=1997&maxYear=2018&format=m/d/y&n=100)
+>- [Format: 16/04/2017](https://node-data-generator.herokuapp.com/api/dates?minYear=1997&maxYear=2018&format=d/m/y&n=100)
+>- [Format: 10-06-2017](https://node-data-generator.herokuapp.com/api/dates?minYear=1997&maxYear=2018&format=d-m-y&n=100)
+>- [Format: 06-10-2017](https://node-data-generator.herokuapp.com/api/dates?minYear=1997&maxYear=2018&format=m/d/y&n=100)
 
 ### Company Generator Api
 >- [Random companies](https://node-data-generator.herokuapp.com/api/companies?n=200)

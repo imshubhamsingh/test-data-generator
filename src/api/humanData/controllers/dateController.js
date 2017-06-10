@@ -39,9 +39,9 @@ var dateformat = function (format,min,max) {
     }else if(format ==="M d y"){//June 10 2017
         date = fullmonthNames[fullDate.getDay()]+" "+fullDate.getDate()+" "+fullDate.getFullYear();
     }else if(format ==="D, m d"){//Sat, Jun 10
-        date = dayNames[fullDate.getDay()]+","+monthNames[fullDate.getMonth()]+" "+fullDate.getDate();
+        date = dayNames[fullDate.getDay()]+", "+monthNames[fullDate.getMonth()]+" "+fullDate.getDate();
     }else if(format ==="D, m ds y"){//Sat, Jun 10th, 2017
-        date = dayNames[fullDate.getDay()]+","+monthNames[fullDate.getMonth()]+" "+datesuffix(fullDate.getDate())+","+fullDate.getFullYear();
+        date = dayNames[fullDate.getDay()]+", "+monthNames[fullDate.getMonth()]+" "+datesuffix(fullDate.getDate())+", "+fullDate.getFullYear();
     }else if(format ==="m/d/y"){//04/10/2017
         date = addingZero(parseInt(fullDate.getMonth(),10)+1)+"/"+addingZero(fullDate.getDate())+"/"+fullDate.getFullYear()
     }else if(format ==="d/m/y"){//04/10/2017
