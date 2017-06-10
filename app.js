@@ -15,7 +15,7 @@ var dateRouter = require('./src/routers/dateRouter')();
 
 app.use('/api/names',nameRouter);
 app.use('/api/emails',emailRouter);
-app.use('/api/date',dateRouter);
+app.use('/api/dates',dateRouter);
 
 app.listen(port,function () {
    console.log("Server running on port "+ port);

@@ -12,7 +12,7 @@ var emailController = function () {
             var data = JSON.parse(body);
             var emaildomain=require('../../data-plugins/human-data/email/email.json');
             for(var i=0;i<req.query.n;i++){
-                email = data[i].Name.toLowerCase().replace(' ','')+"@"+emaildomain.domain[Math.floor(Math.random()*emaildomain.domain.length)];
+                email = data[i].toLowerCase().replace(' ','')+"@"+emaildomain.domain[Math.floor(Math.random()*emaildomain.domain.length)];
                 emailList.push(email);
             }
             res.json(emailList);
