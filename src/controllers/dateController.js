@@ -9,18 +9,17 @@ var dateformat = function (format,min,max) {
     var dayNames = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
 
     var fullDate = new Date(parseInt(Math.floor(Math.random()*(max-min)),10) + parseInt(min,10),Math.floor(Math.random()*12),Math.floor(Math.random()*31));
-    if (format ==="Jan 1, 2017") {
+    if (format ==="Sat 10, 2017") {
         date = monthNames[fullDate.getMonth()]+" "+fullDate.getDate()+","+fullDate.getFullYear();
-        console.log(fullDate.getFullYear());
-    }else if(format ==="January 1 2017"){
+    }else if(format ==="Saturday 10 2017"){
         date = fullmonthNames[fullDate.getDay()]+" "+fullDate.getDate()+" "+fullDate.getFullYear();
-    }else if(format ==="Mon, Jan 1"){
+    }else if(format ==="Sat, Jun 10"){
         date = dayNames[fullDate.getDay()]+","+monthNames[fullDate.getMonth()]+" "+fullDate.getDate();
-    }else if(format ==="Mon, Jan 1, 2017"){
+    }else if(format ==="Sat, Jun 10, 2017"){
         date = dayNames[fullDate.getDay()]+","+monthNames[fullDate.getMonth()]+" "+fullDate.getDate()+","+fullDate.getFullYear();
-    }else if(format ==="3/25/2017"){
+    }else if(format ==="4/10/2017"){
         date = (parseInt(fullDate.getMonth(),10)+1)+"/"+fullDate.getDate()+"/"+fullDate.getFullYear()
-    }else if(format ==="25/3/2017"){
+    }else if(format ==="10/4/2017"){
         date = fullDate.getDate()+"/"+(parseInt(fullDate.getMonth(),10)+1)+"/"+fullDate.getFullYear()
     }
     return date;
