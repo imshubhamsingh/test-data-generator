@@ -14,9 +14,9 @@ As of now I have created email and name generator api
 >- [Random valid Emails](https://node-data-generator.herokuapp.com/api/emails?n=20)
 
 ### Date Generator Api
->- [Format: Sat 10, 2017]()
->- [Format: Saturday 10 2017]()
->- [Format: Sat, Jun 10]()
->- [Format: Sat, Jun 10, 2017]()
->- [Format: 4/10/2017]()
->- [Format: 10/4/2017]()
+>- [Format: Sat 10, 2017](https://node-data-generator.herokuapp.com/api/date?maxYear=2017&minYear=1997&format=Sat%2010,%202017&n=200)
+>- [Format: Saturday 10 2017](https://node-data-generator.herokuapp.com/api/date?maxYear=2017&minYear=1997&format=Saturday%2010%202017&n=200)
+>- [Format: Sat, Jun 10](https://node-data-generator.herokuapp.com/api/date?maxYear=2017&minYear=1997&format=Sat,%20Jun%2010&n=200)
+>- [Format: Sat, Jun 10, 2017](https://node-data-generator.herokuapp.com/api/date?maxYear=2017&minYear=1997&format=Sat,%20Jun%2010,%202017&n=200)
+>- [Format: 4/10/2017](https://node-data-generator.herokuapp.com/api/date?maxYear=2017&minYear=1997&format=4/10/2017&n=200)
+>- [Format: 10/4/2017](https://node-data-generator.herokuapp.com/api/date?maxYear=2017&minYear=1997&format=10/4/2017&n=200)
