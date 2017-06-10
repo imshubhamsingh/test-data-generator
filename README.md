@@ -24,5 +24,5 @@ As of now I have created email, name, date, and company generator api
 >- [Format: 10-06-2017](https://node-data-generator.herokuapp.com/api/dates?minYear=1997&maxYear=2018&format=d-m-y&n=100)
 >- [Format: 06-10-2017](https://node-data-generator.herokuapp.com/api/dates?minYear=1997&maxYear=2018&format=m/d/y&n=100)
 
-### Company Generator Api
+### Company names Generator Api
 >- [Random companies](https://node-data-generator.herokuapp.com/api/companies?n=200)
