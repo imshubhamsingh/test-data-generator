@@ -32,8 +32,7 @@
     {
       "regionName":"Arunachal Pradesh",
       "regionShort":"AR",
-      "zipCode":["79xxxx"],
-      "weight": 21,
+       "weight": 21,
       "cities":["Itanagar"],
       "extendedData": {
         "zipFormat":{

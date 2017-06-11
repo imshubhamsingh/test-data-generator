@@ -1,17 +1,17 @@
 {
-  "countryName": "United States",
-  "continent": "North_America",
+  "countryName":"United States",
+  "continent":"North_America",
   "zipCode": {
-    "format": "Xxxxx",
+    "format":"Xxxxx",
     "replacement": {
-      "X": "123456789",
-      "x": "0123456789"
+      "X":"123456789",
+      "x":"0123456789"
     }
   },
-  "phone": ["(Nxx) Nxx-xxxx","1 (Nxx) Nxx-xxxx","1-Nxx-Nxx-xxxx"],//N : 2-9
+  "phone": ["(Nxx) Nxx-xxxx","1 (Nxx) Nxx-xxxx","1-Nxx-Nxx-xxxx"],
   "phoneReplacement":{
     "N":"23456789",
-    "x": "0123456789"
+    "x":"0123456789"
   },
   "countryData":[
     {
@@ -19,281 +19,658 @@
       "regionShort":"AL",
       "weight":2,
       "cities":["Birmingham", "Montgomery", "Mobile", "Huntsville", "Tuscaloosa", "Birmingham", "Montgomery",
-        "Mobile", "Huntsville", "Tuscaloosa"]
+        "Mobile", "Huntsville", "Tuscaloosa"],
       "extendedData": {
         "zipFormat":{
-          "format": ["ZYxxx"],
-          "replacement":[
-            {
-              "Z": 3,
-              "Y": 56,
+          "format":["ZYxxx"],
+          "replacement": {
+              "Z":"9",
+              "Y":"56789",
               "x":"0123456789"
             }
-          ]
-        },
-        "phoneAreaCode":""
+        }
       }
     },
     {
-      "regionName":"Arunachal Pradesh",
-      "regionShort":"AR",
+      "regionName":"Alaska",
+      "regionShort":"AK",
       "zipCode":["79xxxx"],
-      "weight": 21,
-      "cities":["Itanagar"],
+      "weight": 2 ,
+      "cities":["Anchorage", "Fairbanks", "Juneau", "College", "Anchorage", "Fairbanks", "Juneau", "College", "Ketchikan"],
       "extendedData": {
         "zipFormat":{
           "format": ["ZYxxx"],
-
-        },
-        "phoneAreaCode":""
+          "replacement":{
+            "Z":"3",
+            "Y":"56",
+            "x":"0123456789"
+          }
+        }
       }
     },
     {
-      "regionName":"Assam",
-      "regionShort":"AS",
-      "weight":484,
-      "cities":["Guwahati","Dibrugarh","Silchar","Nagaon"],
+      "regionName":"Arizona",
+      "regionShort":"AZ",
+      "weight":2,
+      "cities":["Phoenix", "Tucson", "Mesa", "Glendale", "Chandler"],
       "extendedData": {
         "zipFormat":{
-          "format": ["78xxxx"]
-        },
-        "phoneAreaCode":""
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"8",
+            "Y":"56",
+            "x":"0123456789"
+          }
+        }
       }
     },
     {
-      "regionName":"Bihar",
-      "regionShort":"BR",
-      "weight":1611,
-      "cities":["Patna","Gaya","Bhagalpur","Muzaffarpur","Darbhanga","Bihar Sharif",
-        "Arrah","Katihar","Munger","Chapra","Sasaram","Dehri","Bettiah"]
+      "regionName":"Arkansas",
+      "regionShort":"AR",
+      "weight":2,
+      "cities":["Little Rock", "Fort Smith", "Fayetteville", "Springdale", "Jonesboro"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"7",
+            "Y":"12",
+            "x":"0123456789"
+          }
+        }
+      }
     },
     {
-      "regionName":"Chhattisgarh",
+      "regionName":"California",
+      "regionShort":"CA",
+      "weight":2,
+      "cities":["Los Angeles", "San Diego", "San Jose", "San Francisco", "Fresno", "Sacramento"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
+    },
+    {// Check for zipFormat from here
+      "regionName":"Colorado",
+      "regionShort":"CA",
+      "weight":2,
+      "cities":["Denver", "Colorado Springs", "Aurora", "Lakewood", "Fort Collins"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
+    },
+    {
+      "regionName":"Connecticut",
       "regionShort":"CT",
-      "weight": 396,
-      "cities":["Raipur","Bhilai","Bilaspur","Durg","Raj Nandgaon","Korba","Raigarh"]
+      "weight":2,
+      "cities":["Bridgeport", "New Haven", "Hartford", "Stamford", "Waterbury"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
     },
     {
-      "regionName":"Goa",
+      "regionName":"Delaware",
+      "regionShort":"CT",
+      "weight":2,
+      "cities":["Bridgeport", "New Haven", "Hartford", "Stamford", "Waterbury"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
+    },
+    {
+      "regionName":"Florida",
+      "regionShort":"CT",
+      "weight":2,
+      "cities":["Jacksonville", "Miami", "Tampa", "St. Petersburg", "Orlando", "Tallahassee"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
+    },
+    {
+      "regionName":"Georgia",
       "regionShort":"GA",
-      "weight": 23,
-      "cities":["Panjim"]
+      "weight":2,
+      "cities":["Georgia", "Atlanta", "Augusta", "Columbus", "Savannah", "Athens"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
     },
     {
-      "regionName":"Gujarat",
-      "regionShort":"GJ",
-      "weight": 937,
-      "cities":["Ahmedabad","Surat","Vadodara","Rajkot","Bhavnagar","Jamnagar","Nadiad",
-        "Bharuch","Junagadh","Navsari","Gandhinagar","Veraval","Porbandar","Anand",
-        "Surendranagar","Gandhidham","Bhuj","Godhra","Patan","Morvi","Vejalpur"]
+      "regionName":"Hawaii",
+      "regionShort":"HI",
+      "weight":2,
+      "cities":["Honolulu", "Hilo", "Kailua", "Kaneohe", "Kapolei"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
     },
     {
-      "regionName":"Haryana",
-      "regionShort":"HR",
-      "weight":394,
-      "cities":["Ambala","Ambala Sadar","Bhiwani","Faridabad","Gurgaon","Hisar","Karnal",
-        "Panipat","Rohtak","Sirsa","Sonipat","Yamuna Nagar"]
+      "regionName":"Idaho",
+      "regionShort":"ID",
+      "weight":2,
+      "cities":["Boise", "Nampa", "Meridian", "Pocatello", "Idaho Falls"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
     },
     {
-      "regionName": "Himachal Pradesh",
-      "regionShort":"HP",
-      "weight": 106,
-      "cities":["Shimla"]
+      "regionName":"Illinois",
+      "regionShort":"IL",
+      "weight":2,
+      "cities":["Chicago", "Aurora", "Rockford", "Joliet", "Naperville", "Springfield"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
     },
     {
-      "regionName":"Jammu and Kashmir",
-      "regionShort":"JK",
-      "weight": 195,
-      "cities":["Jammu", "Srinagar"]
+      "regionName":"Indiana",
+      "regionShort":"IN",
+      "weight":2,
+      "cities":["Indianapolis", "Fort Wayne", "Evansville", "South Bend", "Gary"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
     },
     {
-      "regionName": "Jharkhand",
-      "regionShort":"JH",
-      "weight": 512,
-      "cities": ["Bokaro Steel City","Dhanbad","Hazaribag","Jamshedpur","Mango","Purnea",
-        "Purulia","Ranchi"]
+      "regionName":"Iowa",
+      "regionShort":"IA",
+      "weight":2,
+      "cities":["Des Moines", "Cedar Rapids", "Davenport", "Sioux City", "Iowa City"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
     },
     {
-      "regionName":"Karnataka",
-      "regionShort":"KA",
-      "weight": 949,
-      "cities": ["Bangalore","Belgaum","Bellary","Bidar","Bijapur","Davangere","Gadag Betigeri",
-        "Gulbarga","Hassan","Hospet","Hubli","Mandya","Mangalore","Mysore","Raichur",
-        "Shimoga","Timkur"]
+      "regionName":"Kansas",
+      "regionShort":"IL",
+      "weight":2,
+      "cities":["Wichita", "Overland Park", "Kansas City", "Topeka", "Olathe"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
     },
     {
-      "regionName":"Kerala",
-      "regionShort":"KL",
-      "weight": 518,
-      "cities":["Allappuzha","Kozhikode","Cochin","Kollam","Palakkad","Thalassery","Trivandrum"]
+      "regionName":"Kentucky",
+      "regionShort":"IL",
+      "weight":2,
+      "cities":["Louisville", "Lexington", "Owensboro", "Bowling Green", "Covington", "Frankfort"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
     },
     {
-      "regionName":"Madhya Pradesh",
-      "regionShort":"MP",
-      "weight": 1127,
-      "cities":["Bhind","Bhopal","Burhanpur","Chhindwara","Damoh","Dewas","Guna","Gwalior",
-        "Indore","Jabalpur","Khandwa","Mandasor","Morena","Murwara","Ratlam","Rewa",
-        "Sagar","Satna","Shivapuri","Ujjain","Vidisha"]
+      "regionName":"Louisiana",
+      "regionShort":"LA",
+      "weight":2,
+      "cities":["New Orleans", "Baton Rouge", "Shreveport", "Metairie", "Lafayette"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
     },
     {
-      "regionName": "Maharastra",
-      "regionShort":"MH",
-      "weight": 1744,
-      "cities": ["Achalpur","Ahmadnagar","Akola","Amravati","Bhir","Bhiwandi","Bhusawal",
-        "Chandrapur","Dhule","Gondiya","Ichalkaranji","Jalgaon","Jalna","Kalyan",
-        "Kolhapur","Latur","Malegaon","Mira Bhayandar","Miraj","Mumbai","Nagpur",
-        "Nanded","Nashik","New Bombay","Parbhani","Pimpri-Chinchwad","Pune","Sangli",
-        "Satara","Aurangabad","Solapur","Thane","Ulhasnagar","Wardha","Yeotmal"]
+      "regionName":"Maine",
+      "regionShort":"ME",
+      "weight":2,
+      "cities":["Portland", "Lewiston", "Bangor", "South Portland", "Auburn", "Augusta"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
     },
     {
-      "regionName":"Manipur",
+      "regionName":"Maryland",
+      "regionShort":"MD",
+      "weight":2,
+      "cities":["Baltimore", "Rockville", "Frederick", "Gaithersburg", "Columbia", "Annapolis"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
+    },
+    {
+      "regionName":"Massachusetts",
+      "regionShort":"MA",
+      "weight":2,
+      "cities":["Boston", "Worcester", "Springfield", "Lowell", "Cambridge"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
+    },
+    {
+      "regionName":"Michigan",
+      "regionShort":"MI",
+      "weight":2,
+      "cities":["Detroit", "Grand Rapids", "Warren", "Sterling Heights", "Flint", "Lansing"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
+    },
+    {
+      "regionName":"Minnesota",
       "regionShort":"MN",
-      "weight": 42,
-      "cities":["Imphal"]
+      "weight":2,
+      "cities":["Minneapolis", "Saint Paul", "Rochester", "Duluth", "Bloomington"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
     },
     {
-      "regionName":"Meghalaya",
-      "regionShort":"ML",
-      "weight": 46,
-      "cities":["Shillong"]
+      "regionName":"Maryland",
+      "regionShort":"MD",
+      "weight":2,
+      "cities":["Baltimore", "Rockville", "Frederick", "Gaithersburg", "Columbia", "Annapolis"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
     },
     {
-      "regionName": "Mizoram",
-      "regionShort":"MZ",
-      "weight":17,
-      "cities": ["Aizwal"]
+      "regionName":"Mississippi",
+      "regionShort":"MS",
+      "weight":2,
+      "cities":["Jackson", "Gulfport", "Hattiesburg", "Biloxi", "Southaven"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
     },
     {
-      "regionName":"Nagaland",
-      "regionShort":"NL",
-      "weight": 31,
-      "cities":["Kohima"]
+      "regionName":"Missouri",
+      "regionShort":"MO",
+      "weight":2,
+      "cities":["Kansas City", "Saint Louis", "Springfield", "Independence", "Columbia", "Jefferson City"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
     },
     {
-      "regionName": "Odisha",
+      "regionName":"Montana",
+      "regionShort":"MT",
+      "weight":2,
+      "cities":["Billings", "Missoula", "Great Falls", "Butte", "Bozeman", "Helena"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
+    },
+    {
+      "regionName":"Nebraska",
+      "regionShort":"NE",
+      "weight":2,
+      "cities":["Omaha", "Lincoln", "Bellevue", "Grand Island", "Kearney"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
+    },
+    {
+      "regionName":"Nevada",
+      "regionShort":"NV",
+      "weight":2,
+      "cities":["Las Vegas", "Henderson", "North Las Vegas", "Reno", "Paradise", "Carson City"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
+    },
+    {
+      "regionName":"Ohio",
+      "regionShort":"OH",
+      "weight":2,
+      "cities":["Columbus", "Cleveland", "Cincinnati", "Toledo", "Akron"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
+    },
+    {
+      "regionName":"Oklahoma",
+      "regionShort":"OK",
+      "weight":2,
+      "cities":["Oklahoma City", "Tulsa", "Norman", "Lawton", "Broken Arrow"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
+    },
+    {
+      "regionName":"Oregon",
       "regionShort":"OR",
-      "weight": 651,
-      "cities": ["Bhubaneswar","Brahmapur","Cuttack","Puri","Raurkela","Raurkela Civil Township","Sambalpur"]
+      "weight":2,
+      "cities":["Portland", "Eugene", "Salem", "Gresham", "Hillsboro"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
     },
     {
-      "regionName": "Punjab",
-      "regionShort":"PB",
-      "weight": 430,
-      "cities": ["Abohar","Ahmadpur East","Amritsar","Bahawalnagar","Bahawalpur","Bhatinda","Chiniot",
-        "Chishtian Mandi","Daska","Dera Ghazi Khan","Faisalabad","Gojra","Gujranwala","Gujrat",
-        "Hafizabad","Hoshiarpur","Jalandhar (Jullundur)","Jaranwala","Jhang","Jhelum","Kamalia",
-        "Kamoke","Kasur","Khanewal","Khanpur","Lahore","Ludhiana","Mandi Bahauddin","Mandi Burewala",
-        "Moga","Multan","Muridke","Muzaffargarh","Okara","Pak Pattan","Pathankot","Patiala",
-        "Rahim Yar Khan","Rawalpindi","Sadiqabad","Sahiwal","Sargodha","Sheikhupura","Sialkot",
-        "Vihari","Wah","Wazirabad"]
+      "regionName":"Pennsylvania",
+      "regionShort":"PA",
+      "weight":2,
+      "cities":["Philadelphia", "Pittsburgh", "Allentown", "Erie", "Reading", "Harrisburg"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
     },
     {
-      "regionName": "Rajasthan",
-      "regionShort":"RJ",
-      "weight": 1065,
-      "cities": ["Ajmer","Alwar","Beawar","Bharatpur","Bhilwara","Bikaner","Ganganagar",
-        "Jaipur","Jodhpur","Kota","Pali","Sikar","Tonk","Udaipur"]
-    },
-    {
-      "regionName": "Sikkim",
-      "regionShort":"SK",
-      "weight": 9,
-      "cities":["Gangtok"]
-    },
-    {
-      "regionName": "Tamil Nadu",
+      "regionName":"Tennessee",
       "regionShort":"TN",
-      "weight": 1120,
-      "cities": ["Alandur","Ambattur","Avadi","Chennai","Coimbatore","Cuddalore","Dindigul","Erode",
-        "Kanchipuram","Kumbakonam","Madurai","Nagarcoil","Neyveli","Palayankottai","Pallavaram",
-        "Pudukkottai","Rajapalaiyam","Salem","Tambaram","Thanjavur","Tiruchirapalli",
-        "Tirunelveli","Tiruppur","Tiruvannamalai","Tiruvarur","Tiruvottiyur","Tuticorin",
-        "Valparai","Vellore"]
+      "weight":2,
+      "cities":["Memphis", "Nashville", "Knoxville", "Chattanooga", "Clarksville"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
     },
     {
-      "regionName": "Tripura",
-      "regionShort":"TR",
-      "weight": 57,
-      "cities" :["Agartala"]
+      "regionName":"Texas",
+      "regionShort":"TX",
+      "weight":2,
+      "cities":["Houston", "San Antonio", "Dallas", "Austin", "Fort Worth"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
     },
     {
-      "regionName": "Telangana",
-      "regionShort":"TG",
-      "weight": 4,
-      "cities": ["Hyderabad","Warangal","Nizamabad","Khammam","Karimnagar","Ramagundam","Mahbubnagar","Nalgonda","Adilabad"]
-    },
-    {
-      "regionName": "Uttar Pradesh",
-      "regionShort":"UP",
-      "weight":  3098,
-      "cities": ["Agra","Aligarh","Allahabad","Amroha","Bahraich","Banda","Bareilly","Budaun",
-        "Bulandshahr","Etawah","Faizabad","Farrukhabad-cum-Fatehgarh","Fatehpur","Firozabad",
-        "Ghaziabad","Gonda","Gorakhpur","Hapur","Hathras","Jaunpur","Jhansi","Kanpur",
-        "Kanpur Cantonment","Lucknow","Mathura","Maunath Bhanjan","Meerut",
-        "Meerut Cantonment","Mirzapur-cum-Vindhyachal","Modinagar","Moradabad",
-        "Muzaffarnagar","Noida","Orai","Pilibhit","Rae Bareli","Rampur","Saharanpur",
-        "Sambhal","Shahjahanpur","Sitapur","Unnao","Varanasi"]
-    },
-    {
-      "regionName": "Uttarakhand",
+      "regionName":"Utah",
       "regionShort":"UT",
-      "weight": 157,
-      "cities": ["Dehradun", "Haridwar"]
+      "weight":2,
+      "cities":["Salt Lake City", "West Valley City", "Provo", "West Jordan", "Sandy"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
     },
     {
-      "regionName": "West Bengal",
-      "regionShort":"WB",
-      "weight": 1418,
-      "cities": ["Asansol","Ashoknagar-Kalyangarh","Baidyabati","Bally","Balurghat","Bankura",
-        "Bansberia","Barahanagar","Barasat","Barddhaman","Barrackpur","Basirhat",
-        "Berhampore","Bhatpara","Burnpur","Kolkata","Champdani","Chandannagar","Dabgram",
-        "Durgapur","Habra","Haldia","Halisahar","Howrah","Hugli-Chinsurah","Ingraj Bazar",
-        "Kamarhati","Kanchrapara","Kharagpur","Krishnanagar","Kulti-Barakar","Midnapore",
-        "Naihati","Navadwip","North Barrackpur","North Dum Dum","Panihati","Raiganj",
-        "Rishra","Santipur","Serampore","Siliguri","South Dum Dum","Titagarh","Uluberia",
-        "Uttarpara-Kotrung"]
+      "regionName":"Vermont",
+      "regionShort":"VT",
+      "weight":2,
+      "cities":["Burlington", "Essex", "Rutland", "Colchester", "South Burlington", "Montpelier"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
     },
     {
-      "regionName": "Andaman and Nicobar Islands",
-      "regionShort":"AN",
-      "weight": 6,
-      "cities":["Port Blair"]
+      "regionName":"Virginia",
+      "regionShort":"VA",
+      "weight":2,
+      "cities":["Virginia Beach", "Norfolk", "Chesapeake", "Richmond", "Newport News"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
     },
     {
-      "regionName": "Chandigarh",
-      "regionShort":"CH",
-      "weight": 16,
-      "cities" : ["Chandigarh"]
+      "regionName":"Washington",
+      "regionShort":"WA",
+      "weight":2,
+      "cities":["Seattle", "Spokane", "Tacoma", "Vancouver", "Bellevue", "Olympia"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
     },
     {
-      "regionName": "Dadra and Nagar Haveli",
-      "regionShort":"DN",
-      "weight": 5,
-      "cities":["Silvassa"]
+      "regionName":"Wisconsin",
+      "regionShort":"WT",
+      "weight":2,
+      "cities":["Milwaukee", "Madison", "Green Bay", "Kenosha", "Racine"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
     },
     {
-      "regionName": "Daman and Diu",
-      "regionShort":"DD",
-      "weight": 4,
-      "cities": ["Daman"]
-    },
-    {
-      "regionName": "Lakshadweep",
-      "regionShort":"LD",
-      "weight": 1,
-      "cities":["Kavaratti"]
-    },
-    {
-      "regionName": "Delhi",
-      "regionShort":"DL",
-      "weight":  260,
-      "cities":["Delhi"]
-    },
-    {
-      "regionName": "Pondicherry",
-      "regionShort":"PY",
-      "weight": 19,
-      "cities": ["Pondicherry"]
+      "regionName":"Wyoming",
+      "regionShort":"WY",
+      "weight":2,
+      "cities":["Wyoming", "Cheyenne", "Casper", "Laramie", "Gillette", "Rock Springs"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["ZYxxx"],
+          "replacement":{
+            "Z":"9",
+            "Y":"0123456",
+            "x":"0123456789"
+          }
+        }
+      }
     }
   ]
 }
