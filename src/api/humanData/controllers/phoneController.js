@@ -4,12 +4,17 @@
 
 function phoneno(str,str2,format) {
     var no="";
-
+    var change;
      for(var i=0;i<=str.length;i++){
+         change = 0;
          for(var key in format){
-             if(str.charAt(i)===key){
-                 no+=format.key[Math.floor(Math.random()*format.key.length)];
+             if(str.charAt(i)===key) {
+                 no += format[key][Math.floor(Math.random() * format[key].length)];
+                 change = 1;
              }
+         }
+         if(change===0){
+             no+=str.charAt(i).toString();
          }
     }
     if(str2 !== undefined){
