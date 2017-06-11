@@ -10,8 +10,9 @@ function phoneno(str,str2) {
             no+= (Math.floor(Math.random()*10)).toString();
         }else if(str.charAt(i)==='X'){
             no+=(Math.floor(Math.random()*9+1)).toString();
-        }
-        else{
+        }else if(str.charAt(i)==='B'){
+            no+=(Math.floor(Math.random()*4+6)).toString();
+        }else{
             no+=str.charAt(i).toString();
         }
     }

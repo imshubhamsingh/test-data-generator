@@ -1,6 +1,6 @@
 {
   "countryName": "Canada",
-  "continent": "North America",
+  "continent": "North_America",
   "zipCode": {
     "format": "%*@ *@*",
     "replacement": {
