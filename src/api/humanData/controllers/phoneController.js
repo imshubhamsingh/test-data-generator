@@ -2,19 +2,15 @@
  * Created by shubham on 10/6/17.
  */
 
-function phoneno(str,str2) {
+function phoneno(str,str2,format) {
     var no="";
 
      for(var i=0;i<=str.length;i++){
-        if(str.charAt(i)==='x'){
-            no+= (Math.floor(Math.random()*10)).toString();
-        }else if(str.charAt(i)==='X'){
-            no+=(Math.floor(Math.random()*9+1)).toString();
-        }else if(str.charAt(i)==='B'){
-            no+=(Math.floor(Math.random()*4+6)).toString();
-        }else{
-            no+=str.charAt(i).toString();
-        }
+         for(var key in format){
+             if(str.charAt(i)===key){
+                 no+=format.key[Math.floor(Math.random()*format.key.length)];
+             }
+         }
     }
     if(str2 !== undefined){
        return (no.replace(new RegExp("AAA",'g'),str2[Math.floor(Math.random()*str2.length)].toString()));
@@ -27,7 +23,7 @@ var phoneController = function () {
         var phoneList = [];
 
         for (var i = 0; i < req.query.n; i++) {
-            phoneList.push(phoneno(phoneData.phone[req.query.fomat],phoneData.areaCode));
+            phoneList.push(phoneno(phoneData.phone[req.query.fomat],phoneData.areaCode,phoneData.phoneReplacement));
         }
         res.json(phoneList);
     };

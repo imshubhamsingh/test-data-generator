@@ -8,18 +8,28 @@
       "x": "0123456789"
     }
   },
-  "phone": ["(AAA) Xxx-xxxx","1 (AAA) Xxx-xxxx","1-AAA-Xxx-xxxx"],
+  "phone": ["(Nxx) Nxx-xxxx","1 (Nxx) Nxx-xxxx","1-Nxx-Nxx-xxxx"],//N : 2-9
+  "phoneReplacement":{
+    "N":"23456789",
+    "x": "0123456789"
+  },
   "countryData":[
     {
-      "regionName":"Andhra Pradesh",
-      "regionShort":"AP",
-      "weight":1314,
-      "cities":["Adoni","Anantapur","Bhimavaram","Chittoor","Cuddapah","Eluru","Gudivada","Guntakal","Guntur","Hindupur","Hyderabad","Kakinada","Karimnagar","Khammam",
-        "Kukatpalle","Kurnool","Lalbahadur Nagar","Machilipatnam","Mahbubnagar","Malkajgiri","Nandyal","Nellore","Nizamabad","Ongole",
-        "Proddatur","Qutubullapur","Rajahmundry","Ramagundam","Secunderabad","Tenali","Tirupati","Vijayawada","Vishakhapatnam","Vizianagaram","Warangal"],
+      "regionName":"Alabama",
+      "regionShort":"AL",
+      "weight":2,
+      "cities":["Birmingham", "Montgomery", "Mobile", "Huntsville", "Tuscaloosa", "Birmingham", "Montgomery",
+        "Mobile", "Huntsville", "Tuscaloosa"]
       "extendedData": {
         "zipFormat":{
-          "format": ["51xxxx","52xxxx","53xxxx"]
+          "format": ["ZYxxx"],
+          "replacement":[
+            {
+              "Z": 3,
+              "Y": 56,
+              "x":"0123456789"
+            }
+          ]
         },
         "phoneAreaCode":""
       }
@@ -32,7 +42,8 @@
       "cities":["Itanagar"],
       "extendedData": {
         "zipFormat":{
-          "format": ["79xxxx"]
+          "format": ["ZYxxx"],
+
         },
         "phoneAreaCode":""
       }
