@@ -19,7 +19,7 @@ app.use('/api/names',nameRouter);
 app.use('/api/emails',emailRouter);
 app.use('/api/dates',dateRouter);
 app.use('/api/companies',companyRouter);
-app.use('/api/phoneNo',phoneRouter);
+app.use('/api/phone',phoneRouter);
 
 app.listen(port,function () {
    console.log("Server running on port "+ port);
