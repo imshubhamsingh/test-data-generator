@@ -9,14 +9,16 @@
     }
   },
   "phone": ["Xxxx-xxxx","(0x) xxxx xxxx","04xx xxx xxx"],
-  "country":[
+  "countryData":[
     {
       "regionName":"Australian Capital Territory",
+      "regionShort":"ACT",
       "weight": 3,
       "cities":["Canberra"]
     },
     {
       "regionName":"New South Wales",
+      "regionShort":"NSW",
       "weight":69,
       "cities":["Sydney", "Albury", "Armidale", "Bathurst", "Blue Mountains", "Broken Hill",
         "Campbelltown", "Cessnock", "Dubbo", "Goulburn", "Grafton", "Lithgow",
@@ -25,11 +27,13 @@
     },
     {
       "regionName":"Northern Territory",
+      "regionShort":"NT",
       "weight":2,
       "cities":["Darwin", "Palmerston" ]
     },
     {
       "regionName":"Queensland",
+      "regionShort":"QLD",
       "weight":42,
       "cities":["Brisbane", "Bundaberg", "Cairns", "Caloundra", "Charters Towers", "Gladstone", "Gold Coast",
         "Hervey Bay", "Ipswich", "Logan City", "Mackay", "Maryborough", "Mount Isa", "Redcliffe",
@@ -37,17 +41,20 @@
     },
     {
       "regionName":"South Australia",
+      "regionShort":"SA",
       "weight":16,
       "cities":["Adelaide", "Mount Gambier", "Murray Bridge", "Port Augusta", "Port Pirie", "Port Lincoln",
         "Victor Harbor", "Whyalla"]
     },
     {
       "regionName":"Tasmania",
+      "regionShort":"TSA",
       "weight": 5,
       "cities":["Greater Hobart", "Burnie", "Devonport", "Launceston"]
     },
     {
       "regionName":"Victoria",
+      "regionShort":"VIC",
       "weight":52,
       "cities":["Melbourne", "Ararat", "Bairnsdale", "Benalla", "Ballarat", "Bendigo", "Belgrave",
         "Dandenong", "Frankston", "Geelong", "Hamilton", "Horsham", "Melton", "Moe", "Morwell",
@@ -57,7 +64,6 @@
     {
       "regionName":"Western Australia",
       "regionShort":"WA",
-      "regionSlug":"western_australia",
       "weight":21,
       "cities":["Perth", "Albany", "Armadale", "Bayswater", "Belmont", "Bunbury", "Canning", "Cockburn",
         "Fremantle", "Geraldton-Greenough", "Gosnells", "Joondalup", "Kalgoorlie-Boulder", "Mandurah",

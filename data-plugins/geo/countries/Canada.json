@@ -1,0 +1,211 @@
+{
+  "countryName": "Canada",
+  "continent": "North America",
+  "zipCode": {
+    "format": "%*@ *@*",
+    "replacement": {
+      "%": "ABCEGHJKLMNPRSTVXY",
+      "*": "0123456789",
+      "@": "ABCEGHJKLMNPRSTVWXYZ"
+    }
+  },
+  "areaCode": [587, 603, 780, 205, 604, 778, 204, 431, 506, 709, 902, 867, 416, 647, 437, 519, 226, 613,
+    343, 705, 249, 807, 905, 289, 365, 902, 418, 581, 450, 579, 514, 438, 819, 873, 306],
+  "phone": ["(AAA) Xxx-xxxx","1 (AAA) Xxx-xxxx","1-AAA-Xxx-xxxx"],
+  "countryData":[
+    {
+      "regionName":"Alberta",
+      "regionShort": "AB",
+      "weight":11,
+      "cities":[
+        "Airdrie", "Alix", "Banff", "Barrhead", "Bearberry", "Beaumont", "Bon Accord", "Bonnyville",
+        "Bonnyville Municipal District", "Bowden", "Breton", "Bruderheim", "Calgary", "Calmar", "Camrose",
+        "Canmore", "Carstairs", "Castor", "Chestermere", "Clearwater Municipal District", "Coaldale", "Coalhurst",
+        "Cochrane", "Crowsnest Pass", "Crystal Springs", "Devon", "Drayton Valley", "Drumheller", "Eckville",
+        "Edmonton", "Fahler", "Fort Saskatchewan", "Gibbons", "Glendon", "Grande Prairie", "Grande Cache",
+        "High Level", "Hines Creek", "Innisfail", "Irricana", "Jasper", "Kitscoty", "Lac La Biche County",
+        "Lac Ste. Anne", "Lacombe", "Lacombe County", "Lakeland County", "Lamont", "Leduc", "Legal", "Lloydminster",
+        "Lethbridge", "Mayerthorpe", "Medicine Hat", "Millet", "Morinville", "Mundare", "Nanton", "New Sarepta",
+        "Okotoks", "Oyen", "Provost", "Parkland County", "Penhold", "Picture Butte", "Pincher Creek", "Ponoka",
+        "Raymond", "Red Deer", "Redwater", "Rimbey", "Rocky Mountain House", "Rocky View", "Rycroft", "St. Albert",
+        "St. Paul", "Sedgewick", "Smoky Lake", "Spruce Grove", "Stirling", "Strathcona County", "Stony Plain", "Sundrie",
+        "Sunset Point", "Swan Hills", "Sylvan Lake", "Taber", "Tofield", "Trochu", "Valleyview", "Vegreville", "Vilna",
+        "Wabamun", "Warburg", "Warspite", "Westlock", "Wetaskiwin", "Wood Buffalo", "Woodlands County", "Yellowhead County"
+      ],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["T*@ *@*"]
+        },
+        "phoneAreaCode":[587, 603, 780]
+      }
+    },
+    {
+      "regionName":"British Columbia",
+      "regionShort": "BC",
+      "weight": 13,
+      "cities":[
+        "100 Mile House", "Abbotsford", "Alert Bay", "Armstrong", "Belcarra", "Burnaby", "Burns Lake", "Cache Creek",
+        "Cariboo Regional District", "Castlegar", "Chetwynd", "Chilliwack", "Coldstream", "Colwood", "Comox", "Coquitlam",
+        "Cranbrook", "Dawson Creek", "Delta", "Fernie", "Duncan", "Fort St. John", "Fraser Lake", "Fraser-Fort George",
+        "Gibsons", "Harrison Hot Springs", "Hope", "Houston", "Hudsons","Hope", "Kelowna", "Kent", "Kimberly", "Kitimat",
+        "Lake Cowichan", "Langford", "Langley", "Lions Bay", "Mission", "Maple Ridge", "Merritt", "Midway", "Nanaimo",
+        "Nakusp", "Nelson", "New Westminster", "North Cowichan", "North Saanich", "North Vancouver", "Oliver",
+        "Pemberton", "Penticton", "Pitt Meadows", "Port Alice", "Port Coquitlam", "Port Moody", "Prince George",
+        "Qualicum Beach", "Richmond", "Salt Spring Island", "Silverton", "Smithers", "Sooke", "Sparwood", "Stewart",
+        "Sunshine Coast Regional District", "Surrey", "Terrance", "Tumbler Ridge", "Ucluelet", "Vancouver", "Vanderhoof",
+        "Victoria", "West Vancouver", "White Rock", "Williams Lake"
+      ],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["V*@ *@*"]
+        },
+        "phoneAreaCode":[205, 604, 778]
+      }
+    },
+    {
+      "regionName":"Manitoba",
+      "regionShort": "MB",
+      "weight": 4,
+      "cities":["Winnipeg", "Stonewall", "Minitonas", "Lourdes", "Flin Flon", "Daly", "Brandon", "Beausejour"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["R*@ *@*"]
+        },
+        "phoneAreaCode":[204, 431]
+      }
+    },
+    {
+      "regionName":"New Brunswick",
+      "regionShort":"NB",
+      "weight": 2,
+      "cities":["Bathurst", "Campbellton", "Dieppe", "Edmundston", "Fredericton", "Miramichi", "Moncton", "Saint John"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["E*@ *@*"]
+        },
+        "phoneAreaCode":[506]
+      }
+    },
+    {
+      "regionName":"Newfoundland and Labrador",
+      "regionShort":"NL",
+      "weight": 2,
+      "cities":["Bathurst", "Campbellton", "Dieppe", "Edmundston", "Fredericton", "Miramichi", "Moncton", "Saint John"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["A*@ *@*"]
+        },
+        "phoneAreaCode":[709]
+      }
+    },
+    {
+      "regionName":"Northwest Territories",
+      "regionShort":"NT",
+      "weight": 1,
+      "cities":["Yellowknife", "Wrigley", "Wha Ti", "Wekweti", "Tulita", "Tuktoyaktuk", "Tsiigehtchic", "Sachs Harbour",
+        "Rae Lakes", "Rae-Edzo", "Paulatuk", "Norman Wells", "Lutsel K'e", "Kakisa", "Inuvik", "Holman", "Hay River",
+        "Fort Smith", "Fort Simpson", "Fort Resolution", "Fort Providence", "Fort McPherson", "Fort Laird",
+        "Fort Good Hope", "Enterprise", "Deline", "Coleville Lake", "Aklavik"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["X*@ *@*"]
+        },
+        "phoneAreaCode":[867]
+      }
+    },
+    {
+      "regionName":"Nunavut",
+      "regionShort":"NU",
+      "weight": 1,
+      "cities":["Arviat", "Cambridge Bay", "Gjoa Haven", "Pangnirtung", "Iqaluit"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["X*@ *@*"]
+        },
+        "phoneAreaCode":[867]
+      }
+    },
+    {
+      "regionName":"Ontario",
+      "regionShort":"ON",
+      "weight": 39,
+      "cities":["Ajax", "Aurora", "Ancaster Town", "Barrie", "Bath", "Blind River", "Burlington", "Caledon", "Cobourg",
+        "Cornwall", "Cumberland", "East Gwillimbury", "Essex", "Etobicoke", "Gloucester", "Goderich", "Grey County",
+        "Guelph", "Hamilton", "Hearst", "Kapuskasing", "Kawartha Lakes", "Kearny", "King Township", "Kingston",
+        "Kitchener", "Lakeshore", "Lanark County", "LaSalle", "Leamington", "Malahide", "Markham",
+        "Merrickville-Wolford", "Midlands", "Township of Minden Hills", "Minto", "Newbury", "Newmarket",
+        "Norfolk County", "North Bay", "Northumberland", "Orangeville", "Orilla", "Osgoode", "Ottawa",
+        "Ottawa-Carleton", "Owen Sound", "Oxford County", "Pickering", "Port Hope", "Quinte West", "Ramara",
+        "Renfrew", "Richmond Hill", "Russell", "Scarborough", "St. Catharines", "St. Thomas", "Greater Sudbury",
+        "Tay", "Thorold", "Thunder Bay", "Toronto", "Valley East", "Vanier", "Vaughan", "Warwick", "Welland",
+        "Whitby", "Whitchurch-Stouffville", "Whitewater Region Township", "Wilmont", "Windsor", "Woodstock"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["M*@ *@*"]
+        },
+        "phoneAreaCode":[416, 647, 437, 519, 226, 613, 343, 705, 249, 807, 905, 289, 365]
+      }
+    },
+    {
+      "regionName":"Prince Edward Island",
+      "regionShort":"PE",
+      "weight": 1,
+      "cities":["Charlottetown", "Montague", "Stratford"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["C*@ *@*"]
+        },
+        "phoneAreaCode":[902]
+      }
+    },{
+      "regionName":"Quebec",
+      "regionShort":"QC",
+      "weight": 23,
+      "cities":["Amqui", "Cabano", "Dégelis", "Price", "Rimouski", "Rivière-du-Loup", "Sainte-Flavie", "Alma", "Chambord",
+        "Chicoutimi", "La Baie", "Labrecque", "Saguenay", "Saint-Prime", "Shipshaw", "Baie-Saint-Paul", "Beauport",
+        "Cap-Rouge", "Deschambault", "Isle-aux-Coudres", "Lac-Serent", "Malbaie", "Neuville", "Pointe-au-Pic",
+        "Québec City", "Saint-Hilarion", "Saint-Urbain", "Batiscan", "Cap-de-la-Madeleine", "Champlain",
+        "Pointe-du-Lac", "Saint-Georges", "Shawinigan", "Trois-Rivières", "Asbestos", "Richmond", "Sherbrooke",
+        "Valcourt", "Anjou", "Baie-D'Urfé", "Beaconsfield", "Côte Saint-Luc", "Dollard-des-Ormeaux", "Dorval",
+        "Hampstead", "Kirkland", "Lachine", "LaSalle", "Montreal", "Outremont", "Pierrefonds", "Pointe-aux-Trembles",
+        "Pointe-Claire", "Roxboro", "Saint-Laurent", "Saint-Pierre", "Senneville", "Verdun", "Westmount", "Aylmer",
+        "Buckingham", "Cantley", "Chelsea", "Collines-de-l'Outaouais", "Gatineau", "Hull", "Ville de Maniwaki",
+        "Mansfield-et-Pontefract", "Montebello", "Montpellier", "Namur", "Notre-Dame-de-la-Salette", "Shawville",
+        "Thurso", "Dubuisson", "Malartic", "Notre-Dame-du-Nord", "Rouyn-Noranda", "Baie-Comeau", "Fermont",
+        "Kawawachikamach", "Matagami", "Caplan", "Carleton", "Gaspé", "Gespeg", "Maria", "Murdochville",
+        "Cap-Saint-Ignace", "Charny", "Lévis"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["G*@ *@*"]
+        },
+        "phoneAreaCode":[418, 581, 450, 579, 514, 438, 819, 873]
+      }
+    },
+    {
+      "regionName":"Saskatchewan",
+      "regionShort":"SK",
+      "weight": 4,
+      "cities":["Assiniboia", "Calder", "Canora", "Estevan", "Gravelbourg", "Hudson Bay", "Lang", "Langenburg", "Lloydminster",
+        "Macklin", "Maple Creek", "Milestone", "Moose Jaw", "North Battleford", "Prince Albert", "Regina", "Saskatoon",
+        "Weyburn", "Yorkton"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["S*@ *@*"]
+        },
+        "phoneAreaCode":[306]
+      }
+    },
+    {
+      "regionName":"Yukon",
+      "regionShort":"YT",
+      "weight": 1,
+      "cities":["Whitehorse", "Watson Lake"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["Y*@ *@*"]
+        },
+        "phoneAreaCode":[867]
+      }
+    }
+  ]
+}
