@@ -96,7 +96,7 @@
         }
       }
     },
-    {// Check for zipFormat from here
+    {
       "regionName":"Colorado",
       "regionShort":"CA",
       "weight":2,
