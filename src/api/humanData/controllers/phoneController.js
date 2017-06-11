@@ -5,7 +5,7 @@
 function phoneno(str,str2) {
     var no="";
 
-     for(var i=0;i<str.length;i++){
+     for(var i=0;i<=str.length;i++){
         if(str.charAt(i)==='x'){
             no+= (Math.floor(Math.random()*10)).toString();
         }else if(str.charAt(i)==='X'){
