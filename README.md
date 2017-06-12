@@ -27,6 +27,9 @@ As of now I have created email, name, date, and company generator api
 ### Company names Generator Api
 >- [Random companies](https://node-data-generator.herokuapp.com/api/companies?n=200)
 
+### Country names Generator Api
+>- [Random country](https://node-data-generator.herokuapp.com/api/countries?n=20)
+
 ### Phone number Generator Api
 >- Australia
 >  - [Xxxx-xxxx](https://node-data-generator.herokuapp.com/api/phone?country=australia&fomat=0&n=200)
