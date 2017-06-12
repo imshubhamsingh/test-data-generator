@@ -3,6 +3,8 @@ Data Generator
 
 As of now I have created email, name, date, and company generator api
 
+## Human Related Data Generator
+
 ### Name Generator Api
 >- [Full Name](https://node-data-generator.herokuapp.com/api/names/fullNames?n=20)
 >- [Male Names](https://node-data-generator.herokuapp.com/api/names/maleNames?n=20)
@@ -27,8 +29,6 @@ As of now I have created email, name, date, and company generator api
 ### Company names Generator Api
 >- [Random companies](https://node-data-generator.herokuapp.com/api/companies?n=200)
 
-### Country names Generator Api
->- [Random country](https://node-data-generator.herokuapp.com/api/countries?n=20)
 
 ### Phone number Generator Api
 >- Australia
@@ -49,8 +49,10 @@ As of now I have created email, name, date, and company generator api
 >  - [(0x) xxxx xxxx](https://node-data-generator.herokuapp.com/api/phone?country=us&fomat=1&n=200)
 >  - [04xx xxx xxx](https://node-data-generator.herokuapp.com/api/phone?country=us&fomat=2&n=200)
 
+## Geographic Related Data Generator
 
-
+### Country names Generator Api
+>- [Random country](https://node-data-generator.herokuapp.com/api/countries?n=20)
 
    
   
