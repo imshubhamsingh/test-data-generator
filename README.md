@@ -29,22 +29,22 @@ As of now I have created email, name, date, and company generator api
 
 ### Phone number Generator Api
 >- Australia
->  - [Xxxx-xxxx]()
->  - [(0x) xxxx xxxx]()
->  - [04xx xxx xxx]()
+>  - [Xxxx-xxxx](https://node-data-generator.herokuapp.com/api/phone?country=australia&fomat=0&n=200)
+>  - [(0x) xxxx xxxx](https://node-data-generator.herokuapp.com/api/phone?country=australia&fomat=1&n=200)
+>  - [04xx xxx xxx](https://node-data-generator.herokuapp.com/api/phone?country=australia&fomat=2&n=200)
 >- Canada
->  - [(AAA) Xxx-xxxx]()
->  - [1 (AAA) Xxx-xxxx]()
->  - [1-AAA-Xxx-xxxx]()
+>  - [(AAA) Xxx-xxxx](https://node-data-generator.herokuapp.com/api/phone?country=canada&fomat=0&n=200)
+>  - [1 (AAA) Xxx-xxxx](https://node-data-generator.herokuapp.com/api/phone?country=canada&fomat=1&n=200)
+>  - [1-AAA-Xxx-xxxx](https://node-data-generator.herokuapp.com/api/phone?country=canada&fomat=2&n=200)
 >- India
->  - [+91 xxxxxxxxxx]()
->  - [0xx-xxxxxxxx]()
->  - [0Xxx-xxxxxxx]()
->  - [0Xxxx-xxxxxx]()
+>  - [+91 xxxxxxxxxx](https://node-data-generator.herokuapp.com/api/phone?country=india&fomat=0&n=200)
+>  - [0xx-xxxxxxxx](https://node-data-generator.herokuapp.com/api/phone?country=india&fomat=1&n=200)
+>  - [0Xxx-xxxxxxx](https://node-data-generator.herokuapp.com/api/phone?country=india&fomat=2&n=200)
+>  - [0Xxxx-xxxxxx](https://node-data-generator.herokuapp.com/api/phone?country=india&fomat=3&n=200)
 >- US
->  - [Xxxx-xxxx]()
->  - [(0x) xxxx xxxx]()
->  - [04xx xxx xxx]()
+>  - [Xxxx-xxxx](https://node-data-generator.herokuapp.com/api/phone?country=us&fomat=0&n=200)
+>  - [(0x) xxxx xxxx](https://node-data-generator.herokuapp.com/api/phone?country=us&fomat=1&n=200)
+>  - [04xx xxx xxx](https://node-data-generator.herokuapp.com/api/phone?country=us&fomat=2&n=200)
 
 
 
