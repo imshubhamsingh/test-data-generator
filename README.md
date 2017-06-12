@@ -57,5 +57,11 @@ As of now I have created email, name, date, and company generator api
 ### Country names Generator Api
 >- [Random country](https://node-data-generator.herokuapp.com/api/countries?n=20)
 
+### Region names of various Country Generator Api
+>- [Random regions of Australia](http://node-data-generator.herokuapp.com/api/countries/australia?n=20)
+>- [Random regions of Canada](http://node-data-generator.herokuapp.com/api/countries/canada?n=20)
+>- [Random regions of India](http://node-data-generator.herokuapp.com/api/countries/india?n=20)
+>- [Random regions of US](http://node-data-generator.herokuapp.com/api/countries/us?n=20)
+
    
   
