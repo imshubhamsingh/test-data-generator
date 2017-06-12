@@ -229,7 +229,7 @@
     },
     {
       "regionName": "Uttarakhand",
-      "regionShort":"Uk",
+      "regionShort":"UK",
       "weight": 157,
       "cities": ["Dehradun", "Haridwar"]
     },
