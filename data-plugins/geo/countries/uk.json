@@ -9,12 +9,10 @@
       "@": "ABCEGHJKLMNPRSTVWXYZ"
     }
   },
-  "areaCode": [],
   "phone": ["+44 7xxx xxx xxx","07xxx xxx xxx"],
   "phoneReplacement":{
     "x": "123456789"
   },
-
   "countryData":[
     {
       "regionName":"Aberdeenshire",
