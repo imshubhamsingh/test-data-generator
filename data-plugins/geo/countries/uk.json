@@ -1,0 +1,919 @@
+{
+  "countryName": "United Kingdom",
+  "continent": "europe",
+  "zipCode": {
+    "format": "%*@ *@*",
+    "replacement": {
+      "%": "ABCEGHJKLMNPRSTVXY",
+      "*": "0123456789",
+      "@": "ABCEGHJKLMNPRSTVWXYZ"
+    }
+  },
+  "areaCode": [],
+  "phone": ["+44 7xxx xxx xxx","07xxx xxx xxx"],
+  "phoneReplacement":{
+    "x": "123456789"
+  },
+
+  "countryData":[
+    {
+      "regionName":"Aberdeenshire",
+      "regionShort": "AB",
+      "weight":1,
+      "cities":[
+        "Aberdeen", "Peterhead", "Fraserburgh", "Inverurie", "Huntley", "Ellon", "Turriff"
+      ],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Anglesey",
+      "regionShort": "AG",
+      "weight": 1,
+      "cities":[
+        "Beaumaris", "Holyhead", "Llangefni", "Amlwch", "Menai Bridge"
+      ],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Manitoba",
+      "regionShort": "MB",
+      "weight": 1,
+      "cities":["Winnipeg", "Stonewall", "Minitonas", "Lourdes", "Flin Flon", "Daly", "Brandon", "Beausejour"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["R*@ *@*"]
+        },
+        "phoneAreaCode":[204, 431]
+      }
+    },
+    {
+      "regionName":"Angus",
+      "regionShort":"AN",
+      "weight": 1,
+      "cities":["Forfar", "Dundee", "Arbroath", "Brechin", "Montrose", "Carnoustie", "Kirriemuir"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Argyllshire",
+      "regionShort":"AR",
+      "weight": 1,
+      "cities":["Inveraray", "Oban", "Dunoon", "Campbeltown", "Lochgilphead", "Tobermory"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Ayrshire",
+      "regionShort":"AY",
+      "weight": 1,
+      "cities":["Ayr", "Kilmarnock", "Irvine", "Saltcoats", "Kilwinning", "Largs", "Troon", "Cumnock"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Banffshire",
+      "regionShort":"BA",
+      "weight": 1,
+      "cities":["Banff", "Buckie", "Keith", "Macduff", "Portsoy", "Dufftown"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Bedfordshire",
+      "regionShort":"BD",
+      "weight": 1,
+      "cities":["Bedford", "Luton", "Dunstable", "Leighton Buzzard", "Biggleswade", "Sandy"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["M*@ *@*"]
+        }
+      }
+    },
+    {
+      "regionName":"Berwickshire",
+      "regionShort":"BE",
+      "weight": 1,
+      "cities":["Greenlaw", "Duns", "Eyemouth", "Lauder", "Coldstream"],
+      "extendedData": {
+        "zipFormat":{
+          "format": ["C*@ *@*"]
+        },
+        "phoneAreaCode":[902]
+      }
+    },{
+      "regionName":"Buckinghamshire",
+      "regionShort":"BK",
+      "weight": 1,
+      "cities":["Aylesbury", "Milton Keynes", "Slough", "Buckingham", "High Wycombe"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Berkshire",
+      "regionShort":"BR",
+      "weight": 1,
+      "cities":["Reading", "Bracknell", "Maidenhead", "Newbury", "Windsor", "Wokingham", "Abingdon"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Caithness",
+      "regionShort":"CA",
+      "weight": 1,
+      "cities":["Wick", "Thurso", "Halkirk", "Castletown"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Cambridgeshire",
+      "regionShort":"CB",
+      "weight": 1,
+      "cities":["Cambridge", "Wisbech", "Ely", "March", "Whittlesey", "Chatteris", "Linton"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Cardiganshire",
+      "regionShort":"CG",
+      "weight": 1,
+      "cities":["Cardigan", "Aberystwyth", "Lampeter", "New Quay", "Tregaron"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Cheshire",
+      "regionShort":"CH",
+      "weight": 1,
+      "cities":["Chester", "Stockport", "Ellesmere Port", "Birkenhead", "Wallasey", "Runcorn", "Macclesfield", "Crewe"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Clackmannanshire",
+      "regionShort":"CL",
+      "weight": 1,
+      "cities":["Clackmannan", "Alloa", "Tillicoultry", "Tullibody"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Carmarthenshire",
+      "regionShort":"CM",
+      "weight": 1,
+      "cities":["Carmarthen", "Llanelli", "Ammanford", "Llandovery", "Kidwelly", "St. Clears"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Cornwall",
+      "regionShort":"CO",
+      "weight": 1,
+      "cities":["Bodmin", "Truro", "Camborne", "Redruth", "St. Austell", "Falmouth", "Penzance", "Newquay"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Cumberland",
+      "regionShort":"CU",
+      "weight": 1,
+      "cities":["Carlisle", "Whitehaven", "Workington", "Penrith", "Keswick", "Brampton"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Derbyshire",
+      "regionShort":"DB",
+      "weight": 1,
+      "cities":["Derby", "Chesterfield", "Glossop", "Ilkeston", "Long Eaton", "Swadlincote", "Buxton", "Matlock", "Ashbourne"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Denbighshire",
+      "regionShort":"DE",
+      "weight": 1,
+      "cities":["Denbigh", "Wrexham", "Ruthin", "Abergele", "Llangollen"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Devon",
+      "regionShort":"DE",
+      "weight": 1,
+      "cities":["Exeter", "Plymouth", "Torquay", "Paignton", "Barnstaple", "Tiverton", "Newton Abbot", "Tavistock"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Dunbartonshire",
+      "regionShort":"DN",
+      "weight": 1,
+      "cities":["Dumbarton", "Clydebank", "Cumbernauld", "Helensburgh", "Alexandria", "Kirkintilloch"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Dorset",
+      "regionShort":"DO",
+      "weight": 1,
+      "cities":["Dorchester", "Poole", "Weymouth", "Sherborne", "Wimborne Minster", "Shaftesbury"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"East Lothian",
+      "regionShort":"EL",
+      "weight": 1,
+      "cities":["Haddington", "North Berwick", "Dunbar", "Tranent", "East Linton"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Essex",
+      "regionShort":"CA",
+      "weight": 1,
+      "cities":["Chelmsford", "Basildon", "Romford", "Southend", "Colchester", "Harlow", "Brentwood", "West Ham"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Fife",
+      "regionShort":"FI",
+      "weight": 1,
+      "cities":["Cupar", "Dunfermline", "Glenrothes", "Kirkcaldy", "St. Andrews", "Cowdenbeath", "Burntisland"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Flintshire",
+      "regionShort":"Fl",
+      "weight": 1,
+      "cities":["Mold", "Flint", "Rhyl", "Prestatyn", "Connah's Quay", "Holywell", "Buckley", "St. Asaph"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Glamorgan",
+      "regionShort":"GL",
+      "weight": 1,
+      "cities":["Cardiff", "Swansea", "Merthyr Tydfil", "Barry", "Caerphilly", "Bridgend", "Neath", "Pontypridd"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Gloucestershire",
+      "regionShort":"GH",
+      "weight": 1,
+      "cities":["Gloucester", "Bristol", "Cheltenham", "Stroud", "Cirencester", "Tewkesbury"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Caithness",
+      "regionShort":"CA",
+      "weight": 1,
+      "cities":["Wick", "Thurso", "Halkirk", "Castletown"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Hampshire",
+      "regionShort":"HA",
+      "weight": 1,
+      "cities":["Winchester", "Southampton", "Portsmouth", "Bournemouth", "Basingstoke", "Newport"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Herefordshire",
+      "regionShort":"HE",
+      "weight": 1,
+      "cities":["Hereford", "Ross-on-Wye", "Leominster", "Ledbury", "Bromyard", "Kington"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Hertfordshire",
+      "regionShort":"HR",
+      "weight": 1,
+      "cities":["Hertford", "Watford", "St. Albans", "Hemel Hempstead", "Stevenage", "Hatfield"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Huntingdonshire",
+      "regionShort":"HU",
+      "weight": 1,
+      "cities":["Huntingdon", "St. Ives", "St. Neots", "Ramsey", "Yaxley"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Inverness-shire",
+      "regionShort":"IN",
+      "weight": 1,
+      "cities":["Inverness", "Fort William", "Kingussie", "Newtonmore", "Portree"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Kincardineshire",
+      "regionShort":"KC",
+      "weight": 1,
+      "cities":["Stonehaven", "Banchory", "Laurencekirk", "Inverbervie"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Kent",
+      "regionShort":"KE",
+      "weight": 1,
+      "cities":["Maidstone", "Canterbury", "Bromley", "Rochester", "Margate", "Folkestone", "Dover", "Greenwich"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Kirkcudbrightshire",
+      "regionShort":"KK",
+      "weight": 1,
+      "cities":["Kircudbright", "Castle Douglas", "Dalbeattie", "New Galloway"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Kinross-shire",
+      "regionShort":"KS",
+      "weight": 1,
+      "cities":["Kinross", "Milnathort"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Lancashire",
+      "regionShort":"LA",
+      "weight": 1,
+      "cities":["Lancaster", "Liverpool", "Manchester", "Preston", "Bolton", "Warrington", "Barrow-in-Furness"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Leicestershire",
+      "regionShort":"HU",
+      "weight": 1,
+      "cities":["Leicester", "Loughborough", "Hinckley", "Melton Mowbray", "Coalville", "Lutterworth"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Lincolnshire",
+      "regionShort":"LI",
+      "weight": 1,
+      "cities":["Lincoln", "Grimsby", "Scunthorpe", "Boston", "Grantham", "Stamford", "Skegness", "Louth"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Lanarkshire",
+      "regionShort":"LK",
+      "weight": 1,
+      "cities":["Lanark", "Glasgow", "East Kilbride", "Hamilton", "Motherwell", "Coatbridge", "Carluke"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Merionethshire",
+      "regionShort":"ME",
+      "weight": 1,
+      "cities":["Dolgellau", "Bala", "Tywyn", "Blaenau Ffestiniog", "Barmouth", "Harlech"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Montgomeryshire",
+      "regionShort":"MG",
+      "weight": 1,
+      "cities":["Montgomery", "Newtown", "Welshpool", "Machynlleth", "Llanidloes"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Midlothian",
+      "regionShort":"ML",
+      "weight": 1,
+      "cities":["Edinburgh", "Musselburgh", "Penicuik", "Dalkeith", "Bonnyrigg"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Monmouthshire",
+      "regionShort":"MO",
+      "weight": 1,
+      "cities":["Monmouth", "Newport", "Blackwood", "Cwmbran", "Abergavenny", "Chepstow", "Tredegar"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Morayshire",
+      "regionShort":"MO",
+      "weight": 1,
+      "cities":["Elgin", "Forres", "Rothes", "Lossiemouth", "Fochabers"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Northumberland",
+      "regionShort":"NB",
+      "weight": 1,
+      "cities":["Alnwick", "Newcastle-upon-Tyne", "Morpeth", "Hexham", "Berwick-upon-Tweed"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Norfolk",
+      "regionShort":"HU",
+      "weight": 1,
+      "cities":["Norwich", "Great Yarmouth", "King's Lynn", "Dereham", "Cromer", "Hunstanton"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Northamptonshire",
+      "regionShort":"NT",
+      "weight": 1,
+      "cities":["Northampton", "Peterborough", "Corby", "Kettering", "Wellingborough"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Nottinghamshiree",
+      "regionShort":"NG",
+      "weight": 1,
+      "cities":["Nottingham", "Mansfield", "Worksop", "Newark", "Retford", "Southwell"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Orkney",
+      "regionShort":"OK",
+      "weight": 1,
+      "cities":["Kirkwall", "Sromness", "Balfour"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Oxfordshire",
+      "regionShort":"OX",
+      "weight": 1,
+      "cities":["Oxford", "Banbury", "Witney", "Bicester", "Henley-on-Thames", "Carterton", "Thame", "Bloxham"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Pembrokeshire",
+      "regionShort":"PE",
+      "weight": 1,
+      "cities":["Pembroke", "Milford Haven", "Haverfordwest", "Fishguard", "Tenby", "St. David's"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Radnorshire",
+      "regionShort":"RA",
+      "weight": 1,
+      "cities":["Presteigne", "Llandrindod Wells", "Knighton", "Rhayader", "New Radnor"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Renfrewshire",
+      "regionShort":"RF",
+      "weight": 1,
+      "cities":["Renfrew", "Paisley", "Greenock", "Johnstone", "Port Glasgow", "Barrhead", "Kilmalcolm"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Roxburghshire",
+      "regionShort":"RU",
+      "weight": 1,
+      "cities":["Oakham", "Uppingham. Cottesmore"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Shropshire",
+      "regionShort":"SA",
+      "weight": 1,
+      "cities":["Shrewsbury", "Telford", "Oswestry", "Bridgnorth", "Whitchurch", "Market Drayton", "Ludlow"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Selkirkshire",
+      "regionShort":"SE",
+      "weight": 1,
+      "cities":["Selkirk", "Clovenfords", "Galashiels"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Suffolk",
+      "regionShort":"SF",
+      "weight": 1,
+      "cities":["Ipswich", "Bury St. Edmunds", "Lowestoft", "Felixstowe", "Sudbury", "Haverhill", "Bungay"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Shetlande",
+      "regionShort":"SH",
+      "weight": 1,
+      "cities":["Huntingdon", "St. Ives", "St. Neots", "Ramsey", "Yaxley"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Somerset",
+      "regionShort":"SR",
+      "weight": 1,
+      "cities":["Guildford", "Croydon", "Woking", "Sutton", "Kingston-on-Thames", "Wandsworth", "Wimbledon", "Brixton"
+      ],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Sussex",
+      "regionShort":"SS",
+      "weight": 1,
+      "cities":["Chichester", "Brighton", "Worthing", "Crawley", "Hastings", "Eastbourne", "Bognor Regis", "Horsham"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Sutherland'",
+      "regionShort":"SU",
+      "weight": 1,
+      "cities":["Dornoch", "Helmsdale", "Brora", "Golspie", "Lairg", "Durness", "Tongue"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Staffordshire",
+      "regionShort":"ST",
+      "weight": 1,
+      "cities":["Stafford", "Stoke-on-Trent", "Wolverhampton", "Walsall", "Cannock", "Lichfield"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Warwickshire",
+      "regionShort":"WE",
+      "cities":["Warwick", "Birmingham", "Coventry", "Nuneaton", "Rugby", "Solihull", "Stratford-upon-Avon"],
+      "weight": 1,
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Westmorland",
+      "regionShort":"WE",
+      "weight": 1,
+      "cities":["Appleby", "Kendal", "Windermere", "Ambleside", "Kirkby Lonsdale"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Wigtownshire",
+      "regionShort":"WI",
+      "weight": 1,
+      "cities":["Wigtown", "Stranraer", "Newton Stewart", "Whithorn"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Wiltshire",
+      "regionShort":"WT",
+      "weight": 1,
+      "cities":["Trowbridge", "Salisbury", "Swindon", "Chippenham", "Devizes", "Marlborough", "Warminster"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"West Lothian",
+      "regionShort":"WL",
+      "weight": 1,
+      "cities":["Linlithgow", "Livingston", "Bo'ness", "Broxburn", "Whitburn", "Armadale", "Bathgate"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Worcestershire",
+      "regionShort":"WO",
+      "weight": 1,
+      "cities":["Worcester", "Dudley", "Kidderminster", "Stourbridge", "Halesowen", "Malvern", "Evesham"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Yorkshire",
+      "regionShort":"YK",
+      "weight": 1,
+      "cities":["Northallerton", "Middlesbrough", "Scarborough", "Whitby", "Beverley", "Hull", "Bridlington",
+        "Driffield", "Hornsea", "Filey", "Wakefield", "Leeds", "Sheffield", "Bradford", "Halifax",
+        "Harrogate", "York"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Durham",
+      "regionShort":"DU",
+      "weight": 1,
+      "cities":["Durham", "Sunderland", "Stockton-on-Tees", "Darlington", "Hartlepool", "Gateshead", "Washington"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Brecknockshire",
+      "regionShort":"BR",
+      "weight": 1,
+      "cities":["Brecon", "Builth Wells", "Hay-on-Wye", "Talgarth", "Llanwrtwd Wells"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Buteshire",
+      "regionShort":"BU",
+      "weight": 1,
+      "cities":["Rothesay", "Millport", "Brodick", "Lochranza"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Dumfriesshire",
+      "regionShort":"DF",
+      "weight": 1,
+      "cities":["Dumfries", "Annan", "Lockerbie", "Moffat", "Sanquhar", "Langholm", "Gretna"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Nairnshire",
+      "regionShort":"NA",
+      "weight": 1,
+      "cities":["Nairn", "Auldearn", "Cawdor", "Ferness"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName":"Perthshire",
+      "regionShort":"PE",
+      "weight": 1,
+      "cities":["Perth", "Crieff", "Pitlochry", "Callander", "Blairgowrie", "Rattray", "Coupar Angus", "Kincardine"],
+      "extendedData": {
+        "zipFormat":{
+          "format": []
+        }
+      }
+    },
+    {
+      "regionName": "Ross-shire",
+      "regionShort": "RO",
+      "weight": 1,
+      "cities": ["Dingwall", "Stornaway", "Tain", "Alness", "Invergordon"],
+      "extendedData": {
+        "zipFormat": {
+          "format": []
+        }
+      }
+    }
+  ]
+}

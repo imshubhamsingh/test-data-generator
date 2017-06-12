@@ -8,7 +8,7 @@
       "x": "0123456789"
     }
   },
-  "phone": ["Xxxx-xxxx","(0x) xxxx xxxx","04xx xxx xxx"],
+  "phone": ["Xxxx-xxxx","+61 4xxxx xxxx","04xx xxx xxx"],
   "phoneReplacement":{
     "X": "123456789",
     "x": "0123456789"
