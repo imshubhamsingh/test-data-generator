@@ -49,7 +49,7 @@ As of now I have created email, name, date, and company generator api
 >  
 > UK
 >  - [+44 7xxx xxx xxx](https://node-data-generator.herokuapp.com/api/phone?country=uk&fomat=0&n=200)
->  - [07xxx xxx xxx"](https://node-data-generator.herokuapp.com/api/phone?country=uk&fomat=1&n=200)
+>  - [07xxx xxx xxx](https://node-data-generator.herokuapp.com/api/phone?country=uk&fomat=1&n=200)
 
 > US
 >  - [Xxxx-xxxx](https://node-data-generator.herokuapp.com/api/phone?country=us&fomat=0&n=200)
