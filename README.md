@@ -26,3 +26,28 @@ As of now I have created email, name, date, and company generator api
 
 ### Company names Generator Api
 >- [Random companies](https://node-data-generator.herokuapp.com/api/companies?n=200)
+
+### Phone number Generator Api
+>- Australia
+>  - [Xxxx-xxxx]()
+>  - [(0x) xxxx xxxx]()
+>  - [04xx xxx xxx]()
+>- Canada
+>  - [(AAA) Xxx-xxxx]()
+>  - [1 (AAA) Xxx-xxxx]()
+>  - [1-AAA-Xxx-xxxx]()
+>- India
+>  - [+91 xxxxxxxxxx]()
+>  - [0xx-xxxxxxxx]()
+>  - [0Xxx-xxxxxxx]()
+>  - [0Xxxx-xxxxxx]()
+>- US
+>  - [Xxxx-xxxx]()
+>  - [(0x) xxxx xxxx]()
+>  - [04xx xxx xxx]()
+
+
+
+
+   
+  
