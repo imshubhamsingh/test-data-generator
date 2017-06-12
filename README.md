@@ -65,10 +65,10 @@ As of now I have created email, name, date, and company generator api
 
 ### City List generator of various regions of various Country Api
  It has got lot of options ...As of now I'm giving only one example for each country
-> -[Cities in Queensland (Australia)](http://node-data-generator.herokuapp.com/api/countries/australia/QLD?n=20)
-> -[Cities in Ontario (Canada)](http://node-data-generator.herokuapp.com/api/countries/canada/ON?n=20)
-> -[Cities in Maharastra (India)](http://node-data-generator.herokuapp.com/api/countries/india/MH?n=20)
-> -[Cities in Alaska (US)](http://node-data-generator.herokuapp.com/api/countries/us/AK?n=20)
+> - [Cities in Queensland (Australia)](http://node-data-generator.herokuapp.com/api/countries/australia/QLD?n=20)
+> - [Cities in Ontario (Canada)](http://node-data-generator.herokuapp.com/api/countries/canada/ON?n=20)
+> - [Cities in Maharastra (India)](http://node-data-generator.herokuapp.com/api/countries/india/MH?n=20)
+> - [Cities in Alaska (US)](http://node-data-generator.herokuapp.com/api/countries/us/AK?n=20)
 
 
    
