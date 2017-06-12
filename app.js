@@ -27,6 +27,7 @@ var countryRouter = require('./src/api/geoData/routers/countryRouter')();
 
 app.use('/api/countries',countryRouter);
 
+
 app.listen(port,function () {
    console.log("Server running on port "+ port);
 });
