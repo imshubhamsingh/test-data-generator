@@ -47,6 +47,10 @@ As of now I have created email, name, date, and company generator api
 >  - [0Xxx-xxxxxxx](https://node-data-generator.herokuapp.com/api/phone?country=india&fomat=2&n=200)
 >  - [0Xxxx-xxxxxx](https://node-data-generator.herokuapp.com/api/phone?country=india&fomat=3&n=200)
 >  
+> UK
+>  - [+44 7xxx xxx xxx](https://node-data-generator.herokuapp.com/api/phone?country=uk&fomat=0&n=200)
+>  - [07xxx xxx xxx"](https://node-data-generator.herokuapp.com/api/phone?country=uk&fomat=1&n=200)
+
 > US
 >  - [Xxxx-xxxx](https://node-data-generator.herokuapp.com/api/phone?country=us&fomat=0&n=200)
 >  - [(0x) xxxx xxxx](https://node-data-generator.herokuapp.com/api/phone?country=us&fomat=1&n=200)
@@ -61,6 +65,7 @@ As of now I have created email, name, date, and company generator api
 >- [Random regions of Australia](http://node-data-generator.herokuapp.com/api/countries/australia?n=20)
 >- [Random regions of Canada](http://node-data-generator.herokuapp.com/api/countries/canada?n=20)
 >- [Random regions of India](http://node-data-generator.herokuapp.com/api/countries/india?n=20)
+>- [Random regions of UK](http://node-data-generator.herokuapp.com/api/countries/uk?n=20)
 >- [Random regions of US](http://node-data-generator.herokuapp.com/api/countries/us?n=20)
 
 ### City List generator of various regions of various Country Api
@@ -68,6 +73,7 @@ As of now I have created email, name, date, and company generator api
 > - [Cities in Queensland (Australia)](http://node-data-generator.herokuapp.com/api/countries/australia/QLD?n=20)
 > - [Cities in Ontario (Canada)](http://node-data-generator.herokuapp.com/api/countries/canada/ON?n=20)
 > - [Cities in Maharastra (India)](http://node-data-generator.herokuapp.com/api/countries/india/MH?n=20)
+> - [Cities in Yorkshire (UK)](http://node-data-generator.herokuapp.com/api/countries/uk/YK?n=20)
 > - [Cities in Alaska (US)](http://node-data-generator.herokuapp.com/api/countries/us/AK?n=20)
 
 
