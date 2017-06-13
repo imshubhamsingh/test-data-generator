@@ -83,7 +83,7 @@ As of now I have created email, name, date,company, phone number, country, regio
 
 ## Credit Card Number generator Api
 
-> - [Random Fake Credit Card](https://node-data-generator.herokuapp.com/api/creditCard?n=20)
+> [Random Fake Credit Card](https://node-data-generator.herokuapp.com/api/creditCard?n=20)
 
 ### Fake credit card numbers generator for all major brands
 >[VISA](https://node-data-generator.herokuapp.com/api/creditCard/visa?n=20),
