@@ -30,6 +30,10 @@ var latlngRouter = require('./src/api/geoData/routers/latlngRouter')();
 app.use('/api/countries',countryRouter);
 app.use('/api/latlng',latlngRouter);
 
+//credit card data
+var creditCardRouter = require('./src/api/creditCard/routers/creditCardRouter')();
+
+app.use('/api/creditCard',creditCardRouter);
 
 app.listen(port,function () {
    console.log("Server running on port "+ port);

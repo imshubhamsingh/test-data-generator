@@ -2,9 +2,9 @@
    {
      "name":"Visa",
      "short":"visa",
-     "prefix":[4539, 4556, 4916, 4532, 4929, 40240071, 4485, 4716, 4],
+     "ccprefix":["4539", "4556", "4916", "4532", "4929", "40240071", "4485", "4716", "4"],
      "length":[13,16],
-     "format": [
+     "ccformat": [
       "XXXXXXXXXXXXX",
       "XXXX XXX XX XXXX",
       "XXXXXXXXXXXXXXXX",
@@ -17,9 +17,9 @@
   {
     "name":"Visa Electron",
     "short":"visaElectron",
-    "prefix":[4026, 417500, 4508, 4844, 4913, 4917],
+    "ccprefix":["4026", "417500", "4508", "4844", "4913", "4917"],
     "length":[16],
-    "format": [
+    "ccformat": [
       "XXXXXXXXXXXXXXXX",
       "XXXX XXXX XXXX XXXX",
       "XXXXXX XXXXXX XXXX",
@@ -30,9 +30,9 @@
   {
     "name": "Mastercard",
     "short": "mastercard",
-    "prefix":[51, 52, 53, 54, 55],
+    "ccprefix":["51", "52", "53", "54", "55"],
     "length":[16],
-    "format": [
+    "ccformat": [
       "XXXXXXXXXXXXXXXX",
       "XXXX XXXX XXXX XXXX",
       "XXXXXX XXXXXX XXXX",
@@ -43,9 +43,9 @@
   {
     "name":"Amex",
     "short":"amex",
-    "prefix":[34, 37],
+    "ccprefix":["34", "37"],
     "length":[15],
-    "format": [
+    "ccformat": [
       "XXXXXXXXXXXXXXX",
       "XXXX XXXXXX XXXXX"
     ]
@@ -53,9 +53,9 @@
   {
     "name":"Discover",
     "short":"discover",
-    "prefix":[6011, 644, 645, 646, 647, 648, 649, 65],
+    "ccprefix":["6011", "644", "645", "646", "647", "648", "649", "65"],
     "length":[16],
-    "format": [
+    "ccformat": [
       "XXXXXXXXXXXXXXXX",
       "XXXX XXXX XXXX XXXX",
       "XXXXXX XXXXXX XXXX",
@@ -66,9 +66,9 @@
   {
     "name":"Carte Blanche",
     "short":"carteBlanche",
-    "prefix":[300, 301, 302, 303, 304, 305],
+    "ccprefix":["300", "301", "302", "303", "304", "305"],
     "length":[14],
-    "format": [
+    "ccformat": [
       "XXXXXXXXXXXXXXX",
       "XXXX XXXXXX XXXXX"
     ]
@@ -76,9 +76,9 @@
   {
     "name":"Diner's Club International",
     "short":"dinersClubInt",
-    "prefix":[36],
+    "ccprefix":["36"],
     "length":[14],
-    "format": [
+    "ccformat": [
       "XXXXXXXXXXXXXXX",
       "XXXX XXXXXX XXXXX"
     ]
@@ -86,9 +86,9 @@
   {
     "name":"enRoute",
     "short":"dinersClubEnRoute",
-    "prefix":[2014, 2149],
+    "ccprefix":["2014", "2149"],
     "length":[15],
-    "format": [
+    "ccformat": [
       "XXXXXXXXXXXXXXX",
       "XXXX XXXXXX XXXXX"
     ]
@@ -96,9 +96,9 @@
   {
     "name":"JCB",
     "short":"jcb15",
-    "prefix":[2131, 1800],
+    "ccprefix":["2131", "1800"],
     "length":[15,16],
-    "format": [
+    "ccformat": [
       "XXXXXXXXXXXXXXX",
       "XXXX XXXXXX XXXXX",
       "XXXXXXXXXXXXXXXX",
@@ -111,9 +111,9 @@
   {
     "name":"JCB",
     "short":"jcb16",
-    "prefix":[31, 309],
+    "ccprefix":["31", "309"],
     "length":[15,16],
-    "format": [
+    "ccformat": [
       "XXXXXXXXXXXXXXX",
       "XXXX XXXXXX XXXXX",
       "XXXXXXXXXXXXXXXX",
@@ -126,9 +126,9 @@
   {
     "name":"Maestro",
     "short":"maestro",
-    "prefix":[5018, 5038, 6304, 6759, 6761, 6762, 6763, 5893, 56, 57, 58],
+    "ccprefix":["5018", "5038", "6304", "6759", "6761", "6762", "6763", "5893", "56", "57", "58"],
     "length":[12,13,14,15,16,17,18,19],
-    "format": [
+    "ccformat": [
       "XXXXXXXXXXXX",
       "XXXXXXXXXXXXX",
       "XXXX XXX XX XXXX",
@@ -150,9 +150,9 @@
   {
     "name":"Solo",
     "short":"solo",
-    "prefix":[6334, 6767],
+    "ccprefix":["6334", "6767"],
     "length":[16,18,19],
-    "format": [
+    "ccformat": [
       "XXXXXXXXXXXXXXXX",
       "XXXX XXXX XXXX XXXX",
       "XXXXXX XXXXXX XXXX",
@@ -166,9 +166,9 @@
  {
     "name":"Switch",
     "short":"switch",
-    "prefix":[4903, 4905, 4905, 4911, 4936, 564182, 633110, 6333, 6759],
+    "ccprefix":["4903", "4905", "4905", "4911", "4936", "564182", "633110", "6333", "6759"],
     "length":[16,18,19],
-    "format": [
+    "ccformat": [
       "XXXXXXXXXXXXXXXX",
       "XXXX XXXX XXXX XXXX",
       "XXXXXX XXXXXX XXXX",
@@ -182,9 +182,9 @@
   {
     "name":"Laser",
     "short":"laser",
-    "prefix":[6304, 6706, 6771, 6709],
+    "ccprefix":["6304", "6706", "6771", "6709"],
     "length":[16,17,18,19],
-    "format": [
+    "ccformat": [
       "XXXXXXXXXXXXXXXX",
       "XXXX XXXX XXXX XXXX",
       "XXXXXX XXXXXX XXXX",

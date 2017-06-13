@@ -6,9 +6,9 @@ var express = require('express');
 var creditCardRouter = express.Router();
 
 var router = function () {
-    var countryController = require('../controllers/latlngController')();
+    var creditCardController = require('../../creditCard/controllers/creditCardController')();
     creditCardRouter.route('/')
-        .get(countryController.latitudelongitude);
+        .get(creditCardController.creditCard);
 
     return creditCardRouter;
 };
