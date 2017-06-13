@@ -76,6 +76,10 @@ As of now I have created email, name, date, and company generator api
 > - [Cities in Yorkshire (UK)](http://node-data-generator.herokuapp.com/api/countries/uk/YK?n=20)
 > - [Cities in Alaska (US)](http://node-data-generator.herokuapp.com/api/countries/us/AK?n=20)
 
+### Latitude and Longitude Generator Api
+>- [Random Latitude](http://localhost:3010/api/latlng/lat?n=20)
+>- [Random Longitude](http://localhost:3010/api/latlng/lng?n=20)
+>- [Random Latitude and Longitude](http://localhost:3010/api/latlng?n=20)
 
    
   
