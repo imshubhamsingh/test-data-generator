@@ -24,8 +24,11 @@ app.use('/api/phone',phoneRouter);
 
 //geo data
 var countryRouter = require('./src/api/geoData/routers/countryRouter')();
+var latlngRouter = require('./src/api/geoData/routers/latlngRouter')();
+
 
 app.use('/api/countries',countryRouter);
+app.use('/api/latlng',latlngRouter);
 
 
 app.listen(port,function () {
