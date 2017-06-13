@@ -1,4 +1,13 @@
 [
+  {
+    "name":"American Express",
+    "short":"americanExpress",
+    "ccprefix":["34","37"],
+    "length":[15],
+    "ccformat": [
+      "XXXX XXXXXX XXXXX"
+    ]
+  },
    {
      "name":"Visa",
      "short":"visa",
