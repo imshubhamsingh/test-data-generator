@@ -32,8 +32,10 @@ app.use('/api/latlng',latlngRouter);
 
 //credit card data
 var creditCardRouter = require('./src/api/creditCard/routers/creditCardRouter')();
+var cvvRouter = require('./src/api/creditCard/routers/cvvRouter')();
 
 app.use('/api/creditCard',creditCardRouter);
+app.use('/api/cvv',cvvRouter);
 
 app.listen(port,function () {
    console.log("Server running on port "+ port);
