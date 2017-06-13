@@ -74,6 +74,7 @@ var creditCardController = function () {
         for(var i=0;i<req.query.n;i++){
             cvvList.push(Math.random()*(888)+111)
         }
+        res.json(cvvList);
     };
 
     return{
