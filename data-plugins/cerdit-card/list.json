@@ -1,9 +1,10 @@
-{
-  "visa":{
-    "name":"Visa",
-    "prefix":[4539, 4556, 4916, 4532, 4929, 40240071, 4485, 4716, 4],
-    "length":[13,16],
-    "format": [
+[
+   {
+     "name":"Visa",
+     "short":"visa",
+     "prefix":[4539, 4556, 4916, 4532, 4929, 40240071, 4485, 4716, 4],
+     "length":[13,16],
+     "format": [
       "XXXXXXXXXXXXX",
       "XXXX XXX XX XXXX",
       "XXXXXXXXXXXXXXXX",
@@ -13,8 +14,9 @@
       "XXXXXX XXXXXXXXXX"
     ]
   },
-  "visaElectron":{
+  {
     "name":"Visa Electron",
+    "short":"visaElectron",
     "prefix":[4026, 417500, 4508, 4844, 4913, 4917],
     "length":[16],
     "format": [
@@ -25,8 +27,9 @@
       "XXXXXX XXXXXXXXXX"
     ]
   },
-  "mastercard":{
+  {
     "name": "Mastercard",
+    "short": "mastercard",
     "prefix":[51, 52, 53, 54, 55],
     "length":[16],
     "format": [
@@ -37,8 +40,9 @@
       "XXXXXX XXXXXXXXXX"
     ]
   },
-  "amex":{
+  {
     "name":"Amex",
+    "short":"amex",
     "prefix":[34, 37],
     "length":[15],
     "format": [
@@ -46,8 +50,9 @@
       "XXXX XXXXXX XXXXX"
     ]
   },
-  "discover":{
+  {
     "name":"Discover",
+    "short":"discover",
     "prefix":[6011, 644, 645, 646, 647, 648, 649, 65],
     "length":[16],
     "format": [
@@ -58,8 +63,9 @@
       "XXXXXX XXXXXXXXXX"
     ]
   },
-  "carteBlanche":{
+  {
     "name":"Carte Blanche",
+    "short":"carteBlanche",
     "prefix":[300, 301, 302, 303, 304, 305],
     "length":[14],
     "format": [
@@ -67,8 +73,9 @@
       "XXXX XXXXXX XXXXX"
     ]
   },
-  "dinersClubInt":{
+  {
     "name":"Diner's Club International",
+    "short":"dinersClubInt",
     "prefix":[36],
     "length":[14],
     "format": [
@@ -76,8 +83,9 @@
       "XXXX XXXXXX XXXXX"
     ]
   },
-  "dinersClubEnRoute":{
+  {
     "name":"enRoute",
+    "short":"dinersClubEnRoute",
     "prefix":[2014, 2149],
     "length":[15],
     "format": [
@@ -85,22 +93,24 @@
       "XXXX XXXXXX XXXXX"
     ]
   },
-  "jcb15":{
-  "name":"JCB",
-  "prefix":[2131, 1800],
-  "length":[15,16],
-  "format": [
-    "XXXXXXXXXXXXXXX",
-    "XXXX XXXXXX XXXXX",
-    "XXXXXXXXXXXXXXXX",
-    "XXXX XXXX XXXX XXXX",
-    "XXXXXX XXXXXX XXXX",
-    "XXX XXXXX XXXXX XXX",
-    "XXXXXX XXXXXXXXXX"
+  {
+    "name":"JCB",
+    "short":"jcb15",
+    "prefix":[2131, 1800],
+    "length":[15,16],
+    "format": [
+      "XXXXXXXXXXXXXXX",
+      "XXXX XXXXXX XXXXX",
+      "XXXXXXXXXXXXXXXX",
+      "XXXX XXXX XXXX XXXX",
+      "XXXXXX XXXXXX XXXX",
+      "XXX XXXXX XXXXX XXX",
+      "XXXXXX XXXXXXXXXX"
     ]
   },
-  "jcb16":{
+  {
     "name":"JCB",
+    "short":"jcb16",
     "prefix":[31, 309],
     "length":[15,16],
     "format": [
@@ -113,8 +123,9 @@
       "XXXXXX XXXXXXXXXX"
     ]
   },
-  "maestro":{
+  {
     "name":"Maestro",
+    "short":"maestro",
     "prefix":[5018, 5038, 6304, 6759, 6761, 6762, 6763, 5893, 56, 57, 58],
     "length":[12,13,14,15,16,17,18,19],
     "format": [
@@ -136,8 +147,9 @@
       "XXXXXX XX XXXX XXXX XXX"
     ]
   },
-  "solo":{
+  {
     "name":"Solo",
+    "short":"solo",
     "prefix":[6334, 6767],
     "length":[16,18,19],
     "format": [
@@ -151,8 +163,9 @@
       "XXXXXX XX XXXX XXXX XXX"
     ]
   },
-  "switch":{
+ {
     "name":"Switch",
+    "short":"switch",
     "prefix":[4903, 4905, 4905, 4911, 4936, 564182, 633110, 6333, 6759],
     "length":[16,18,19],
     "format": [
@@ -166,8 +179,9 @@
       "XXXXXX XX XXXX XXXX XXX"
     ]
   },
-  "laser":{
+  {
     "name":"Laser",
+    "short":"laser",
     "prefix":[6304, 6706, 6771, 6709],
     "length":[16,17,18,19],
     "format": [
@@ -182,4 +196,4 @@
       "XXXXXX XX XXXX XXXX XXX"
     ]
   }
-}
+]
