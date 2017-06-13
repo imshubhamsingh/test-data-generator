@@ -1,14 +1,5 @@
 [
   {
-    "name":"American Express",
-    "short":"americanExpress",
-    "ccprefix":["34","37"],
-    "length":[15],
-    "ccformat": [
-      "XXXX XXXXXX XXXXX"
-    ]
-  },
-   {
      "name":"Visa",
      "short":"visa",
      "ccprefix":["4539", "4556", "4916", "4532", "4929", "40240071", "4485", "4716", "4"],
@@ -50,7 +41,7 @@
     ]
   },
   {
-    "name":"Amex",
+    "name":"American Express",
     "short":"amex",
     "ccprefix":["34", "37"],
     "length":[15],
@@ -73,7 +64,7 @@
     ]
   },
   {
-    "name":"Carte Blanche",
+    "name":"Diners Club - Carte Blanche",
     "short":"carteBlanche",
     "ccprefix":["300", "301", "302", "303", "304", "305"],
     "length":[14],
@@ -87,16 +78,6 @@
     "short":"dinersClubInt",
     "ccprefix":["36"],
     "length":[14],
-    "ccformat": [
-      "XXXXXXXXXXXXXXX",
-      "XXXX XXXXXX XXXXX"
-    ]
-  },
-  {
-    "name":"enRoute",
-    "short":"dinersClubEnRoute",
-    "ccprefix":["2014", "2149"],
-    "length":[15],
     "ccformat": [
       "XXXXXXXXXXXXXXX",
       "XXXX XXXXXX XXXXX"
@@ -145,55 +126,6 @@
       "XXXX XXXXXX XXXX",
       "XXXXXXXXXXXXXXX",
       "XXXX XXXXXX XXXXX",
-      "XXXXXXXXXXXXXXXX",
-      "XXXX XXXX XXXX XXXX",
-      "XXXXXX XXXXXX XXXX",
-      "XXX XXXXX XXXXX XXX",
-      "XXXXXX XXXXXXXXXX",
-      "XXXXXXXXXXXXXXXXX",
-      "XXXXXXXXXXXXXXXXXX",
-      "XXXXXXXXXXXXXXXXXXX",
-      "XXXXXX XX XXXX XXXX XXX"
-    ]
-  },
-  {
-    "name":"Solo",
-    "short":"solo",
-    "ccprefix":["6334", "6767"],
-    "length":[16,18,19],
-    "ccformat": [
-      "XXXXXXXXXXXXXXXX",
-      "XXXX XXXX XXXX XXXX",
-      "XXXXXX XXXXXX XXXX",
-      "XXX XXXXX XXXXX XXX",
-      "XXXXXX XXXXXXXXXX",
-      "XXXXXXXXXXXXXXXXXX",
-      "XXXXXXXXXXXXXXXXXXX",
-      "XXXXXX XX XXXX XXXX XXX"
-    ]
-  },
- {
-    "name":"Switch",
-    "short":"switch",
-    "ccprefix":["4903", "4905", "4905", "4911", "4936", "564182", "633110", "6333", "6759"],
-    "length":[16,18,19],
-    "ccformat": [
-      "XXXXXXXXXXXXXXXX",
-      "XXXX XXXX XXXX XXXX",
-      "XXXXXX XXXXXX XXXX",
-      "XXX XXXXX XXXXX XXX",
-      "XXXXXX XXXXXXXXXX",
-      "XXXXXXXXXXXXXXXXXX",
-      "XXXXXXXXXXXXXXXXXXX",
-      "XXXXXX XX XXXX XXXX XXX"
-    ]
-  },
-  {
-    "name":"Laser",
-    "short":"laser",
-    "ccprefix":["6304", "6706", "6771", "6709"],
-    "length":[16,17,18,19],
-    "ccformat": [
       "XXXXXXXXXXXXXXXX",
       "XXXX XXXX XXXX XXXX",
       "XXXXXX XXXXXX XXXX",

@@ -81,5 +81,10 @@ As of now I have created email, name, date,company, phone number, country, regio
 >- [Random Longitude](http://localhost:3010/api/latlng/lng?n=20)
 >- [Random Latitude and Longitude](http://localhost:3010/api/latlng?n=20)
 
+### Credit Card Number generator Api
+> - [Random Fake Credit Card](https://node-data-generator.herokuapp.com/api/creditCard?n=20)
+
+
+
    
   
