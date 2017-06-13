@@ -81,5 +81,22 @@ As of now I have created email, name, date, company, phone number, country, regi
 >- [Random Longitude](http://localhost:3010/api/latlng/lng?n=20)
 >- [Random Latitude and Longitude](http://localhost:3010/api/latlng?n=20)
 
-   
+## Credit Card Number generator Api
+
+> [Random Fake Credit Card](https://node-data-generator.herokuapp.com/api/creditCard?n=20)
+
+### Fake credit card numbers generator for all major brands
+>[VISA](https://node-data-generator.herokuapp.com/api/creditCard/visa?n=20),
+[American Express (AMEX)](https://node-data-generator.herokuapp.com/api/creditCard/amex?n=20),
+[Discover](https://node-data-generator.herokuapp.com/api/creditCard/discover?n=20),
+[JCB](https://node-data-generator.herokuapp.com/api/creditCard/jcb16?n=20),
+[Diners Club - Carte Blanche](https://node-data-generator.herokuapp.com/api/creditCard/dinersClubEnRoute?n=20),
+[Diners Club - International](https://node-data-generator.herokuapp.com/api/creditCard/dinersClubInt?n=20),
+[Maestro](https://node-data-generator.herokuapp.com/api/creditCard/maestro?n=20),
+[Visa Electron](https://node-data-generator.herokuapp.com/api/creditCard/visaElectron?n=20),
+[Mastercard](https://node-data-generator.herokuapp.com/api/creditCard/mastercard?n=20),
+[Carte Blanche](https://node-data-generator.herokuapp.com/api/creditCard/carteBlanche?n=20)
+
+### CVV generator Api
+>[Random CVV](https://node-data-generator.herokuapp.com/api/cvv?n=20)   
   
