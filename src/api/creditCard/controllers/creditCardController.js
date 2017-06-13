@@ -69,10 +69,17 @@ var creditCardController = function () {
         }
         res.json(specifiedCreditCardList);
     };
+    var cvv = function (req,res) {
+        var cvvList =[];
+        for(var i=0;i<req.query.n;i++){
+            cvvList.push(Math.random()*(888)+111)
+        }
+    };
 
     return{
         creditCard:creditCardGenerator,
-        specificCreditCard:specificCreditCard
+        specificCreditCard:specificCreditCard,
+        cvv:cvv
     }
 };
 

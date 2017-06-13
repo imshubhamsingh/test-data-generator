@@ -11,6 +11,8 @@ var router = function () {
         .get(creditCardController.creditCard);
     creditCardRouter.route('/:specifiedCreditCard')
         .get(creditCardController.specificCreditCard);
+    creditCardRouter.route('/cvv')
+        .get(creditCardController.cvv);
 
     return creditCardRouter;
 };
