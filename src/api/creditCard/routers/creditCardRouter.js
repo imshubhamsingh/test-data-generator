@@ -9,6 +9,8 @@ var router = function () {
     var creditCardController = require('../../creditCard/controllers/creditCardController')();
     creditCardRouter.route('/')
         .get(creditCardController.creditCard);
+    creditCardRouter.route('/:specifiedCreditCard')
+        .get(creditCardController.specificCreditCard);
 
     return creditCardRouter;
 };

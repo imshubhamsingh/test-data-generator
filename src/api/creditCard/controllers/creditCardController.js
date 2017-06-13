@@ -17,7 +17,6 @@ var creditCardController = function () {
                 creditCardNo+=format.charAt(i)
             }
         }
-        console.log(creditCardNo+"+++");
 
         while(creditCardNo.length< format.length-1){
             change = 0;
@@ -37,7 +36,6 @@ var creditCardController = function () {
         var type = creditCardData[index].name;
         console.log(type);
         var creditCardNoFormat = creditCardData[index].ccformat[Math.floor(Math.random()*creditCardData[index].ccformat.length)];
-        console.log(creditCardNoFormat);
         var creditCardNoPrefix = creditCardData[index].ccprefix[Math.floor(Math.random()*creditCardData[index].ccprefix.length)];
         console.log(creditCardNoPrefix);
         return {
@@ -54,11 +52,27 @@ var creditCardController = function () {
         for(var i=0;i<req.query.n;i++){
          creditCardList.push(creditCard());
         }
-        res.json(creditCardList)
+        res.json(creditCardList);
+    };
+    var specificCreditCard = function (req,res) {
+        var specifiedCreditCardList = [];
+        var specifiedCreditCard = req.params.specifiedCreditCard;
+        for(var i=0;i<req.query.n;i++){
+            for(var j=0;j<creditCardData.length;j++){
+                if(creditCardData[j].short === specifiedCreditCard){
+                    break;
+                }
+            }
+            var creditCardNoFormat = creditCardData[j].ccformat[Math.floor(Math.random()*creditCardData[j].ccformat.length)];
+            var creditCardNoPrefix = creditCardData[j].ccprefix[Math.floor(Math.random()*creditCardData[j].ccprefix.length)];
+            specifiedCreditCardList.push(completed_number(creditCardNoPrefix,creditCardNoFormat));
+        }
+        res.json(specifiedCreditCardList);
     };
 
     return{
-        creditCard:creditCardGenerator
+        creditCard:creditCardGenerator,
+        specificCreditCard:specificCreditCard
     }
 };
 
