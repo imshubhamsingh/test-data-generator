@@ -1,7 +1,7 @@
 Data Generator
 ===================
 
-As of now I have created email, name, date,company, phone number, country, region, city,latitude and longitude generator api
+As of now I have created email, name, date,company, phone number, country, region, city, latitude and longitude generator API
 
 ## Human Related Data Generator
 
