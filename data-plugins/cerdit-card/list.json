@@ -5,7 +5,13 @@
      "ccprefix":["4539", "4556", "4916", "4532", "4929", "40240071", "4485", "4716", "4"],
      "length":[13,16],
      "ccformat": [
-      "XXXXXXXXXXXXXXXX"
+       "XXXXXXXXXXXXX",
+       "XXXX XXX XX XXXX",
+       "XXXXXXXXXXXXXXXX",
+       "XXXX XXXX XXXX XXXX",
+       "XXXXXX XXXXXX XXXX",
+       "XXX XXXXX XXXXX XXX",
+       "XXXXXX XXXXXXXXXX"
     ]
   },
   {
