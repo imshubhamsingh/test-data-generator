@@ -14,7 +14,6 @@ var creditCardController = function () {
 //Applying Luhn algorithm to check if the credit card number is valid or not
     var ccChecker = function (ccNumber) {
       var checkingCreditCard = strrev(ccNumber);
-      var sum = 0;
       var pos =0;
       var even = 0;
       var odd = 0;
@@ -28,8 +27,7 @@ var creditCardController = function () {
           }
             pos++;
         }
-        sum = even+odd;
-        var checkdigit = (sum*9)%10;
+        var checkdigit = ((even+odd)*9)%10;
         return ccNumber+checkdigit.toString();
     };
 
