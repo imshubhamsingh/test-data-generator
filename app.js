@@ -37,6 +37,12 @@ var cvvRouter = require('./src/api/creditCard/routers/cvvRouter')();
 app.use('/api/creditCard',creditCardRouter);
 app.use('/api/cvv',cvvRouter);
 
+//text data
+var loremIpsumRouter = require('./src/api/textData/routers/loremIpsumRouter')();
+
+app.use('/api/loremIpsum',loremIpsumRouter);
+
+
 app.listen(port,function () {
    console.log("Server running on port "+ port);
 });
