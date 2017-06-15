@@ -99,4 +99,9 @@ As of now I have created email, name, date, company, phone number, country, regi
 
 ### CVV generator Api
 >[Random CVV](https://node-data-generator.herokuapp.com/api/cvv?n=20)   
-  
+
+## Text Data generator Api
+
+### Lorem Ipsum generator Api
+>[Dummy Text](https://node-data-generator.herokuapp.com/api/loremIpsum?n=111)   
+   
