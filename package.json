@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.15.3",
+    "materialize-css": "^0.98.2",
     "request": "^2.81.0"
   }
 }
