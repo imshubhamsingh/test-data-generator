@@ -4,4 +4,5 @@
 
 require('jquery');
 require('materialize-css');
+require('css-loader!materialize-css/bin/materialize.css');
 
