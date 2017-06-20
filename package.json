@@ -11,6 +11,10 @@
   "dependencies": {
     "express": "^4.15.3",
     "materialize-css": "^0.98.2",
-    "request": "^2.81.0"
+    "request": "^2.81.0",
+    "webpack": "^3.0.0"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.4"
   }
 }
