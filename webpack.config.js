@@ -1,5 +1,7 @@
 module.exports ={
-    entry: 'config.js',
+    entry: {
+        main:'./config.js'
+    },
     output: {
         path: __dirname+'/public/assets/lib',
         filename: 'bundle.js'
