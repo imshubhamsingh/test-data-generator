@@ -17,9 +17,13 @@
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.28.0",
     "materialize-loader": "^2.0.0",
+    "node-sass": "^4.5.3",
     "path": "^0.12.7",
+    "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
+    "url": "^0.11.0",
     "url-loader": "^0.5.9"
   }
 }

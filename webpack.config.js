@@ -1,18 +1,13 @@
 var path = require("path");
-var NODE_MODULES = path.join(__dirname,"node_modules");
-var PUBLIC = path.join(__dirname,"public");
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports ={
     entry: {
-        main:'./config.js',
-        'bundle.min.css': [
-            __dirname + '/public/assets/css/app.css',
-            __dirname + '/node_modules/materialize-css/bin/materialize.css'
-        ]
+        main:'./config.js'
     },
     output: {
-        path: __dirname+'/public/assets/lib',
+        path: __dirname+'/public/dist',
         filename: 'bundle.js'
     },
     resolve:{
@@ -22,10 +17,15 @@ module.exports ={
         }
     },
     module:{
-        loaders: [
+        rules:[
             {
-                test: /\.css$/i,
-                loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' })
+                test:/\.(scss|css)$/,
+                loaders:ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: ['css-loader','sass-loader'],
+                    publicPath: './public/dist'
+
+                })
             },
             {
                 test: /\.(png|woff|woff2)$/,
@@ -33,11 +33,23 @@ module.exports ={
             },
             {
                 test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                loader: "file"
+                loader: "file-loader?limit=100000"
             }
         ]
     },
     plugins: [
-        new ExtractTextPlugin("styles.css")
+        new ExtractTextPlugin({
+            filename:"app.css",
+            disable: false,
+            allChunks: true
+        }),
+         new HtmlWebpackPlugin({
+            title:'Data Generator',
+            minify:{
+                collapseWhitespace: false
+            },
+            hash: true,
+            template: './public/assets/index.html'
+        })
     ]
 };
