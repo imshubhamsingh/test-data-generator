@@ -12,7 +12,7 @@ module.exports ={
     },
     resolve:{
          alias: {
-            "custom-css" : path.join(__dirname,"/public/assets/css/app.css"),
+            "custom-scss" : path.join(__dirname,"/public/assets/scss/app.scss"),
             "materialize-css-file" : path.join(__dirname,"/node_modules/materialize-css/bin/materialize.css")
         }
     },
