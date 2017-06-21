@@ -9893,6 +9893,7 @@ window.$ = __webpack_require__(0);
 __webpack_require__(3);
 __webpack_require__(6);
 __webpack_require__(7);
+__webpack_require__(8);
 
 
 
@@ -12598,6 +12599,12 @@ if (true) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "./img/dg.svg";
 
 /***/ })
 /******/ ]);

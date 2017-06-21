@@ -13,7 +13,8 @@ module.exports ={
     resolve:{
          alias: {
             "custom-scss" : path.join(__dirname,"/public/assets/scss/app.scss"),
-            "materialize-css-file" : path.join(__dirname,"/node_modules/materialize-css/bin/materialize.css")
+            "materialize-css-file" : path.join(__dirname,"/node_modules/materialize-css/bin/materialize.css"),
+             "logo": path.join(__dirname,"public/assets/img/dg.svg")
         }
     },
     module:{
@@ -28,12 +29,25 @@ module.exports ={
                 })
             },
             {
-                test: /\.(png|woff|woff2)$/,
-                loader: 'url-loader?limit=100000'
+                test: /\.(jpg|png|svg)$/,
+                loader: 'file-loader',
+                options: {
+                    name: './img/[name].[ext]'
+                }
             },
             {
-                test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                loader: "file-loader?limit=100000"
+                test: /\.(woff|woff2)$/,
+                loader: 'url-loader?limit=100000',
+                options:{
+                    name: './fonts/[name].[ext]'
+                }
+            },
+            {
+                test: /\.(ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: "file-loader?limit=100000",
+                options:{
+                    name: './fonts/[name].[ext]'
+                }
             }
         ]
     },
