@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.11.2",
     "materialize-loader": "^2.0.0",
     "path": "^0.12.7",

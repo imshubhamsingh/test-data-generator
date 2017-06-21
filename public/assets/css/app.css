@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+html {
+    font-family: 'Pacifico', cursive !important;
+}
+ nav{
+     background-color: #b91219 !important;
+ }
