@@ -7,7 +7,11 @@ var app = express();
 
 const port = process.env.PORT||3010;
 
+app.use('/lib/css',express.static(__dirname+'/node_modules/node_modules/materialize-css/dist/css'));
+app.use('/lib/js',express.static(__dirname+'/node_modules/jquery/dist'));
+app.use('/lib/js',express.static(__dirname+'/node_modules/materialize-css/dist/js/'));
 app.use(express.static(__dirname+'/public'));
+
 
 //human data
 var nameRouter = require('./src/api/humanData/routers/nameRouter')();
