@@ -1,6 +1,7 @@
 var path = require("path");
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var webpack = require("webpack");
 
 module.exports ={
     entry: {
@@ -12,8 +13,8 @@ module.exports ={
     },
     resolve:{
          alias: {
-            "custom-scss" : path.join(__dirname,"/public/assets/scss/app.scss"),
-            "materialize-css-file" : path.join(__dirname,"/node_modules/materialize-css/bin/materialize.css"),
+            "custom-scss" : path.join(__dirname,"public/assets/scss/app.scss"),
+            "materialize-css-file" : path.join(__dirname,"node_modules/materialize-css/bin/materialize.css"),
              "logo": path.join(__dirname,"public/assets/img/dg.svg")
         }
     },
@@ -64,6 +65,10 @@ module.exports ={
             },
             hash: true,
             template: './public/assets/index.html'
+        }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
         })
     ]
 };

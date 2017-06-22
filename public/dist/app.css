@@ -7269,6 +7269,8 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 nav {
   background: linear-gradient(#3D3B49, #3D3B49) !important; }
   nav .generator {
-    font-family: 'Pacifico', cursive !important; }
+    font-family: 'Pacifico', cursive !important;
+    font-size: 96%; }
   nav .data {
-    font-family: 'Permanent Marker', cursive !important; }
+    font-family: 'Permanent Marker', cursive !important;
+    font-size: 96%; }
