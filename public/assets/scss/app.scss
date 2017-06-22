@@ -25,8 +25,8 @@
   url('../fonts/permanent-marker-v5-latin-regular.svg#PermanentMarker') format('svg'); /* Legacy iOS */
 }
 
-
-    nav{
+html{
+  nav{
     background: linear-gradient(#3D3B49,#3D3B49) !important;
     .generator{
       font-family: 'Pacifico', cursive !important;
@@ -37,5 +37,8 @@
       font-size: 96%;
     }
   }
+  background-color: #d0d0d0;
+}
+
 
 

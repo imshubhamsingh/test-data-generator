@@ -44,6 +44,11 @@ var loremIpsumRouter = require('./src/api/textData/routers/loremIpsumRouter')();
 app.use('/api/loremIpsum',loremIpsumRouter);
 
 
+// catch 404 and forward to home page
+
+app.use('*',function (req,res) {
+   res.redirect('/');
+});
 
 //Listening to port 3000
 app.listen(port,function () {

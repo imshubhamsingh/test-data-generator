@@ -5,7 +5,7 @@ var webpack = require("webpack");
 
 module.exports ={
     entry: {
-        main:'./config.js'
+        main:'./public/assets/js/app.js'
     },
     output: {
         path: __dirname+'/public/dist',
