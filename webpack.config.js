@@ -8,8 +8,9 @@ module.exports ={
         main:'./public/assets/js/app.js'
     },
     output: {
-        path: __dirname+'/public/dist',
-        filename: 'bundle.js'
+        path: path.join( __dirname,'/public/dist'),
+        filename: 'bundle.js',
+        sourceMapFilename: 'bundle.js.map'
     },
     resolve:{
          alias: {
@@ -61,7 +62,7 @@ module.exports ={
          new HtmlWebpackPlugin({
             title:'Data Generator',
             minify:{
-                collapseWhitespace: false
+                collapseWhitespace: true
             },
             hash: true,
             template: './public/assets/index.html'
@@ -69,6 +70,15 @@ module.exports ={
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery'
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            sourceMap: true,
+            compress: {
+                warnings: false
+            }
+        }),
+        new webpack.LoaderOptionsPlugin({
+            minimize: true
         })
     ]
 };
