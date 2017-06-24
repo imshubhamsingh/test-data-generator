@@ -19,7 +19,7 @@
 
 <script>
     var navBar = require("./Shared/navBar.vue");
-    var nameGenerstor = require("./DataType/HumanData/names.vue");
+    var nameGenerator = require("./DataType/HumanData/names.vue");
     console.log("In App.vue");
     export default{
         data:function(){
@@ -30,7 +30,7 @@
         },
         components:{
             navBar:navBar,
-            nameGenerator: nameGenerstor
+            nameGenerator: nameGenerator
         },
         methods:{
             getSampleData: function () {

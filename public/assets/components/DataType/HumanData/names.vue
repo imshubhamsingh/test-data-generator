@@ -9,6 +9,7 @@
                         <option value="maleNames">Male Names</option>
                         <option value="femaleNames">Female Names</option>
                         <option value="surnames">Surname</option>
+                        <option value="middleNames">With middle name</option>
                     </select>
                     <label>Select Name Type</label>
                 </div>
@@ -44,8 +45,7 @@
         },
         props:{
             trigger:{
-                type:Boolean,
-                default: false
+                type:Boolean
             }
         },
         watch:{
@@ -56,9 +56,9 @@
                 axios.get("/api/names/"+choice+"/?n="+vm.number).then(function (response) {
                     vm.names = [];
                     vm.names = response.data;
-                      vm.$emit('nameWasGenerated',vm.names);
-                      this.trigger = false;
+                    vm.$emit('nameWasGenerated',vm.names);
                 }).catch(function (e) {
+                    console.log("Error: ");
                     console.log(e);
                 });
             }
