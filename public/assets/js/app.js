@@ -8,5 +8,13 @@ require("materialize-css-file");
 require("custom-scss");
 require("logo");
 var Vue = require("vue");
+var App = require("../components/App.vue");
+
+new Vue({
+    el:"#app",
+    render: function (h) {
+        return h(App)
+    }
+});
 
 

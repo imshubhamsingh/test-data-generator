@@ -14,13 +14,24 @@ module.exports ={
     },
     resolve:{
          alias: {
-            "custom-scss" : path.join(__dirname,"public/assets/scss/app.scss"),
-            "materialize-css-file" : path.join(__dirname,"node_modules/materialize-css/bin/materialize.css"),
-             "logo": path.join(__dirname,"public/assets/img/dg.svg")
+             "custom-scss" : path.join(__dirname,"public/assets/scss/app.scss"),
+             "materialize-css-file" : path.join(__dirname,"node_modules/materialize-css/bin/materialize.css"),
+             "logo": path.join(__dirname,"public/assets/img/dg.svg"),
+             "vue$": path.join(__dirname,'node_modules/vue/dist/vue')
         }
     },
     module:{
         rules:[
+            {
+                test: /\.vue$/,
+                loader: 'vue-loader',
+                options: {
+                    loaders:{
+                        'scss': 'vue-style-loader!css-loader!sass-loader',
+                        'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
+                    }
+                }
+            },
             {
                 test:/\.(scss|css)$/,
                 loaders:ExtractTextPlugin.extract({
