@@ -32,10 +32,10 @@ var nameController = function () {
     var femaleNames = function (req,res) {
         nameList =[];
         i=0;
-        index = Math.floor(Math.random()*firstNames.length);
         while(i<req.query.n)  {
+            index = Math.floor(Math.random()*firstNames.length);
             if(firstNames[index].gender ==="female"){
-                nameList.push(firstNames[Math.floor(Math.random()*firstNames.length)].name+" "+lastNames[Math.floor(Math.random()*lastNames.length)]);
+                nameList.push(firstNames[index].name+" "+lastNames[Math.floor(Math.random()*lastNames.length)]);
                 i++;
             }
         }
