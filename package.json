@@ -8,6 +8,8 @@
   "author": "Shubham Singh",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.16.2",
+    "cors": "^2.8.3",
     "express": "^4.15.3",
     "materialize-css": "^0.98.2",
     "request": "^2.81.0",

@@ -4,9 +4,11 @@
 
 var express = require('express');
 var app = express();
+var cors = require('cors');
 
 const port = process.env.PORT||3020;
 
+app.use(cors());
 app.use(express.static(__dirname+'/public/dist'));
 
 
