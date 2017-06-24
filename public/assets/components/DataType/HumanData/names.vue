@@ -50,7 +50,7 @@
         },
         watch:{
             trigger: function () {
-                console.log("Name Type: "+this.selected+" Number: "+this.number );
+                //console.log("Name Type: "+this.selected+" Number: "+this.number );
                 var vm = this;
                 //console.log("/api/names/"+choice+"/?n="+vm.number);
                 axios.get("/api/names/"+choice+"/?n="+vm.number).then(function (response) {
