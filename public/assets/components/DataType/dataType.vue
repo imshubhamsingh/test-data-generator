@@ -134,5 +134,13 @@
             max-height: 60% !important;
         }
     }
+    .collapsible-body{
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+        background-color: #f1f1f1;
+    }
+    [type=radio]:checked+label, [type=radio]:not(:checked)+label{
+        padding-left: 23px !important;
+    }
 
 </style>

@@ -2,6 +2,11 @@
     <div>
         <nav-bar></nav-bar>
         <div class="container">
+            <div class="input-field col s6">
+                <i class="fa fa-table prefix" style="margin-top: 10px;" aria-hidden="true"></i>
+                <input id="last_name" type="text" class="validate">
+                <label for="last_name">Enter Data set name</label>
+            </div>
             <data-type :trigger="trigger" @dataGenerated="data=$event"></data-type>
             <div class="row col s12">
                 <button class="waves-effect waves-light btn col s12 getdata disabled" @click="getSampleData">Get data</button>
