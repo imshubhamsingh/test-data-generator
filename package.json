@@ -11,6 +11,7 @@
     "axios": "^0.16.2",
     "cors": "^2.8.3",
     "express": "^4.15.3",
+    "font-awesome": "^4.7.0",
     "materialize-css": "^0.98.2",
     "request": "^2.81.0",
     "vue": "^2.3.4",

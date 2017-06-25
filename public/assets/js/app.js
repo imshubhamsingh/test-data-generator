@@ -7,6 +7,7 @@ require("materialize-css");
 require("materialize-css-file");
 require("custom-scss");
 require("logo");
+require("font-awesome-css");
 var Vue = require("vue");
 var App = require("../components/App.vue");
 

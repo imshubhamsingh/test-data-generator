@@ -17,6 +17,7 @@ module.exports ={
              "custom-scss" : path.join(__dirname,"public/assets/scss/app.scss"),
              "materialize-css-file" : path.join(__dirname,"node_modules/materialize-css/bin/materialize.css"),
              "logo": path.join(__dirname,"public/assets/img/dg.svg"),
+             "font-awesome-css":path.join(__dirname,"node_modules/font-awesome/css/font-awesome.min.css"),
              "vue$": path.join(__dirname,'node_modules/vue/dist/vue')
         }
     },

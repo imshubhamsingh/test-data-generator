@@ -3,7 +3,7 @@
         <div class="container section">
             <div class="row">
                 <div class="col s6 input-field">
-                    <select>
+                    <select id="nameOption">
                         <option disabled value="" selected>Choose your option</option>
                         <option value="fullNames">Full Names</option>
                         <option value="maleNames">Male Names</option>
@@ -23,25 +23,30 @@
 </template>
 
 <script>
-    var choice ="";
-    $(document).ready(function() {
-        $('select').material_select();
-        $('select').on('change', function(event) {
-            choice = event.currentTarget.value;
-            if( $(".getdata").hasClass("disabled")){
-                $(".getdata").removeClass("disabled")
-            }
-            //console.log(choice);
-        });
-    });
+
     var axios = require("axios");
     console.log("In name.vue");
     export default{
         data:function(){
             return {
                 number: 0,
-                names: []
+                names: [],
+                choice: ""
             }
+        },
+        mounted:function(){
+            var vm = this;
+            $(document).ready(function() {
+                $('#nameOption').material_select();
+                $('#nameOption').on('change', function(event) {
+                    vm.choice = event.currentTarget.value;
+                    if( $(".getdata").hasClass("disabled")){
+                        $(".getdata").removeClass("disabled")
+                    }
+                    //console.log(choice);
+                });
+                console.log("In name Option")
+            });
         },
         props:{
             dataReady:{
@@ -53,7 +58,7 @@
                 //console.log("Name Type: "+this.selected+" Number: "+this.number );
                 var vm = this;
                 //console.log("/api/names/"+choice+"/?n="+vm.number);
-                axios.get("/api/names/"+choice+"/?n="+vm.number).then(function (response) {
+                axios.get("/api/names/"+vm.choice+"/?n="+vm.number).then(function (response) {
                     vm.names = [];
                     vm.names = response.data;
                     var data = [
