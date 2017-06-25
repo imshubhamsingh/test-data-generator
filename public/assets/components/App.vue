@@ -2,7 +2,7 @@
     <div>
         <nav-bar></nav-bar>
         <div class="container">
-            <name-generator :trigger="trigger" @nameWasGenerated="data=$event"></name-generator>
+            <data-type :trigger="trigger" @dataGenerated="data=$event"></data-type>
             <div class="row col s12">
                 <button class="waves-effect waves-light btn col s12 getdata disabled" @click="getSampleData">Get data</button>
             </div>
@@ -19,7 +19,7 @@
 
 <script>
     var navBar = require("./Shared/navBar.vue");
-    var nameGenerator = require("./DataType/HumanData/names.vue");
+    var dataType = require("./DataType/dataType.vue");
     console.log("In App.vue");
     export default{
         data:function(){
@@ -30,7 +30,7 @@
         },
         components:{
             navBar:navBar,
-            nameGenerator: nameGenerator
+            dataType: dataType
         },
         methods:{
             getSampleData: function () {

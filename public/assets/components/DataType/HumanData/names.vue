@@ -14,7 +14,7 @@
                     <label>Select Name Type</label>
                 </div>
                 <div class="input-field col s6">
-                    <input type="number" v-model="number" min="0">
+                    <input type="number" v-model="number" min="0" max="500">
                     <label>List size</label>
                 </div>
             </div>
@@ -40,23 +40,27 @@
         data:function(){
             return {
                 number: 0,
-                names: [],
+                names: []
             }
         },
         props:{
-            trigger:{
+            dataReady:{
                 type:Boolean
             }
         },
         watch:{
-            trigger: function () {
+            dataReady: function () {
                 //console.log("Name Type: "+this.selected+" Number: "+this.number );
                 var vm = this;
                 //console.log("/api/names/"+choice+"/?n="+vm.number);
                 axios.get("/api/names/"+choice+"/?n="+vm.number).then(function (response) {
                     vm.names = [];
                     vm.names = response.data;
-                    vm.$emit('nameWasGenerated',vm.names);
+                    var data = [
+                        true,
+                        vm.names
+                    ];
+                    vm.$emit('nameGenerated',data);
                 }).catch(function (e) {
                     console.log("Error: ");
                     console.log(e);
