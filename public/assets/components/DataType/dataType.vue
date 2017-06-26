@@ -10,16 +10,16 @@
                 <div id="modal1" class="modal bottom-sheet">
                     <div class="modal-content">
                         <h4>Column Details</h4>
-                        <form>
+                        <div  method="post">
                             <div class="input-field">
-                                <input id="columnTitle" name="column" type="text" class="validate" placeholder="" v-model="columnName" required aria-required="true">
+                                <input id="columnTitle" type="text" v-model="columnName" required aria-required="true">
                                 <label for="columnTitle">Column Title</label>
                             </div>
                             <div>
                                 <h6>Human Data</h6>
                                 <div class="row">
                                     <p class="col s3 m2 l1">
-                                        <input type="radio" value="names" id="names" v-model="columnType"/>
+                                        <input type="radio" value="name" id="names" v-model="columnType"/>
                                         <label for="names">Names</label>
                                     </p>
                                     <p class="col s3 m2 l1">
@@ -41,9 +41,9 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="submit" class="modal-action modal-close waves-effect waves-green btn-flat" name="action" @click="addColumn">Add Column</button>
+                                <button class="modal-action waves-effect waves-green btn-flat"  @click="addColumn">Add Column</button>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -78,7 +78,7 @@
                     }
                     ],
                 columnName:"",
-                columnType:""
+                columnType:"name"
             }
         },
         mounted:function () {
@@ -115,10 +115,10 @@
                         columnName:this.columnName,
                         columnType:this.columnType
                     });
+                    $('#modal1').modal('close');
+                }else{
+                    Materialize.toast('Please enter the column title', 1000)
                 }
-
-                this.columnName ="";
-                this.columnType ="";
             }
         }
 
@@ -127,7 +127,7 @@
 
 <style lang="scss" scoped>
     label{
-    color:#000 !important;
+    color:#000;
     }
     .modal{
         &.bottom-sheet{
@@ -141,6 +141,17 @@
     }
     [type=radio]:checked+label, [type=radio]:not(:checked)+label{
         padding-left: 23px !important;
+    }
+    %colour{
+        color: #000;
+    }
+    input[type=text]:focus:not([readonly]){
+        & + label{
+            @extend %colour ;
+        }
+        border-bottom: 1px solid #000;
+        box-shadow: 0 1px 0 0 #000;
+        color:#000;
     }
 
 </style>

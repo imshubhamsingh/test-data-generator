@@ -3,7 +3,7 @@
         <nav-bar></nav-bar>
         <div class="container">
             <div class="input-field col s6">
-                <i class="fa fa-table prefix" style="margin-top: 10px;" aria-hidden="true"></i>
+                <i class="fa fa-table prefix" style="margin-top: 10px;color:#A89E9E" aria-hidden="true"></i>
                 <input id="last_name" type="text" class="validate">
                 <label for="last_name">Enter Data set name</label>
             </div>
@@ -58,4 +58,18 @@
             background-color: #dfdfdf !important;
         }
     }
+
+    %colour {
+        color:#302953;
+    }
+    input[type=text]:focus:not([readonly]){
+        & + label{
+            @extend %colour ;
+        }
+        border-bottom: 1px solid #302953;
+        box-shadow: 0 1px 0 0 #302953;
+        color:#302953;
+    }
+
+
 </style>
