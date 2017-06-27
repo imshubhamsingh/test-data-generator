@@ -52,7 +52,8 @@
                 <ul class="collapsible" data-collapsible="accordion">
                     <li v-for="(dataType, index) in dataTypes">
                         <div class="collapsible-header"><a @click="remove($index)"><i class="fa fa-trash" aria-hidden="true"></i></a> {{dataType.columnName}}</div>
-                        <div class="collapsible-body"><name-generator :dataReady="dataGenCall" @nameGenerated="dataGen=$event"></name-generator></div>
+                        <!--<div class="collapsible-body"><name-generator :dataReady="dataGenCall" @nameGenerated="dataGen+=$event"></name-generator></div>-->
+                        <div class="collapsible-body"><date-generator :dataReady="dataGenCall" @nameGenerated="dataGen=$event"></date-generator></div>
                     </li>
                 </ul>
             </div>
@@ -65,6 +66,7 @@
 
 <script>
     var nameGenerator = require("./HumanData/names.vue");
+    var dateGenerator = require("./HumanData/dates.vue");
     console.log("In dataType.vue");
     export default{
         data:function(){
@@ -90,7 +92,8 @@
             }
         },
         components:{
-            nameGenerator: nameGenerator
+            nameGenerator: nameGenerator,
+            dateGenerator: dateGenerator
         },
         watch:{
             dataGen: function () {
