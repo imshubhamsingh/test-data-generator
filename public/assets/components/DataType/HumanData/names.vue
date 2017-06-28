@@ -52,10 +52,12 @@
         },
         created() {
             console.log(dataBus);
+            const vm = this;
             dataBus.$on('calltoGenerateData',function () {
-                const vm = this;
-                //console.log("/api/names/"+choice+"/?n="+vm.number);
+                console.log(vm.number);                //console.log("/api/names/"+choice+"/?n="+vm.number);
+                console.log(`/api/names/${vm.choice}/?n=${vm.number}`);
                 axios.get(`/api/names/${vm.choice}/?n=${vm.number}`).then(response => {
+                   // console.log(response);
                     vm.names = [];
                     vm.names = response.data;
                     dataBus.dataCollector({

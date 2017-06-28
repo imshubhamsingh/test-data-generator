@@ -33,7 +33,7 @@
 </template>
 
 <script>
-    import dataBus from "../../../js/app";
+    import {dataBus} from "../../../js/app";
     import axios from "axios";
     console.log("In name.vue");
     export default{
@@ -70,8 +70,8 @@
             }
         },
         created() {
+            const vm = this;
             dataBus.$on('calltoGenerateData',function () {
-                const vm = this;
                 //console.log("/api/names/"+choice+"/?n="+vm.number);
                 console.log(`/api/dates?minYear=1997&maxYear=2018&format=${vm.choice}&n=${vm.number}`);
                 axios.get(`/api/dates?minYear=${vm.minDate.getFullYear()}&maxYear=${vm.maxDate.getFullYear()}&format=${vm.choice}&n=${vm.number}`).then(response => {

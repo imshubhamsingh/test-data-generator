@@ -17,18 +17,21 @@ export const dataBus = new Vue({
             data:{}
         }
     },
-    method:{
+    methods:{
         dataCollector(event) {
+            //console.log(event);
             const vm = this;
             for(const key in vm.data){
                 if(key === event.type){
-                    vm.dataGen[key]=event.data;
-                    this.$emit('dataGenerated');
+                    vm.data[key]=event.data;
+                    this.$emit('dataGenerated',vm.data);
+                  //  console.log(vm.data);
                     return;
                 }
             }
-            vm.dataGen[event.type]=event.data;
-            this.$emit('dataGenerated');
+            vm.data[event.type]=event.data;
+          //  console.log(vm.data);
+            this.$emit('dataGenerated',vm.data);
         }
     }
 

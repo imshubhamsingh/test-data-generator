@@ -20,9 +20,7 @@
             </div>
             <div class="row">
                 <div v-if="data" class="card-content white-text col s12">
-                    <div class="card-title name" v-for="name in data">
-                        {{name}}
-                    </div>
+                    {{data}}
                 </div>
             </div>
         </div>
@@ -49,13 +47,14 @@
         methods:{
             getSampleData() {
                 dataBus.$emit('calltoGenerateData');
-                this.trigger = !this.trigger;
             }
         },
         created() {
             const vm = this;
-            dataBus.$on('dataGenerated',() => {
-                vm.data = dataBus.data;
+            dataBus.$on('dataGenerated',(data) => {
+                //console.log(data);
+                vm.data = data;
+                console.log(vm.data);
             });
         }
     }
