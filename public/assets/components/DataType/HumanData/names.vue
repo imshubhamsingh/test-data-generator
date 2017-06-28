@@ -2,7 +2,7 @@
     <div>
         <div class="container section">
             <div class="row">
-                <div class="col s6 input-field">
+                <div class="col s12 input-field">
                     <select id="nameOption">
                         <option disabled value="" selected>Choose your option</option>
                         <option value="fullNames">Full Names</option>
@@ -13,32 +13,29 @@
                     </select>
                     <label>Select Name Type</label>
                 </div>
-                <div class="input-field col s6">
-                    <input type="number" v-model="number" min="0" max="500">
-                    <label>List size</label>
-                </div>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-
-    var axios = require("axios");
+    import {dataBus} from "../../../js/app";
+    console.log("+++++");
+    console.log(dataBus);
+    import axios from "axios";
     console.log("In name.vue");
     export default{
-        data:function(){
+        data() {
             return {
-                number: 0,
                 names: [],
                 choice: ""
             }
         },
-        mounted:function(){
-            var vm = this;
-            $(document).ready(function() {
+        mounted() {
+            const vm = this;
+            $(document).ready(() => {
                 $('#nameOption').material_select();
-                $('#nameOption').on('change', function(event) {
+                $('#nameOption').on('change', event => {
                     vm.choice = event.currentTarget.value;
                     if( $(".getdata").hasClass("disabled")){
                         $(".getdata").removeClass("disabled")
@@ -49,29 +46,29 @@
             });
         },
         props:{
-            dataReady:{
-                type:Boolean
+            number:{
+                type: Number
             }
         },
-        watch:{
-            dataReady: function () {
-                //console.log("Name Type: "+this.selected+" Number: "+this.number );
-                var vm = this;
+        created() {
+            console.log(dataBus);
+            dataBus.$on('calltoGenerateData',function () {
+                const vm = this;
                 //console.log("/api/names/"+choice+"/?n="+vm.number);
-                axios.get("/api/names/"+vm.choice+"/?n="+vm.number).then(function (response) {
+                axios.get(`/api/names/${vm.choice}/?n=${vm.number}`).then(response => {
                     vm.names = [];
                     vm.names = response.data;
-                    var data = [
-                        true,
-                        vm.names
-                    ];
-                    vm.$emit('nameGenerated',data);
-                }).catch(function (e) {
+                    dataBus.dataCollector({
+                        type: "name",
+                        data: vm.names
+                    });
+                }).catch(e => {
                     console.log("Error: ");
                     console.log(e);
                 });
-            }
+            })
         }
+
     }
 </script>
 

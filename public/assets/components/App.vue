@@ -2,12 +2,19 @@
     <div>
         <nav-bar></nav-bar>
         <div class="container">
-            <div class="input-field col s6">
-                <i class="fa fa-table prefix" style="margin-top: 10px;color:#A89E9E" aria-hidden="true"></i>
-                <input id="last_name" type="text" class="validate">
-                <label for="last_name">Enter Data set name</label>
+            <div class="row">
+                <div class="input-field col s12 m6 l6">
+                    <i class="fa fa-table prefix" style="margin-top: 10px;color:#A89E9E" aria-hidden="true"></i>
+                    <input id="last_name" type="text" class="validate">
+                    <label for="last_name">Enter Data set name</label>
+                </div>
+                <div class="input-field col s12 m6 l6">
+                    <input type="number" v-model="number" min="0" max="500">
+                    <label>List size</label>
+                </div>
             </div>
-            <data-type :trigger="trigger" @dataGenerated="data=$event"></data-type>
+
+            <data-type :trigger="trigger" @dataGenerated="data=$event" :number="parseInt(number)"></data-type>
             <div class="row col s12">
                 <button class="waves-effect waves-light btn col s12 getdata disabled" @click="getSampleData">Get data</button>
             </div>
@@ -23,24 +30,33 @@
 </template>
 
 <script>
-    var navBar = require("./Shared/navBar.vue");
-    var dataType = require("./DataType/dataType.vue");
+    import navBar from "./Shared/navBar.vue";
+    import dataType from "./DataType/dataType.vue";
+    import {dataBus} from "../js/app";
     console.log("In App.vue");
     export default{
-        data:function(){
+        data() {
             return {
-                data: [],
-                trigger:false
+                data: {},
+                trigger:false,
+                number:0
             }
         },
         components:{
-            navBar:navBar,
-            dataType: dataType
+            navBar,
+            dataType
         },
         methods:{
-            getSampleData: function () {
+            getSampleData() {
+                dataBus.$emit('calltoGenerateData');
                 this.trigger = !this.trigger;
             }
+        },
+        created() {
+            const vm = this;
+            dataBus.$on('dataGenerated',() => {
+                vm.data = dataBus.data;
+            });
         }
     }
 </script>

@@ -8,14 +8,35 @@ require("materialize-css-file");
 require("custom-scss");
 require("logo");
 require("font-awesome-css");
-var Vue = require("vue");
-var App = require("../components/App.vue");
+import Vue from "vue";
+import App from "../components/App.vue";
 
+export const dataBus = new Vue({
+    data() {
+        return{
+            data:{}
+        }
+    },
+    method:{
+        dataCollector(event) {
+            const vm = this;
+            for(const key in vm.data){
+                if(key === event.type){
+                    vm.dataGen[key]=event.data;
+                    this.$emit('dataGenerated');
+                    return;
+                }
+            }
+            vm.dataGen[event.type]=event.data;
+            this.$emit('dataGenerated');
+        }
+    }
+
+});
 new Vue({
     el:"#app",
-    render: function (h) {
+    render(h) {
         return h(App)
     }
 });
-
 

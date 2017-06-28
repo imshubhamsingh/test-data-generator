@@ -34,6 +34,11 @@ module.exports ={
                 }
             },
             {
+                test: /\.js$/,
+                loader: 'babel-loader',
+                exclude: /node_modules/
+            },
+            {
                 test:/\.(scss|css)$/,
                 loaders:ExtractTextPlugin.extract({
                     fallback: 'style-loader',

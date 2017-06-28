@@ -33,28 +33,27 @@
 </template>
 
 <script>
-
-    var axios = require("axios");
+    import dataBus from "../../../js/app";
+    import axios from "axios";
     console.log("In name.vue");
     export default{
-        data:function(){
+        data() {
             return {
-                number: 10,
                 date: [],
                 choice: "",
                 minDate:new Date(25-3-2010),
                 maxDate:new Date(),
             }
         },
-        mounted:function(){
-            var vm = this;
-            $(document).ready(function() {
+        mounted() {
+            const vm = this;
+            $(document).ready(() => {
                 $('#dateOption').material_select();
                 $('.datepicker').pickadate({
                     selectMonths: true, // Creates a dropdown to control month
                     selectYears: 15 // Creates a dropdown of 15 years to control year
                 });
-                $('#dateOption').on('change', function(event) {
+                $('#dateOption').on('change', event => {
                     console.log(event.currentTarget.value);
                     vm.choice = event.currentTarget.value;
                     if( $(".getdata").hasClass("disabled")){
@@ -66,32 +65,31 @@
             });
         },
         props:{
-            dataReady:{
-                type:Boolean
+            number:{
+                type: Number,
             }
         },
-        watch:{
-            dataReady: function () {
-                //console.log("Name Type: "+this.selected+" Number: "+this.number );
-                var vm = this;
+        created() {
+            dataBus.$on('calltoGenerateData',function () {
+                const vm = this;
                 //console.log("/api/names/"+choice+"/?n="+vm.number);
-                console.log("/api/dates?minYear=1997&maxYear=2018&format="+vm.choice+"&n="+vm.number);
-                axios.get("/api/dates?minYear="+vm.minDate.getFullYear()+"&maxYear="+vm.maxDate.getFullYear()+"&format="+vm.choice+"&n="+vm.number).then(function (response) {
+                console.log(`/api/dates?minYear=1997&maxYear=2018&format=${vm.choice}&n=${vm.number}`);
+                axios.get(`/api/dates?minYear=${vm.minDate.getFullYear()}&maxYear=${vm.maxDate.getFullYear()}&format=${vm.choice}&n=${vm.number}`).then(response => {
                     console.log(response.data.dateList);
                     vm.date = [];
                     vm.date = response.data.dateList;
-                    var data = [
-                        true,
-                        vm.date
-                    ];
-                    vm.$emit('nameGenerated',data);
-                }).catch(function (e) {
+                    dataBus.dataCollector({
+                        type:"date",
+                        data: vm.date
+                    });
+                }).catch(e => {
                     console.log("Error: ");
                     console.log(e);
                 });
-            }
+            })
         }
     }
+
 </script>
 
 <style>

@@ -3,7 +3,7 @@
         <div class="container">
             <div class="">
                 <div class="fixed-action-btn">
-                    <a class="btn-floating btn-large waves-effect waves-light red large" href="#modal1"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                    <a class="btn-floating btn-large waves-effect waves-light red large" href="#modal1" style="font-size: 35px;">+</a>
                 </div>
 
                 <!-- Modal Structure -->
@@ -19,23 +19,23 @@
                                 <h6>Human Data</h6>
                                 <div class="row">
                                     <p class="col s3 m2 l1">
-                                        <input type="radio" value="name" id="names" v-model="columnType"/>
+                                        <input type="radio" value="nameGenerator" id="names" v-model="columnType"/>
                                         <label for="names">Names</label>
                                     </p>
                                     <p class="col s3 m2 l1">
-                                        <input type="radio" value="date" id="date" v-model="columnType" />
+                                        <input type="radio" value="dateGenerator" id="date" v-model="columnType" />
                                         <label for="date">Date</label>
                                     </p >
                                     <p class="col s3 m2 l1">
-                                        <input type="radio" value="email" id="email" v-model="columnType" />
+                                        <input type="radio" value="emailGenerator" id="email" v-model="columnType" />
                                         <label for="email">Email</label>
                                     </p>
                                     <p class="col s3 m2 l1">
-                                        <input type="radio" value="phone" id="phone" v-model="columnType" />
+                                        <input type="radio" value="phoneGenerator" id="phone" v-model="columnType" />
                                         <label for="phone">Phone</label>
                                     </p>
                                     <p class="col s3 m2 l1">
-                                        <input type="radio" value="company" id="company" v-model="columnType" />
+                                        <input type="radio" value="companyGenerator" id="company" v-model="columnType" />
                                         <label for="company">Company</label>
                                     </p>
                                 </div>
@@ -53,7 +53,7 @@
                     <li v-for="(dataType, index) in dataTypes">
                         <div class="collapsible-header"><a @click="remove($index)"><i class="fa fa-trash" aria-hidden="true"></i></a> {{dataType.columnName}}</div>
                         <!--<div class="collapsible-body"><name-generator :dataReady="dataGenCall" @nameGenerated="dataGen+=$event"></name-generator></div>-->
-                        <div class="collapsible-body"><date-generator :dataReady="dataGenCall" @nameGenerated="dataGen=$event"></date-generator></div>
+                        <div class="collapsible-body"><component :is="dataType.columnType" :dataReady="dataGenCall" :number="parseInt(number)" :dataCollector="dataCollector"></component></div>
                     </li>
                 </ul>
             </div>
@@ -65,43 +65,45 @@
 </template>
 
 <script>
-    var nameGenerator = require("./HumanData/names.vue");
-    var dateGenerator = require("./HumanData/dates.vue");
+    import nameGenerator from "./HumanData/names.vue";
+    import dateGenerator from "./HumanData/dates.vue";
     console.log("In dataType.vue");
     export default{
-        data:function(){
+        data() {
             return {
-                dataGen: [],
+                dataGen: { },
                 dataGenCall: this.trigger,
                 dataTypes: [
                     {
                         columnName:"Name",
-                        columnType: "name"
+                        columnType: "nameGenerator"
                     }
-                    ],
+                ],
                 columnName:"",
-                columnType:"name"
+                columnType:""
             }
         },
-        mounted:function () {
+        mounted() {
             $('.modal').modal();
         },
         props:{
+            number:{
+                type: Number,
+            },
             trigger:{
                 type: Boolean
             }
         },
         components:{
-            nameGenerator: nameGenerator,
-            dateGenerator: dateGenerator
+            nameGenerator,
+            dateGenerator
         },
         watch:{
-            dataGen: function () {
-                if(this.dataGen[0] === true){
-                    this.$emit('dataGenerated',this.dataGen[1]);
-                }
+            dataGen() {
+                console.log(this.dataGen);
+
             },
-            trigger: function () {
+            trigger() {
                 this.dataGenCall = !this.dataGenCall;
             }
         },
@@ -109,20 +111,25 @@
 
         },
         methods:{
-            remove: function (index) {
+            remove(index) {
                 this.dataTypes.splice(index,1);
             },
-            addColumn: function () {
-                if(this.columnName!==""){
+            addColumn() {
+                if(this.columnName==="" || this.columnType ===""){
+                    if(this.columnName===""){
+                        Materialize.toast('Please enter the column title', 1000)
+                    }else{
+                        Materialize.toast('Please choose the column data type', 1000)
+                    }
+
+                }else{
                     this.dataTypes.push({
                         columnName:this.columnName,
                         columnType:this.columnType
                     });
                     $('#modal1').modal('close');
-                }else{
-                    Materialize.toast('Please enter the column title', 1000)
                 }
-            }
+            },
         }
 
     }
