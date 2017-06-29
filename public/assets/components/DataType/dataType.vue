@@ -87,9 +87,6 @@
         props:{
             number:{
                 type: Number,
-            },
-            trigger:{
-                type: Boolean
             }
         },
         components:{

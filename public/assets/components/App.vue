@@ -14,14 +14,11 @@
                 </div>
             </div>
 
-            <data-type :trigger="trigger" @dataGenerated="data=$event" :number="parseInt(number)"></data-type>
+            <data-type :number="parseInt(number)"></data-type>
             <div class="row col s12">
                 <button class="waves-effect waves-light btn col s12 getdata disabled" @click="getSampleData">Get data</button>
             </div>
             <div class="row">
-                <div class="card-content black-text col s12">
-                    Date Set generated: {{i}}
-                </div>
                 <div class="card-content black-text col s12">
                     {{data}}
                 </div>
@@ -39,8 +36,7 @@
         data() {
             return {
                 data: {},
-                number:0,
-                i:0
+                number:0
             }
         },
         components:{
@@ -55,10 +51,10 @@
         created() {
             const vm = this;
             dataBus.$on('dataGenerated',(data) => {
-                //console.log(data);
+                vm.data = {};
                 vm.data = data;
+                console.log("new data");
                 console.log(vm.data);
-                vm.i++;
             });
         }
     }
