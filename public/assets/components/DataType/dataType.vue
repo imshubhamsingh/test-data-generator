@@ -53,7 +53,7 @@
                     <li v-for="(dataType, index) in dataTypes">
                         <div class="collapsible-header"><a @click="remove($index)"><i class="fa fa-trash" aria-hidden="true"></i></a> {{dataType.columnName}}</div>
                         <!--<div class="collapsible-body"><name-generator :dataReady="dataGenCall" @nameGenerated="dataGen+=$event"></name-generator></div>-->
-                        <div class="collapsible-body"><component :is="dataType.columnType" :dataReady="dataGenCall" :number="parseInt(number)" :dataCollector="dataCollector"></component></div>
+                        <div class="collapsible-body"><component :is="dataType.columnType" :number="parseInt(number)" :dataCollector="dataCollector"></component></div>
                     </li>
                 </ul>
             </div>
@@ -71,8 +71,6 @@
     export default{
         data() {
             return {
-                dataGen: { },
-                dataGenCall: this.trigger,
                 dataTypes: [
                     {
                         columnName:"Name",
@@ -97,18 +95,6 @@
         components:{
             nameGenerator,
             dateGenerator
-        },
-        watch:{
-            dataGen() {
-                console.log(this.dataGen);
-
-            },
-            trigger() {
-                this.dataGenCall = !this.dataGenCall;
-            }
-        },
-        computed:{
-
         },
         methods:{
             remove(index) {

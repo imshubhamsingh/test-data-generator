@@ -19,7 +19,10 @@
                 <button class="waves-effect waves-light btn col s12 getdata disabled" @click="getSampleData">Get data</button>
             </div>
             <div class="row">
-                <div v-if="data" class="card-content white-text col s12">
+                <div class="card-content black-text col s12">
+                    Date Set generated: {{i}}
+                </div>
+                <div class="card-content black-text col s12">
                     {{data}}
                 </div>
             </div>
@@ -36,8 +39,8 @@
         data() {
             return {
                 data: {},
-                trigger:false,
-                number:0
+                number:0,
+                i:0
             }
         },
         components:{
@@ -55,6 +58,7 @@
                 //console.log(data);
                 vm.data = data;
                 console.log(vm.data);
+                vm.i++;
             });
         }
     }
@@ -77,7 +81,7 @@
     %colour {
         color:#302953;
     }
-    input[type=text]:focus:not([readonly]){
+    input[type=text]:focus:not([readonly]),input[type=number]:focus:not([readonly]){
         & + label{
             @extend %colour ;
         }
