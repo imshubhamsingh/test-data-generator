@@ -3,7 +3,7 @@
         <div class="container section">
             <div class="row">
                 <div class="col s12 input-field">
-                    <select id="nameOption">
+                    <select id="nameOption" v-model="choice">
                         <option disabled value="" selected>Choose your option</option>
                         <option value="fullNames">Full Names</option>
                         <option value="maleNames">Male Names</option>
@@ -20,8 +20,6 @@
 
 <script>
     import {dataBus} from "../../../js/app";
-    console.log("+++++");
-    console.log(dataBus);
     import axios from "axios";
     console.log("In name.vue");
     export default{
@@ -32,17 +30,19 @@
             }
         },
         mounted() {
-            const vm = this;
-            $(document).ready(() => {
-                $('#nameOption').material_select();
-                $('#nameOption').on('change', event => {
-                    vm.choice = event.currentTarget.value;
-                    if( $(".getdata").hasClass("disabled")){
-                        $(".getdata").removeClass("disabled")
-                    }
-                    //console.log(choice);
-                });
-                console.log("In name Option")
+            var suspend = false;
+            $('#nameOption').material_select();
+            $('#nameOption').on('change', function() {
+                if (!suspend) {
+                    suspend = true;
+                    var event = new CustomEvent('change', {
+                        detail: 'change',
+                        bubbles: true
+                    });
+                    $(this).get(0).dispatchEvent(event);
+                } else {
+                    suspend = false;
+                }
             });
         },
         props:{

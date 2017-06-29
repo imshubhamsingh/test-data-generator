@@ -16,7 +16,7 @@
 
             <data-type :number="parseInt(number)"></data-type>
             <div class="row col s12">
-                <button class="waves-effect waves-light btn col s12 getdata disabled" @click="getSampleData">Get data</button>
+                <button class="waves-effect waves-light btn col s12 getdata" @click="getSampleData">Get data</button>
             </div>
             <div class="row">
                 <div class="card-content black-text col s12">
@@ -84,6 +84,13 @@
         border-bottom: 1px solid #302953;
         box-shadow: 0 1px 0 0 #302953;
         color:#302953;
+    }
+    input[type=text]{
+        &.valid{
+            border-bottom: 1px solid #9e9e9e !important;
+            box-shadow: 0 1px 0 0 #9e9e9e !important;
+            color: #302953 !important;
+        }
     }
 
 

@@ -67,6 +67,7 @@
 <script>
     import nameGenerator from "./HumanData/names.vue";
     import dateGenerator from "./HumanData/dates.vue";
+    import companyGenerator from "./HumanData/companies.vue";
     console.log("In dataType.vue");
     export default{
         data() {
@@ -91,7 +92,8 @@
         },
         components:{
             nameGenerator,
-            dateGenerator
+            dateGenerator,
+            companyGenerator
         },
         methods:{
             remove(index) {
@@ -145,6 +147,12 @@
         border-bottom: 1px solid #000;
         box-shadow: 0 1px 0 0 #000;
         color:#000;
+    }
+    [type=radio]:checked {
+        & + label:after{
+            background-color: #343142 !important;
+            border: 2px solid #343142 !important;
+        }
     }
 
 </style>

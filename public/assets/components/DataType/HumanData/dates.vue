@@ -3,7 +3,7 @@
         <div class="container section">
             <div class="row">
                 <div class="col s12 m12 l12 input-field">
-                    <select id="dateOption">
+                    <select id="dateOption" v-model="choice">
                         <option disabled value="" selected>Choose your option</option>
                         <option value="m d,y">Jun 10, 2017</option>
                         <option value="M ds, y">June 10th 2017</option>
@@ -41,27 +41,28 @@
             return {
                 date: [],
                 choice: "",
-                minDate:new Date(25-3-2010),
+                minDate:new Date(),
                 maxDate:new Date(),
             }
         },
         mounted() {
-            const vm = this;
-            $(document).ready(() => {
-                $('#dateOption').material_select();
-                $('.datepicker').pickadate({
-                    selectMonths: true, // Creates a dropdown to control month
-                    selectYears: 15 // Creates a dropdown of 15 years to control year
-                });
-                $('#dateOption').on('change', event => {
-                    console.log(event.currentTarget.value);
-                    vm.choice = event.currentTarget.value;
-                    if( $(".getdata").hasClass("disabled")){
-                        $(".getdata").removeClass("disabled")
-                    }
-                    //console.log(choice);
-                });
-                console.log("In date Option")
+            $('.datepicker').pickadate({
+                selectMonths: true, // Creates a dropdown to control month
+                selectYears: 15 // Creates a dropdown of 15 years to control year
+            });
+            var suspend = false;
+            $('#dateOption').material_select();
+            $('#dateOption').on('change', function() {
+                if (!suspend) {
+                    suspend = true;
+                    var event = new CustomEvent('change', {
+                        detail: 'change',
+                        bubbles: true
+                    });
+                    $(this).get(0).dispatchEvent(event);
+                } else {
+                    suspend = false;
+                }
             });
         },
         props:{
