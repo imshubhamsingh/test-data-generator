@@ -1,0 +1,6 @@
+.idea
+node_modules
+.idea/modules.xml
+.idea/test-data-generator.iml
+.idea/workspace.xml
+node_modules/
