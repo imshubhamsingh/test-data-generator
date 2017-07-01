@@ -6,6 +6,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Shubham Singh",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/imshubhamsingh/test-data-generator.git"
+  },
   "license": "MIT",
   "dependencies": {
     "axios": "^0.16.2",
