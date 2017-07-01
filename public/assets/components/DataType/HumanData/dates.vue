@@ -126,5 +126,7 @@
 </script>
 
 <style>
-
+    .picker__box {
+        margin-top: 10% !important;
+    }
 </style>
