@@ -15,7 +15,7 @@
                         <option value="d-m-y">10-06-2017</option>
                         <option value="d.m.y">06-10-2017</option>
                     </select>
-                    <label>Select Date Type</label>
+                    <label for="dateOption">Select Date Type</label>
                 </div>
                 <div class="col s12 m12 l12">
                     <div class="input-field col s12 m6">
@@ -48,25 +48,40 @@
             }
         },
         mounted() {
+            Date.prototype.isValid = function () {
+                return this.getTime() === this.getTime();
+            };
             var vm = this;
             $("#from").pickadate({
                 selectMonths: true, // Creates a dropdown to control month
                 selectYears: 15, // Creates a dropdown of 15 years to control year
                 formatSubmit: 'mm/dd/yyyy',
+                container: 'body',
                 onClose() {
-                    console.log('from');
+                  //  console.log('from');
+                  //  console.log(vm.realMindate);
                     vm.realMinDate = new Date($('#from').val());
-                    vm.minDate = vm.realMinDate.toString().split(' ').slice(2,3).join(' ')+" "+vm.realMinDate.toString().split(' ').slice(1,2).join(' ')+", "+vm.realMinDate.toString().split(' ').slice(3,4).join(' ');
+                    if(!vm.realMinDate.isValid()){
+                        vm.minDate="";
+                    }else{
+                        vm.minDate = vm.realMinDate.toString().split(' ').slice(2,3).join(' ')+" "+vm.realMinDate.toString().split(' ').slice(1,2).join(' ')+", "+vm.realMinDate.toString().split(' ').slice(3,4).join(' ');
+                    }
                 }
             });
             $("#to").pickadate({
                 selectMonths: true, // Creates a dropdown to control month
                 selectYears: 15, // Creates a dropdown of 15 years to control year
                 formatSubmit: 'mm/dd/yyyy',
+                container: 'body',
                 onClose() {
-                  //  console.log('from');
+                  //  console.log('to');
                     vm.realMaxDate = new Date($('#to').val());
-                    vm.maxDate = vm.realMaxDate.toString().split(' ').slice(2,3).join(' ')+" "+vm.realMaxDate.toString().split(' ').slice(1,2).join(' ')+", "+vm.realMaxDate.toString().split(' ').slice(3,4).join(' ');
+                   // console.log(vm.realMaxDate);
+                    if(!vm.realMaxDate.isValid()){
+                        vm.maxDate=""
+                    }else{
+                        vm.maxDate = vm.realMaxDate.toString().split(' ').slice(2,3).join(' ')+" "+vm.realMaxDate.toString().split(' ').slice(1,2).join(' ')+", "+vm.realMaxDate.toString().split(' ').slice(3,4).join(' ');
+                    }
                 }
             });
             var suspend = false;
@@ -95,7 +110,7 @@
                 //console.log("/api/names/"+choice+"/?n="+vm.number);
               //  console.log(`/api/dates?minYear=${vm.realMinDate.getFullYear()}&maxYear=${vm.realMaxDate.getFullYear()}&format=${vm.choice}&n=${vm.number}`);
                 axios.get(`/api/dates?minYear=${vm.realMinDate.getFullYear()}&maxYear=${vm.realMaxDate.getFullYear()}&format=${vm.choice}&n=${vm.number}`).then(response => {
-                    console.log(response.data.dateList);
+                   // console.log(response.data.dateList);
                     vm.date = [];
                     vm.date = response.data.dateList;
                     dataBus.dataCollector({

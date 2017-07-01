@@ -9,8 +9,8 @@
                     <label for="last_name">Enter Data set name</label>
                 </div>
                 <div class="input-field col s12 m6 l6">
-                    <input type="number" v-model="number" min="0" max="500">
-                    <label>List size</label>
+                    <input type="number" id="listSize" v-model="number" min="0" max="500">
+                    <label for="listSize">List size</label>
                 </div>
             </div>
 
@@ -54,7 +54,7 @@
                 vm.data = {};
                 vm.data = data;
                 console.log("new data");
-                console.log(vm.data);
+                //console.log(vm.data);
             });
         }
     }

@@ -51,7 +51,7 @@
             }
         },
         created() {
-            console.log(dataBus);
+          //  console.log(dataBus);
             const vm = this;
             dataBus.$on('calltoGenerateData',function () {
                 console.log(vm.number);                //console.log("/api/names/"+choice+"/?n="+vm.number);
