@@ -40,6 +40,32 @@
                                     </p>
                                 </div>
                             </div>
+                            <div>
+                                <h6>Geo Data</h6>
+                                <div class="row">
+                                    <p class="col s3 m2 l1">
+                                        <input type="radio" value="countryGenerator" id="country" v-model="columnType"/>
+                                        <label for="country">Country</label>
+                                    </p>
+                                    <p class="col s3 m2 l1">
+                                        <input type="radio" value="regionGenerator" id="region" v-model="columnType" />
+                                        <label for="region">Region</label>
+                                    </p >
+                                    <p class="col s3 m2 l1">
+                                        <input type="radio" value="latLongGenerator" id="latLong" v-model="columnType" />
+                                        <label for="latLong">Latitude/Longitude</label>
+                                    </p>
+                                    <p class="col s3 m2 l1">
+                                        <input type="radio" value="cityGenerator" id="city" v-model="columnType" />
+                                        <label for="city">City</label>
+                                    </p>
+                                    <p class="col s3 m2 l1">
+                                        <input type="radio" value="zipGenerator" id="zip" v-model="columnType" />
+                                        <label for="zip">Zip/Postal</label>
+                                    </p>
+
+                                </div>
+                            </div>
                             <div class="modal-footer">
                                 <button class="modal-action waves-effect waves-green btn-flat"  @click="addColumn">Add Column</button>
                             </div>
@@ -65,9 +91,13 @@
 </template>
 
 <script>
+    //Human data
     import nameGenerator from "./HumanData/names.vue";
     import dateGenerator from "./HumanData/dates.vue";
     import companyGenerator from "./HumanData/companies.vue";
+    //Geo Data
+    import countryGenerator from "./GeoData/countries.vue"
+
     console.log("In dataType.vue");
     export default{
         data() {
@@ -93,7 +123,8 @@
         components:{
             nameGenerator,
             dateGenerator,
-            companyGenerator
+            companyGenerator,
+            countryGenerator
         },
         methods:{
             remove(index) {

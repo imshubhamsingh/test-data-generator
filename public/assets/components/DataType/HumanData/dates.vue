@@ -41,8 +41,8 @@
             return {
                 date: [],
                 choice: "",
-                minDate:new Date(),
-                maxDate:new Date(),
+                minDate:"",
+                maxDate:"",
             }
         },
         mounted() {

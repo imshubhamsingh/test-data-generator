@@ -24,15 +24,15 @@ export const dataBus = new Vue({
             for(const key in vm.data){
                 if(key === event.type){
                     vm.data[key]=event.data;
-                    console.log("key already exist");
-                    console.log(vm.data);
+                    // console.log("key already exist");
+                    // console.log(vm.data);
                     this.$emit('dataGenerated',vm.data);
                     return;
                 }
             }
             vm.data[event.type]=event.data;
-            console.log("new key");
-            console.log(vm.data);
+            // console.log("new key");
+            // console.log(vm.data);
             this.$emit('dataGenerated',vm.data);
         }
     }

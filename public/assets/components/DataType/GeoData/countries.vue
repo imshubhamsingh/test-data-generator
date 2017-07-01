@@ -5,11 +5,11 @@
 <script>
     import {dataBus} from "../../../js/app";
     import axios from "axios";
-    console.log("In company.vue");
+    console.log("In country.vue");
     export default{
         data() {
             return {
-                company: []
+                country: []
             }
         },
         props:{
@@ -21,14 +21,14 @@
             const vm = this;
             dataBus.$on('calltoGenerateData',function () {
                 console.log(`/api/companies?n=${vm.number}`);
-                axios.get(`/api/companies?n=${vm.number}`).then(response => {
+                axios.get(`api/countries?n=${vm.number}`).then(response => {
                     // console.log("company data");
                     console.log(response.data);
-                    vm.company = [];
-                    vm.company = response.data;
+                    vm.country = [];
+                    vm.country = response.data;
                     dataBus.dataCollector({
-                        type:"company",
-                        data: vm.company
+                        type:"country",
+                        data: vm.country
                     });
                 }).catch(e => {
                     console.log("Error: ");

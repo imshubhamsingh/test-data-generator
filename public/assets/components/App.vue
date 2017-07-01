@@ -19,8 +19,8 @@
                 <button class="waves-effect waves-light btn col s12 getdata" @click="getSampleData">Get data</button>
             </div>
             <div class="row">
-                <div class="card-content black-text col s12">
-                    {{data}}
+                <div class="card-content black-text col s12" v-for="dataset in data">
+                    {{dataset}}
                 </div>
             </div>
         </div>
