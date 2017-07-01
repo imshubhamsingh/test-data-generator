@@ -15,8 +15,15 @@
                                 <input id="columnTitle" type="text" v-model="columnName" required aria-required="true">
                                 <label for="columnTitle">Column Title</label>
                             </div>
-                            <div>
-                                <h6>Human Data</h6>
+                            <div class="col s12">
+                                <ul class="tabs">
+                                    <li class="tab col s3"><a class="active" href="#humanData">Human Data</a></li>
+                                    <li class="tab col s3"><a href="#geoData">Geo Data</a></li>
+                                    <li class="tab col s3"><a href="#creditCardData">Credit Card Data</a></li>
+                                    <li class="tab col s3"><a href="#text">Text</a></li>
+                                </ul>
+                            </div>
+                            <div id="humanData" class="col s12">
                                 <div class="row">
                                     <p class="col s3 m2 l1">
                                         <input type="radio" value="nameGenerator" id="names" v-model="columnType"/>
@@ -40,8 +47,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div>
-                                <h6>Geo Data</h6>
+                            <div id="geoData" class="col s12">
                                 <div class="row">
                                     <p class="col s3 m2 l1">
                                         <input type="radio" value="countryGenerator" id="country" v-model="columnType"/>
@@ -52,16 +58,16 @@
                                         <label for="region">Region</label>
                                     </p >
                                     <p class="col s3 m2 l1">
-                                        <input type="radio" value="latLongGenerator" id="latLong" v-model="columnType" />
-                                        <label for="latLong">Latitude/Longitude</label>
-                                    </p>
-                                    <p class="col s3 m2 l1">
                                         <input type="radio" value="cityGenerator" id="city" v-model="columnType" />
                                         <label for="city">City</label>
                                     </p>
                                     <p class="col s3 m2 l1">
                                         <input type="radio" value="zipGenerator" id="zip" v-model="columnType" />
-                                        <label for="zip">Zip/Postal</label>
+                                        <label for="zip">Zip</label>
+                                    </p>
+                                    <p class="col s3 m2 l1">
+                                        <input type="radio" value="latLongGenerator" id="latLong" v-model="columnType" />
+                                        <label for="latLong">Latitude/Longitude</label>
                                     </p>
 
                                 </div>
@@ -114,6 +120,8 @@
         },
         mounted() {
             $('.modal').modal();
+            $('ul.tabs').tabs();
+            $('ul.tabs').tabs('select_tab', 'tab_id');
         },
         props:{
             number:{
@@ -157,7 +165,7 @@
     }
     .modal{
         &.bottom-sheet{
-            max-height: 60% !important;
+            max-height: 70% !important;
         }
     }
     .collapsible-body{
@@ -185,5 +193,6 @@
             border: 2px solid #343142 !important;
         }
     }
+
 
 </style>
