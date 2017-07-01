@@ -10,68 +10,72 @@
                 <div id="modal1" class="modal bottom-sheet">
                     <div class="modal-content">
                         <h4>Column Details</h4>
-                        <div  method="post">
+                        <div>
                             <div class="input-field">
-                                <input id="columnTitle" type="text" v-model="columnName" required aria-required="true">
-                                <label for="columnTitle">Column Title</label>
+                                <input id="columnTitle" type="text" v-model="columnName" required aria-required="true" autocomplete="off">
+                                <label for="columnTitle" >Column Title</label>
                             </div>
-                            <div class="col s12">
-                                <ul class="tabs">
-                                    <li class="tab col s3"><a class="active" href="#humanData">Human Data</a></li>
-                                    <li class="tab col s3"><a href="#geoData">Geo Data</a></li>
-                                    <li class="tab col s3"><a href="#creditCardData">Credit Card Data</a></li>
-                                    <li class="tab col s3"><a href="#text">Text</a></li>
-                                </ul>
-                            </div>
-                            <div id="humanData" class="col s12">
-                                <div class="row">
-                                    <p class="col s3 m2 l1">
-                                        <input type="radio" value="nameGenerator" id="names" v-model="columnType"/>
-                                        <label for="names">Names</label>
-                                    </p>
-                                    <p class="col s3 m2 l1">
-                                        <input type="radio" value="dateGenerator" id="date" v-model="columnType" />
-                                        <label for="date">Date</label>
-                                    </p >
-                                    <p class="col s3 m2 l1">
-                                        <input type="radio" value="emailGenerator" id="email" v-model="columnType" />
-                                        <label for="email">Email</label>
-                                    </p>
-                                    <p class="col s3 m2 l1">
-                                        <input type="radio" value="phoneGenerator" id="phone" v-model="columnType" />
-                                        <label for="phone">Phone</label>
-                                    </p>
-                                    <p class="col s3 m2 l1">
-                                        <input type="radio" value="companyGenerator" id="company" v-model="columnType" />
-                                        <label for="company">Company</label>
-                                    </p>
+                            <div class="row" style="margin-bottom: -21px;">
+                                <div class="col s12">
+                                    <ul class="tabs" id="optionList">
+                                        <li class="tab col s3"><a href="#humanData" class="active">Human Data</a></li>
+                                        <li class="tab col s3"><a href="#geoData">Geo Data</a></li>
+                                        <li class="tab col s3"><a href="#creditCardData">Credit Card Data</a></li>
+                                        <li class="tab col s3"><a href="#text">Text</a></li>
+                                        <li class="indicator" style="background-color:#fafafa !important"></li>
+                                    </ul>
                                 </div>
-                            </div>
-                            <div id="geoData" class="col s12">
-                                <div class="row">
-                                    <p class="col s3 m2 l1">
-                                        <input type="radio" value="countryGenerator" id="country" v-model="columnType"/>
-                                        <label for="country">Country</label>
-                                    </p>
-                                    <p class="col s3 m2 l1">
-                                        <input type="radio" value="regionGenerator" id="region" v-model="columnType" />
-                                        <label for="region">Region</label>
-                                    </p >
-                                    <p class="col s3 m2 l1">
-                                        <input type="radio" value="cityGenerator" id="city" v-model="columnType" />
-                                        <label for="city">City</label>
-                                    </p>
-                                    <p class="col s3 m2 l1">
-                                        <input type="radio" value="zipGenerator" id="zip" v-model="columnType" />
-                                        <label for="zip">Zip</label>
-                                    </p>
-                                    <p class="col s3 m2 l1">
-                                        <input type="radio" value="latLongGenerator" id="latLong" v-model="columnType" />
-                                        <label for="latLong">Latitude/Longitude</label>
-                                    </p>
+                                <div id="humanData" class="col s12">
+                                    <div class="row">
+                                        <p class="col s3 m2 l1">
+                                            <input type="radio" value="nameGenerator" id="names" v-model="columnType"/>
+                                            <label for="names" class="black-text">Names</label>
+                                        </p>
+                                        <p class="col s3 m2 l1">
+                                            <input type="radio" value="dateGenerator" id="date" v-model="columnType" />
+                                            <label for="date" class="black-text">Date</label>
+                                        </p >
+                                        <p class="col s3 m2 l1">
+                                            <input type="radio" value="emailGenerator" id="email" v-model="columnType" />
+                                            <label for="email" class="black-text">Email</label>
+                                        </p>
+                                        <p class="col s3 m2 l1">
+                                            <input type="radio" value="phoneGenerator" id="phone" v-model="columnType" />
+                                            <label for="phone" class="black-text">Phone</label>
+                                        </p>
+                                        <p class="col s3 m2 l1">
+                                            <input type="radio" value="companyGenerator" id="company" v-model="columnType" />
+                                            <label for="company" class="black-text">Company</label>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div id="geoData" class="col s12">
+                                    <div class="row">
+                                        <p class="col s3 m2 l1">
+                                            <input type="radio" value="countryGenerator" id="country" v-model="columnType"/>
+                                            <label for="country" class="black-text">Country</label>
+                                        </p>
+                                        <p class="col s3 m2 l1">
+                                            <input type="radio" value="regionGenerator" id="region" v-model="columnType" />
+                                            <label for="region" class="black-text">Region</label>
+                                        </p >
+                                        <p class="col s3 m2 l1">
+                                            <input type="radio" value="cityGenerator" id="city" v-model="columnType" />
+                                            <label for="city" class="black-text">City</label>
+                                        </p>
+                                        <p class="col s3 m2 l1">
+                                            <input type="radio" value="zipGenerator" id="zip" v-model="columnType" />
+                                            <label for="zip" class="black-text">Zip</label>
+                                        </p>
+                                        <p class="col s3 m2 l1">
+                                            <input type="radio" value="latLongGenerator" id="latLong" v-model="columnType" />
+                                            <label for="latLong" class="black-text">Latitude/Longitude</label>
+                                        </p>
 
+                                    </div>
                                 </div>
                             </div>
+
                             <div class="modal-footer">
                                 <button class="modal-action waves-effect waves-green btn-flat"  @click="addColumn">Add Column</button>
                             </div>
@@ -120,8 +124,8 @@
         },
         mounted() {
             $('.modal').modal();
-            $('ul.tabs').tabs();
-            $('ul.tabs').tabs('select_tab', 'tab_id');
+            $('ul#optionList').tabs();
+            $('#optionList').tabs('select_tab', 'tab_id');
         },
         props:{
             number:{
@@ -161,8 +165,9 @@
 
 <style lang="scss" scoped>
     label{
-    color:#000;
+    color:#949494;
     }
+
     .modal{
         &.bottom-sheet{
             max-height: 70% !important;
@@ -193,6 +198,16 @@
             border: 2px solid #343142 !important;
         }
     }
-
-
+    .tab{
+        background-color: #fafafa !important;
+        .tabs & a{
+            color:rgba(105, 105, 105, 0.7) !important;
+        }
+        .tabs & a.active, .tabs & a:hover{
+            color:#000 !important;
+        }
+    }
+    .tabs{
+        background-color: #fafafa !important;
+    }
 </style>

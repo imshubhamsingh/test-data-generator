@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="input-field col s12 m6 l6">
                     <i class="fa fa-table prefix" style="margin-top: 10px;color:#A89E9E" aria-hidden="true"></i>
-                    <input id="last_name" type="text" class="validate">
+                    <input id="last_name" type="text" class="validate" autocomplete="off">
                     <label for="last_name">Enter Data set name</label>
                 </div>
                 <div class="input-field col s12 m6 l6">
