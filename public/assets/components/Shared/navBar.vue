@@ -7,10 +7,10 @@
             <span class="generator">generator</span>
         </a>
     </div>
-    <div class="nav-content center">
+    <div class="nav-content">
         <ul class="tabs tabs-transparent">
-            <li class="tab"><a href="/">Generate</a></li>
-            <li class="tab"><a class="active" href="/about">About</a></li>
+            <li class="tab col s4"><a href="/">Generate</a></li>
+            <li class="tab col s4"><a class="active" href="/about">About</a></li>
         </ul>
     </div>
 </nav>

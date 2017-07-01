@@ -56,7 +56,6 @@
                 selectMonths: true, // Creates a dropdown to control month
                 selectYears: 15, // Creates a dropdown of 15 years to control year
                 formatSubmit: 'mm/dd/yyyy',
-                container: 'body',
                 onClose() {
                   //  console.log('from');
                   //  console.log(vm.realMindate);
@@ -72,7 +71,6 @@
                 selectMonths: true, // Creates a dropdown to control month
                 selectYears: 15, // Creates a dropdown of 15 years to control year
                 formatSubmit: 'mm/dd/yyyy',
-                container: 'body',
                 onClose() {
                   //  console.log('to');
                     vm.realMaxDate = new Date($('#to').val());
