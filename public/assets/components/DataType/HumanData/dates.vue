@@ -43,7 +43,7 @@
                 choice: "",
                 minDate:"",
                 maxDate:"",
-                realMindate:"",
+                realMinDate:"",
                 realMaxDate:""
             }
         },
@@ -107,7 +107,7 @@
             dataBus.$on('calltoGenerateData',function () {
                 //console.log("/api/names/"+choice+"/?n="+vm.number);
               //  console.log(`/api/dates?minYear=${vm.realMinDate.getFullYear()}&maxYear=${vm.realMaxDate.getFullYear()}&format=${vm.choice}&n=${vm.number}`);
-                axios.get(`/api/dates?minYear=${vm.realMinDate.getFullYear()}&maxYear=${vm.realMaxDate.getFullYear()}&format=${vm.choice}&n=${vm.number}`).then(response => {
+                axios.get(`/api/dates?realMinDate=${vm.realMinDate}&realMaxDate=${vm.realMaxDate}&format=${vm.choice}&n=${vm.number}`).then(response => {
                    // console.log(response.data.dateList);
                     vm.date = [];
                     vm.date = response.data.dateList;

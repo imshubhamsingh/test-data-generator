@@ -30,8 +30,17 @@ var dateformat = function (format,min,max) {
             return i.toString();
         }
     }
+    function randomDate(min, max, startHour, endHour) {
+        var start = new Date(min);
+        var end = new Date(max);
+        var date = new Date(+start + Math.random() * (end - start));
+        var hour = startHour + Math.random() * (endHour - startHour) | 0;
+        date.setHours(hour);
+        return date;
+    }
 
-    var fullDate = new Date(parseInt(Math.floor(Math.random()*(max-min)),10) + parseInt(min,10),Math.floor(Math.random()*12),Math.floor(Math.random()*31));
+    //var fullDate = new Date(parseInt(Math.floor(Math.random()*(max-min)),10) + parseInt(min,10),Math.floor(Math.random()*12),Math.floor(Math.random()*31));
+    var fullDate = randomDate(min,max,1,0);
     if (format ==="m d,y") {//Jun 10, 2017
         date = monthNames[fullDate.getMonth()]+" "+fullDate.getDate()+", "+fullDate.getFullYear();
     }else if(format ==="M ds, y"){//June 10th, 2017
@@ -63,7 +72,7 @@ var dataController = function () {
             dateList.dateFormatType=req.query.format;
             dateList.dateList =[];
             for(i=0;i<req.query.n;i++){
-                dateList.dateList.push(dateformat(req.query.format,req.query.minYear,req.query.maxYear));
+                dateList.dateList.push(dateformat(req.query.format,req.query.realMinDate,req.query.realMaxDate));
             }
             res.json(dateList);
         };
