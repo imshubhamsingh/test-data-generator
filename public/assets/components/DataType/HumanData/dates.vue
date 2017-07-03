@@ -3,7 +3,7 @@
         <div class="container section">
             <div class="row">
                 <div class="col s12 m12 l12 input-field">
-                    <select id="dateOption" v-model="choice">
+                    <select :id="id" v-model="choice">
                         <option disabled value="" selected>Choose your option</option>
                         <option value="m d,y">Jun 10, 2017</option>
                         <option value="M ds, y">June 10th 2017</option>
@@ -83,8 +83,8 @@
                 }
             });
             var suspend = false;
-            $('#dateOption').material_select();
-            $('#dateOption').on('change', function() {
+            $('#'+vm.id).material_select();
+            $('#'+vm.id).on('change', function() {
                 if (!suspend) {
                     suspend = true;
                     var event = new CustomEvent('change', {
@@ -100,6 +100,9 @@
         props:{
             number:{
                 type: Number,
+            },
+            id:{
+                type:String
             }
         },
         created() {

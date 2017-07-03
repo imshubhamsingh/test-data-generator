@@ -3,7 +3,7 @@
         <div class="container section">
             <div class="row">
                 <div class="col s12 input-field">
-                    <select id="nameOption" v-model="choice">
+                    <select :id="id" v-model="choice">
                         <option disabled value="" selected>Choose your option</option>
                         <option value="fullNames">Full Names</option>
                         <option value="maleNames">Male Names</option>
@@ -30,9 +30,10 @@
             }
         },
         mounted() {
+            var vm = this;
             var suspend = false;
-            $('#nameOption').material_select();
-            $('#nameOption').on('change', function() {
+            $('#'+this.id).material_select();
+            $('#'+this.id).on('change', function() {
                 if (!suspend) {
                     suspend = true;
                     var event = new CustomEvent('change', {
@@ -48,6 +49,9 @@
         props:{
             number:{
                 type: Number
+            },
+            id:{
+                type:String
             }
         },
         created() {

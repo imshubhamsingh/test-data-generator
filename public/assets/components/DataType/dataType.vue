@@ -87,9 +87,9 @@
             <div v-if="dataTypes.length>0">
                 <ul class="collapsible" data-collapsible="accordion">
                     <li v-for="(dataType, index) in dataTypes">
-                        <div class="collapsible-header"><a @click="remove($index)"><i class="fa fa-trash" aria-hidden="true"></i></a> {{dataType.columnName}}</div>
+                        <div class="collapsible-header"><a @click="remove($index)" class="deleteIcon"><i class="fa fa-trash" aria-hidden="true"></i></a> {{dataType.columnName}}</div>
                         <!--<div class="collapsible-body"><name-generator :dataReady="dataGenCall" @nameGenerated="dataGen+=$event"></name-generator></div>-->
-                        <div class="collapsible-body"><component :is="dataType.columnType" :number="parseInt(number)" :dataCollector="dataCollector"></component></div>
+                        <div class="collapsible-body"><component :is="dataType.columnType" :number="parseInt(number)" :dataCollector="dataCollector" :id="dataType.columnType+parseInt(index)"></component></div>
                     </li>
                 </ul>
             </div>
@@ -209,5 +209,11 @@
     }
     .tabs{
         background-color: #fafafa !important;
+    }
+    .deleteIcon{
+        transition: all 0.5s;
+        &:hover{
+            color: #f44336;
+        }
     }
 </style>
