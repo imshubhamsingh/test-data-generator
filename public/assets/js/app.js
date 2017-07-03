@@ -13,24 +13,27 @@ import App from "../components/App.vue";
 
 export const dataBus = new Vue({
     data() {
-        return{
-            data:{}
+        return {
+            data: []
         }
     },
     methods:{
         dataCollector(event) {
             //console.log(event);
             const vm = this;
-            for(const key in vm.data){
-                if(key === event.type){
-                    vm.data[key]=event.data;
+            for(let i= 0 ;i<vm.data.length;i++){
+                if(vm.data[i].fieldName === event.fieldName){
+                    vm.data[i].data=event.data;
                     // console.log("key already exist");
                     // console.log(vm.data);
                     this.$emit('dataGenerated',vm.data);
                     return;
                 }
             }
-            vm.data[event.type]=event.data;
+            vm.data.push({
+                fieldName:event.fieldName,
+                data: event.data
+            });
             // console.log("new key");
             // console.log(vm.data);
             this.$emit('dataGenerated',vm.data);

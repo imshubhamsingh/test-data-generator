@@ -52,6 +52,9 @@
             },
             id:{
                 type:String
+            },
+            fieldName:{
+                type:String
             }
         },
         created() {
@@ -66,7 +69,8 @@
                     vm.names = response.data;
                     dataBus.dataCollector({
                         type: "name",
-                        data: vm.names
+                        data: vm.names,
+                        fieldName: vm.fieldName
                     });
                 }).catch(e => {
                     console.log("Error: ");

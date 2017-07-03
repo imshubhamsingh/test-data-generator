@@ -15,6 +15,9 @@
         props:{
             number:{
                 type: Number,
+            },
+            fieldName:{
+                type:String
             }
         },
         created() {
@@ -28,7 +31,8 @@
                     vm.country = response.data;
                     dataBus.dataCollector({
                         type:"country",
-                        data: vm.country
+                        data: vm.country,
+                        fieldName: vm.fieldName
                     });
                 }).catch(e => {
                     console.log("Error: ");

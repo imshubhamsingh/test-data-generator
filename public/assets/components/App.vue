@@ -20,7 +20,8 @@
             </div>
             <div class="row">
                 <div class="card-content black-text col s12" v-for="dataset in data">
-                    {{dataset}}
+                    <p class="flow-text" style="margin-bottom: 0px !important;">{{dataset.fieldName}}</p>
+                    {{dataset.data}}
                 </div>
             </div>
         </div>
@@ -45,6 +46,7 @@
         },
         methods:{
             getSampleData() {
+                dataBus.data = [];
                 dataBus.$emit('calltoGenerateData');
             }
         },

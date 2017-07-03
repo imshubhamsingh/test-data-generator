@@ -15,20 +15,24 @@
         props:{
             number:{
                 type: Number,
+            },
+            fieldName:{
+                type:String
             }
         },
         created() {
             const vm = this;
             dataBus.$on('calltoGenerateData',function () {
-                console.log(`/api/companies?n=${vm.number}`);
+                //console.log(`/api/companies?n=${vm.number}`);
                 axios.get(`/api/companies?n=${vm.number}`).then(response => {
                     // console.log("company data");
-                    console.log(response.data);
+                   // console.log(response.data);
                     vm.company = [];
                     vm.company = response.data;
                     dataBus.dataCollector({
                         type:"company",
-                        data: vm.company
+                        data: vm.company,
+                        fieldName: vm.fieldName
                     });
                 }).catch(e => {
                     console.log("Error: ");

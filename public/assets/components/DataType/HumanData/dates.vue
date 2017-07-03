@@ -103,6 +103,9 @@
             },
             id:{
                 type:String
+            },
+            fieldName:{
+                type:String
             }
         },
         created() {
@@ -116,7 +119,8 @@
                     vm.date = response.data.dateList;
                     dataBus.dataCollector({
                         type:"date",
-                        data: vm.date
+                        data: vm.date,
+                        fieldName: vm.fieldName
                     });
                 }).catch(e => {
                     console.log("Error: ");
