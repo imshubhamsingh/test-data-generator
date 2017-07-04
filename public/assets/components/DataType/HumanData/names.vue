@@ -33,8 +33,8 @@
         mounted() {
             var vm = this;
             var suspend = false;
-            $('#'+this.id).material_select();
-            $('#'+this.id).on('change', function() {
+            $(`#${vm.id}`).material_select();
+            $(`#${vm.id}`).on('change', function() {
                 if (!suspend) {
                     suspend = true;
                     var event = new CustomEvent('change', {

@@ -84,8 +84,8 @@
                 }
             });
             var suspend = false;
-            $('#'+vm.id).material_select();
-            $('#'+vm.id).on('change', function() {
+            $(`#${vm.id}`).material_select();
+            $(`#${vm.id}`).on('change', function() {
                 if (!suspend) {
                     suspend = true;
                     var event = new CustomEvent('change', {
