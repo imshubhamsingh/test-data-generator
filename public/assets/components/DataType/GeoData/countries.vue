@@ -20,12 +20,9 @@
                 type:String
             }
         },
-        updated(){
-            const vm = this;
-            dataBus.$emit("fieldFilled");
-        },
         created() {
             const vm = this;
+            dataBus.$emit("fieldFilled");
             dataBus.$on('calltoGenerateData',function () {
                 console.log(`/api/companies?n=${vm.number}`);
                 axios.get(`api/countries?n=${vm.number}`).then(response => {
