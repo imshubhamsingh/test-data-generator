@@ -68,8 +68,8 @@
                                             <label for="zip" class="black-text">Zip</label>
                                         </p>
                                         <p class="col s3 m2 l1">
-                                            <input type="radio" value="latLongGenerator" id="latLong" v-model="columnType" />
-                                            <label for="latLong" class="black-text">Latitude/Longitude</label>
+                                            <input type="radio" value="latLngGenerator" id="latLng" v-model="columnType" />
+                                            <label for="latLng" class="black-text">Latitude/Longitude</label>
                                         </p>
 
                                     </div>
@@ -108,6 +108,7 @@
     import companyGenerator from "./HumanData/companies.vue";
     //Geo Data
     import countryGenerator from "./GeoData/countries.vue"
+    import latLngGenerator from "./GeoData/lat&long.vue"
 
     console.log("In dataType.vue");
     export default{
@@ -124,6 +125,8 @@
             }
         },
         mounted() {
+            console.log("collapsible");
+            $('.collapsible').collapsible();
             $('.modal').modal();
             $('ul#optionList').tabs();
             $('#optionList').tabs('select_tab', 'tab_id');
@@ -137,7 +140,8 @@
             nameGenerator,
             dateGenerator,
             companyGenerator,
-            countryGenerator
+            countryGenerator,
+            latLngGenerator
         },
         methods:{
             remove(index) {
