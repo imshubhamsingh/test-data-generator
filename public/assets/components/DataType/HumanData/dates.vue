@@ -19,12 +19,12 @@
                 </div>
                 <div class="col s12 m12 l12">
                     <div class="input-field col s12 m6">
-                        <input type="text" v-model="minDate" id="from" class="datepicker">
-                        <label for="from">From</label>
+                        <input type="text" v-model="minDate" :id="id+'from'" class="datepicker">
+                        <label :for="id+'from'"  >From</label>
                     </div>
                     <div class="input-field col s12 m6">
-                        <input type="text" v-model="maxDate" id="to" class="datepicker">
-                        <label for="to">To</label>
+                        <input type="text" v-model="maxDate" :id="id+'to'" class="datepicker">
+                        <label :for="id+'to'" >To</label>
                     </div>
                 </div>
             </div>
@@ -53,7 +53,7 @@
                 return this.getTime() === this.getTime();
             };
             var vm = this;
-            $("#from").pickadate({
+            $(`#${vm.id}from`).pickadate({
                 selectMonths: true, // Creates a dropdown to control month
                 selectYears: 15, // Creates a dropdown of 15 years to control year
                 formatSubmit: 'mm/dd/yyyy',
@@ -68,7 +68,7 @@
                     }
                 }
             });
-            $("#to").pickadate({
+            $(`#${vm.id}to`).pickadate({
                 selectMonths: true, // Creates a dropdown to control month
                 selectYears: 15, // Creates a dropdown of 15 years to control year
                 formatSubmit: 'mm/dd/yyyy',
@@ -112,7 +112,7 @@
         updated(){
             const vm = this;
             if(vm.changed === false){
-                if(vm.choice!==""){
+                if(vm.choice!=="" && vm.minDate!=="" && vm.maxDate !==""){
                     dataBus.$emit("fieldFilled");
                     vm.changed = true;
                 }
