@@ -60,7 +60,7 @@
                 onClose() {
                   //  console.log('from');
                   //  console.log(vm.realMindate);
-                    vm.realMinDate = new Date($('#from').val());
+                    vm.realMinDate = new Date($(`#${vm.id}from`).val());
                     if(!vm.realMinDate.isValid()){
                         vm.minDate="";
                     }else{
@@ -74,7 +74,7 @@
                 formatSubmit: 'mm/dd/yyyy',
                 onClose() {
                   //  console.log('to');
-                    vm.realMaxDate = new Date($('#to').val());
+                    vm.realMaxDate = new Date($(`#${vm.id}to`).val());
                    // console.log(vm.realMaxDate);
                     if(!vm.realMaxDate.isValid()){
                         vm.maxDate=""
