@@ -70,9 +70,9 @@
                 vm.fieldPresent++;
             });
             dataBus.$on('dataGenerated',(data) => {
-                vm.data = {};
+                vm.data = [];
                 vm.data = data;
-                console.log("new data");
+                //console.log("new data");
                 //console.log(vm.data);
             });
         }

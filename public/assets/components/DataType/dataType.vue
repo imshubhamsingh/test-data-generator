@@ -87,8 +87,7 @@
             <div>
                 <ul class="collapsible" data-collapsible="accordion" :class="{noFieldPresent:(dataTypes.length===0)}">
                     <li v-for="(dataType, index) in dataTypes">
-                        <div class="collapsible-header"><a @click="remove($index)" class="deleteIcon"><i class="fa fa-trash" aria-hidden="true"></i></a> {{dataType.columnName}}</div>
-                        <!--<div class="collapsible-body"><name-generator :dataReady="dataGenCall" @nameGenerated="dataGen+=$event"></name-generator></div>-->
+                        <div class="collapsible-header"><a @click="remove(index)" class="deleteIcon"><i class="fa fa-trash" aria-hidden="true"></i></a> {{dataType.columnName}}</div>
                         <div class="collapsible-body">
                             <component :is="dataType.columnType" :number="parseInt(number)" :dataCollector="dataCollector" :fieldName="dataType.columnName" :id="dataType.columnType+parseInt(index)">
 
@@ -142,6 +141,7 @@
         },
         methods:{
             remove(index) {
+                console.log(index);
                 this.dataTypes.splice(index,1);
             },
             addColumn() {

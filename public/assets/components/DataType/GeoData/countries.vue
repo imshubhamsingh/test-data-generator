@@ -24,7 +24,7 @@
             const vm = this;
             dataBus.$emit("fieldFilled");
             dataBus.$on('calltoGenerateData',function () {
-                console.log(`/api/companies?n=${vm.number}`);
+               // console.log(`/api/countries?n=${vm.number}`);
                 axios.get(`api/countries?n=${vm.number}`).then(response => {
                     // console.log("company data");
                     console.log(response.data);
