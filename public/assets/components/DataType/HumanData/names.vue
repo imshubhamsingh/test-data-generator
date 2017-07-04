@@ -26,7 +26,8 @@
         data() {
             return {
                 names: [],
-                choice: ""
+                choice: "",
+                changed:false,
             }
         },
         mounted() {
@@ -57,6 +58,16 @@
                 type:String
             }
         },
+        updated(){
+            const vm = this;
+            if(vm.changed === false){
+                if(vm.choice!==""){
+                    dataBus.$emit("fieldFilled");
+                    vm.changed = true;
+                }
+            }
+
+        },
         created() {
           //  console.log(dataBus);
             const vm = this;
@@ -77,6 +88,9 @@
                     console.log(e);
                 });
             })
+        },
+        destroyed(){
+            dataBus.$emit("fieldDestroyed");
         }
 
     }

@@ -15,7 +15,7 @@
                         <option value="d-m-y">10-06-2017</option>
                         <option value="d.m.y">06-10-2017</option>
                     </select>
-                    <label for="dateOption">Select Date Type</label>
+                    <label :for="id">Select Date Type</label>
                 </div>
                 <div class="col s12 m12 l12">
                     <div class="input-field col s12 m6">
@@ -44,7 +44,8 @@
                 minDate:"",
                 maxDate:"",
                 realMinDate:"",
-                realMaxDate:""
+                realMaxDate:"",
+                changed: false
             }
         },
         mounted() {
@@ -108,6 +109,15 @@
                 type:String
             }
         },
+        updated(){
+            const vm = this;
+            if(vm.changed === false){
+                if(vm.choice!==""){
+                    dataBus.$emit("fieldFilled");
+                    vm.changed = true;
+                }
+            }
+        },
         created() {
             const vm = this;
             dataBus.$on('calltoGenerateData',function () {
@@ -127,6 +137,9 @@
                     console.log(e);
                 });
             })
+        },
+        destroyed(){
+            dataBus.$emit("fieldDestroyed");
         }
     }
 

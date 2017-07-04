@@ -14,7 +14,8 @@ import App from "../components/App.vue";
 export const dataBus = new Vue({
     data() {
         return {
-            data: []
+            data: [],
+            disable:0
         }
     },
     methods:{

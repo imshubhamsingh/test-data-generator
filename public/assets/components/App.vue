@@ -16,7 +16,7 @@
 
             <data-type :number="parseInt(number)"></data-type>
             <div class="row col s12">
-                <button class="waves-effect waves-light btn col s12 getdata" @click="getSampleData">Get data</button>
+                <button class="waves-effect waves-light btn col s12 getdata" @click="getSampleData" :class="{disabled:!(fieldFilled===fieldPresent)}">Get data</button>
             </div>
             <div class="row">
                 <div class="card-content black-text col s12" v-for="dataset in data">
@@ -36,8 +36,10 @@
     export default{
         data() {
             return {
-                data: {},
-                number:0
+                data: [],
+                number:0,
+                fieldFilled:0,
+                fieldPresent:1,
             }
         },
         components:{
@@ -52,6 +54,16 @@
         },
         created() {
             const vm = this;
+            dataBus.$on("fieldFilled",()=>{
+                vm.fieldFilled++;
+            });
+            dataBus.$on("fieldDestroyed",()=>{
+                vm.fieldFilled--;
+                vm.fieldPresent--;
+            });
+            dataBus.$on("fieldGenerated",()=>{
+                vm.fieldPresent++;
+            });
             dataBus.$on('dataGenerated',(data) => {
                 vm.data = {};
                 vm.data = data;

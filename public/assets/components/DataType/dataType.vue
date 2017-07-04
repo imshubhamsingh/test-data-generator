@@ -101,6 +101,7 @@
 </template>
 
 <script>
+    import {dataBus} from "../../js/app";
     //Human data
     import nameGenerator from "./HumanData/names.vue";
     import dateGenerator from "./HumanData/dates.vue";
@@ -151,6 +152,7 @@
                     }
 
                 }else{
+                    dataBus.$emit("fieldGenerated");
                     this.dataTypes.push({
                         columnName:this.columnName,
                         columnType:this.columnType

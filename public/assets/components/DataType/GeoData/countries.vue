@@ -20,6 +20,10 @@
                 type:String
             }
         },
+        updated(){
+            const vm = this;
+            dataBus.$emit("fieldFilled");
+        },
         created() {
             const vm = this;
             dataBus.$on('calltoGenerateData',function () {
@@ -39,6 +43,9 @@
                     console.log(e);
                 });
             })
+        },
+        destroyed(){
+            dataBus.$emit("fieldDestroyed");
         }
     }
 
