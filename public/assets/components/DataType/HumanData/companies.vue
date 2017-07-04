@@ -42,6 +42,7 @@
             })
         },
         destroyed(){
+            console.log("companyGenerator Destroyed");
             dataBus.$emit("fieldDestroyed");
         }
     }

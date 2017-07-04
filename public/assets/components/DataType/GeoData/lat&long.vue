@@ -18,7 +18,7 @@
 <script>
     import {dataBus} from "../../../js/app";
     import axios from "axios";
-    console.log("In name.vue");
+    console.log("In lat&long.vue");
     export default{
         data() {
             return {
@@ -84,7 +84,13 @@
             })
         },
         destroyed(){
-            dataBus.$emit("fieldDestroyed");
+            var vm = this;
+            console.log("lat&lng Destroyed");
+            if(vm.choice.length ===0){
+                dataBus.$emit("fieldDestroyedEmpty");
+            }else{
+                dataBus.$emit("fieldDestroyed");
+            }
         }
     }
 

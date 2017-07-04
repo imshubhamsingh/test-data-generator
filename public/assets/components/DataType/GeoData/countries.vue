@@ -42,6 +42,7 @@
             })
         },
         destroyed(){
+            console.log("countryGenerator Destroyed");
             dataBus.$emit("fieldDestroyed");
         }
     }

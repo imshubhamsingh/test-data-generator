@@ -92,14 +92,12 @@
         destroyed(){
             var vm = this;
             console.log("nameGenerator Destroyed");
-            if(vm.choice!==""){
+            if(vm.choice===""){
                 dataBus.$emit("fieldDestroyedEmpty");
             }else{
                 dataBus.$emit("fieldDestroyed");
             }
-
         }
-
     }
 </script>
 

@@ -39,7 +39,7 @@
                 data: [],
                 number:0,
                 fieldFilled:0,
-                fieldPresent:1,
+                fieldPresent:0,
             }
         },
         components:{

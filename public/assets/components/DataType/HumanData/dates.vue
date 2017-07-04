@@ -35,7 +35,7 @@
 <script>
     import {dataBus} from "../../../js/app";
     import axios from "axios";
-    console.log("In name.vue");
+    console.log("In date.vue");
     export default{
         data() {
             return {
@@ -139,7 +139,13 @@
             })
         },
         destroyed(){
-            dataBus.$emit("fieldDestroyed");
+            var vm = this;
+            console.log("dateGenerator Destroyed");
+            if(vm.choice==="" || vm.minDate==="" || vm.maxDate ===""){
+                dataBus.$emit("fieldDestroyedEmpty");
+            }else{
+                dataBus.$emit("fieldDestroyed");
+            }
         }
     }
 
