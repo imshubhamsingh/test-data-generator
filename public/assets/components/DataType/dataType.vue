@@ -84,8 +84,8 @@
                 </div>
             </div>
             <!-- Modal Trigger -->
-            <div v-if="dataTypes.length>0">
-                <ul class="collapsible" data-collapsible="accordion">
+            <div>
+                <ul class="collapsible" data-collapsible="accordion" :class="{noFieldPresent:(dataTypes.length===0)}">
                     <li v-for="(dataType, index) in dataTypes">
                         <div class="collapsible-header"><a @click="remove($index)" class="deleteIcon"><i class="fa fa-trash" aria-hidden="true"></i></a> {{dataType.columnName}}</div>
                         <!--<div class="collapsible-body"><name-generator :dataReady="dataGenCall" @nameGenerated="dataGen+=$event"></name-generator></div>-->
@@ -125,8 +125,6 @@
             }
         },
         mounted() {
-            console.log("collapsible");
-            $('.collapsible').collapsible();
             $('.modal').modal();
             $('ul#optionList').tabs();
             $('#optionList').tabs('select_tab', 'tab_id');
@@ -221,5 +219,8 @@
         &:hover{
             color: #f44336;
         }
+    }
+    .noFieldPresent{
+        border-top: 0 solid #ddd !important;
     }
 </style>

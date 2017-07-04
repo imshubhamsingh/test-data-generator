@@ -90,7 +90,14 @@
             })
         },
         destroyed(){
-            dataBus.$emit("fieldDestroyed");
+            var vm = this;
+            console.log("nameGenerator Destroyed");
+            if(vm.choice!==""){
+                dataBus.$emit("fieldDestroyedEmpty");
+            }else{
+                dataBus.$emit("fieldDestroyed");
+            }
+
         }
 
     }

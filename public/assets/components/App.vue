@@ -16,7 +16,7 @@
 
             <data-type :number="parseInt(number)"></data-type>
             <div class="row col s12">
-                <button class="waves-effect waves-light btn col s12 getdata" @click="getSampleData" :class="{disabled:!(fieldFilled===fieldPresent)}">Get data</button>
+                <button class="waves-effect waves-light btn col s12 getdata" @click="getSampleData" :class="{disabled:!((fieldFilled===fieldPresent)&&(fieldPresent !==0))}">Get data</button>
             </div>
             <div class="row">
                 <div class="card-content black-text col s12" v-for="dataset in data">
@@ -58,7 +58,12 @@
                 vm.fieldFilled++;
             });
             dataBus.$on("fieldDestroyed",()=>{
+                console.log("fieldDestroyed");
                 vm.fieldFilled--;
+                vm.fieldPresent--;
+            });
+            dataBus.$on("fieldDestroyedEmpty",()=>{
+                console.log("fieldDestroyedEmpty");
                 vm.fieldPresent--;
             });
             dataBus.$on("fieldGenerated",()=>{
