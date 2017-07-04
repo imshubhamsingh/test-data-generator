@@ -114,12 +114,7 @@
     export default{
         data() {
             return {
-                dataTypes: [
-                    {
-                        columnName:"Name",
-                        columnType: "nameGenerator"
-                    }
-                ],
+                dataTypes: [],
                 columnName:"",
                 columnType:""
             }
