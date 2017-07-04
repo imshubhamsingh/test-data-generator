@@ -172,7 +172,7 @@
 
     .modal{
         &.bottom-sheet{
-            max-height: 70% !important;
+            max-height: 83% !important;
         }
     }
     .collapsible-body{
