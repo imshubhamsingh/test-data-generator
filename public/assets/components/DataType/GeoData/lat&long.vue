@@ -24,7 +24,8 @@
             return {
                 data: [],
                 choice: [],
-                changed: false
+                changed: false,
+                destroyed: false
             }
         },
         props:{
@@ -49,38 +50,40 @@
         },
         created() {
             const vm = this;
+            console.log("lat&lng Created");
             dataBus.$on('calltoGenerateData',function () {
-                if(vm.choice.length ===1){
-                    console.log(`/api/latlng/${vm.choice}?n=${vm.number}`);
-                    axios.get(`/api/latlng/${vm.choice}?n=${vm.number}`).then(response => {
-                        //console.log(response.data);
-                        vm.data = [];
-                        vm.data = response.data;
-                        dataBus.dataCollector({
-                            type:"lat$lng",
-                            data: vm.data,
-                            fieldName: vm.fieldName
+                if(!vm.destroyed){
+                    if(vm.choice.length ===1){
+                        console.log(`/api/latlng/${vm.choice}?n=${vm.number}`);
+                        axios.get(`/api/latlng/${vm.choice}?n=${vm.number}`).then(response => {
+                            //console.log(response.data);
+                            vm.data = [];
+                            vm.data = response.data;
+                            dataBus.dataCollector({
+                                type:"lat$lng",
+                                data: vm.data,
+                                fieldName: vm.fieldName
+                            });
+                        }).catch(e => {
+                            console.log("Error: ");
+                            console.log(e);
                         });
-                    }).catch(e => {
-                        console.log("Error: ");
-                        console.log(e);
-                    });
-                }else{
-                    axios.get(`/api/latlng?n=${vm.number}`).then(response => {
-                        console.log(response.data.dateList);
-                        vm.data = [];
-                        vm.data = response.data;
-                        dataBus.dataCollector({
-                            type:"lat&lng",
-                            data: vm.data,
-                            fieldName: vm.fieldName
+                    }else{
+                        axios.get(`/api/latlng?n=${vm.number}`).then(response => {
+                            console.log(response.data.dateList);
+                            vm.data = [];
+                            vm.data = response.data;
+                            dataBus.dataCollector({
+                                type:"lat&lng",
+                                data: vm.data,
+                                fieldName: vm.fieldName
+                            });
+                        }).catch(e => {
+                            console.log("Error: ");
+                            console.log(e);
                         });
-                    }).catch(e => {
-                        console.log("Error: ");
-                        console.log(e);
-                    });
+                    }
                 }
-
             })
         },
         destroyed(){
@@ -91,6 +94,7 @@
             }else{
                 dataBus.$emit("fieldDestroyed");
             }
+            vm.destroyed = true;
         }
     }
 

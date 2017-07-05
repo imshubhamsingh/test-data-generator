@@ -22,7 +22,7 @@
                                         <li class="tab col s3"><a href="#geoData">Geo Data</a></li>
                                         <li class="tab col s3"><a href="#creditCardData">Credit Card Data</a></li>
                                         <li class="tab col s3"><a href="#text">Text</a></li>
-                                        <li class="indicator" style="background-color:#fafafa !important"></li>
+                                        <li class="indicator" style="background-color:rgba(250, 250, 250, 0) !important"></li>
                                     </ul>
                                 </div>
                                 <div id="humanData" class="col s12">

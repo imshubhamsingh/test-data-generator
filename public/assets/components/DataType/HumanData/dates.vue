@@ -45,7 +45,8 @@
                 maxDate:"",
                 realMinDate:"",
                 realMaxDate:"",
-                changed: false
+                changed: false,
+                destroyed: false
             }
         },
         mounted() {
@@ -120,22 +121,25 @@
         },
         created() {
             const vm = this;
+            console.log("dateGenerator Created");
             dataBus.$on('calltoGenerateData',function () {
                 //console.log("/api/names/"+choice+"/?n="+vm.number);
               //  console.log(`/api/dates?minYear=${vm.realMinDate.getFullYear()}&maxYear=${vm.realMaxDate.getFullYear()}&format=${vm.choice}&n=${vm.number}`);
-                axios.get(`/api/dates?realMinDate=${vm.realMinDate}&realMaxDate=${vm.realMaxDate}&format=${vm.choice}&n=${vm.number}`).then(response => {
-                   // console.log(response.data.dateList);
-                    vm.date = [];
-                    vm.date = response.data.dateList;
-                    dataBus.dataCollector({
-                        type:"date",
-                        data: vm.date,
-                        fieldName: vm.fieldName
+                if(!vm.destroyed){
+                    axios.get(`/api/dates?realMinDate=${vm.realMinDate}&realMaxDate=${vm.realMaxDate}&format=${vm.choice}&n=${vm.number}`).then(response => {
+                        // console.log(response.data.dateList);
+                        vm.date = [];
+                        vm.date = response.data.dateList;
+                        dataBus.dataCollector({
+                            type:"date",
+                            data: vm.date,
+                            fieldName: vm.fieldName
+                        });
+                    }).catch(e => {
+                        console.log("Error: ");
+                        console.log(e);
                     });
-                }).catch(e => {
-                    console.log("Error: ");
-                    console.log(e);
-                });
+                }
             })
         },
         destroyed(){
@@ -146,6 +150,7 @@
             }else{
                 dataBus.$emit("fieldDestroyed");
             }
+            vm.destroyed = true;
         }
     }
 

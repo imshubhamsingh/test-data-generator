@@ -21,21 +21,24 @@ export const dataBus = new Vue({
         dataCollector(event) {
             //console.log(event);
             const vm = this;
-            for(let i= 0 ;i<vm.data.length;i++){
-                if(vm.data[i].fieldName === event.fieldName){
-                    vm.data[i].data=event.data;
-                    // console.log("key already exist");
-                    // console.log(vm.data);
-                    this.$emit('dataGenerated',vm.data);
-                    return;
-                }
-            }
+            // for(let i = 0 ;i<vm.data.length;i++){
+            //     console.log(vm.data[i].fieldName);
+            //     if(vm.data[i].fieldName === event.fieldName){
+            //         console.log(event.fieldName);
+            //         vm.data[i].data=event.data;
+            //         console.log("key already exist");
+            //             console.log(vm.data);
+            //         this.$emit('dataGenerated',vm.data);
+            //         return;
+            //     }
+            // }
+            console.log("----------------- New Key"+event.fieldName+"----------------------");
             vm.data.push({
                 fieldName:event.fieldName,
                 data: event.data
             });
-            // console.log("new key");
-            // console.log(vm.data);
+            console.log(event.fieldName);
+            console.log(vm.data);
             this.$emit('dataGenerated',vm.data);
         }
     }

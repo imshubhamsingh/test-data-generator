@@ -9,7 +9,8 @@
     export default{
         data() {
             return {
-                country: []
+                country: [],
+                destroyed: false
             }
         },
         props:{
@@ -22,28 +23,33 @@
         },
         created() {
             const vm = this;
+            console.log("countryGenerator Created");
             dataBus.$emit("fieldFilled");
             dataBus.$on('calltoGenerateData',function () {
-               // console.log(`/api/countries?n=${vm.number}`);
-                axios.get(`api/countries?n=${vm.number}`).then(response => {
-                    // console.log("company data");
-                    console.log(response.data);
-                    vm.country = [];
-                    vm.country = response.data;
-                    dataBus.dataCollector({
-                        type:"country",
-                        data: vm.country,
-                        fieldName: vm.fieldName
+                if(!vm.destroyed){
+                    // console.log(`/api/countries?n=${vm.number}`);
+                    axios.get(`api/countries?n=${vm.number}`).then(response => {
+                        // console.log("company data");
+                        console.log(response.data);
+                        vm.country = [];
+                        vm.country = response.data;
+                        dataBus.dataCollector({
+                            type:"country",
+                            data: vm.country,
+                            fieldName: vm.fieldName
+                        });
+                    }).catch(e => {
+                        console.log("Error: ");
+                        console.log(e);
                     });
-                }).catch(e => {
-                    console.log("Error: ");
-                    console.log(e);
-                });
+                }
             })
         },
         destroyed(){
+            var vm = this;
             console.log("countryGenerator Destroyed");
             dataBus.$emit("fieldDestroyed");
+            vm.destroyed = true;
         }
     }
 

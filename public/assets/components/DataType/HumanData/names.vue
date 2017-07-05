@@ -28,6 +28,7 @@
                 names: [],
                 choice: "",
                 changed:false,
+                destroyed: false
             }
         },
         mounted() {
@@ -69,24 +70,26 @@
 
         },
         created() {
-          //  console.log(dataBus);
+            console.log("nameGenerator Created");
             const vm = this;
             dataBus.$on('calltoGenerateData',function () {
-                console.log(vm.number);                //console.log("/api/names/"+choice+"/?n="+vm.number);
-               // console.log(`/api/names/${vm.choice}/?n=${vm.number}`);
-                axios.get(`/api/names/${vm.choice}/?n=${vm.number}`).then(response => {
-                    console.log(response);
-                    vm.names = [];
-                    vm.names = response.data;
-                    dataBus.dataCollector({
-                        type: "name",
-                        data: vm.names,
-                        fieldName: vm.fieldName
+                if(!vm.destroyed){
+                    console.log(vm.number);                //console.log("/api/names/"+choice+"/?n="+vm.number);
+                    // console.log(`/api/names/${vm.choice}/?n=${vm.number}`);
+                    axios.get(`/api/names/${vm.choice}/?n=${vm.number}`).then(response => {
+                        console.log(response);
+                        vm.names = [];
+                        vm.names = response.data;
+                        dataBus.dataCollector({
+                            type: "name",
+                            data: vm.names,
+                            fieldName: vm.fieldName
+                        });
+                    }).catch(e => {
+                        console.log("Error: ");
+                        console.log(e);
                     });
-                }).catch(e => {
-                    console.log("Error: ");
-                    console.log(e);
-                });
+                }
             })
         },
         destroyed(){
@@ -97,6 +100,7 @@
             }else{
                 dataBus.$emit("fieldDestroyed");
             }
+            vm.destroyed = true;
         }
     }
 </script>

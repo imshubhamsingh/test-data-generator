@@ -9,7 +9,8 @@
     export default{
         data() {
             return {
-                company: []
+                company: [],
+                destroyed: false
             }
         },
         props:{
@@ -22,28 +23,33 @@
         },
         created() {
             const vm = this;
+            console.log("companyGenerator Created");
             dataBus.$emit("fieldFilled");
             dataBus.$on('calltoGenerateData',function () {
-                //console.log(`/api/companies?n=${vm.number}`);
-                axios.get(`/api/companies?n=${vm.number}`).then(response => {
-                    // console.log("company data");
-                   // console.log(response.data);
-                    vm.company = [];
-                    vm.company = response.data;
-                    dataBus.dataCollector({
-                        type:"company",
-                        data: vm.company,
-                        fieldName: vm.fieldName
+                if(!vm.destroyed){
+                    //console.log(`/api/companies?n=${vm.number}`);
+                    axios.get(`/api/companies?n=${vm.number}`).then(response => {
+                        // console.log("company data");
+                        // console.log(response.data);
+                        vm.company = [];
+                        vm.company = response.data;
+                        dataBus.dataCollector({
+                            type:"company",
+                            data: vm.company,
+                            fieldName: vm.fieldName
+                        });
+                    }).catch(e => {
+                        console.log("Error: ");
+                        console.log(e);
                     });
-                }).catch(e => {
-                    console.log("Error: ");
-                    console.log(e);
-                });
+                }
             })
         },
         destroyed(){
+            var vm = this;
             console.log("companyGenerator Destroyed");
             dataBus.$emit("fieldDestroyed");
+            vm.destroyed = true;
         }
     }
 
