@@ -32,7 +32,7 @@ export const dataBus = new Vue({
             //         return;
             //     }
             // }
-            console.log("----------------- New Key"+event.fieldName+"----------------------");
+            // console.log("----------------- New Key"+event.fieldName+"----------------------");
             vm.data.push({
                 fieldName:event.fieldName,
                 data: event.data
