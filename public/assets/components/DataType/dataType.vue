@@ -96,14 +96,12 @@
                     </li>
                 </ul>
             </div>
-
-
-
         </div>
     </div>
 </template>
 
 <script>
+    import Vue from "vue";
     import {dataBus} from "../../js/app";
     //Human data
     import nameGenerator from "./HumanData/names.vue";
@@ -141,8 +139,8 @@
         },
         methods:{
             remove(index) {
-                console.log(index);
-                this.dataTypes.splice(index,1);
+                Vue.delete(this.dataTypes,index);
+              //  this.dataTypes.splice(index,1);
             },
             addColumn() {
                 if(this.columnName==="" || this.columnType ===""){
@@ -159,6 +157,8 @@
                         columnType:this.columnType
                     });
                     $('#modal1').modal('close');
+                    this.columnName = "";
+                    this.columnType = "";
                 }
             },
         }

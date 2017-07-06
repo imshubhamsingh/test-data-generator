@@ -37,8 +37,8 @@ export const dataBus = new Vue({
                 fieldName:event.fieldName,
                 data: event.data
             });
-            console.log(event.fieldName);
-            console.log(vm.data);
+           // console.log(event.fieldName);
+           // console.log(vm.data);
             this.$emit('dataGenerated',vm.data);
         }
     }

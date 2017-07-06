@@ -55,12 +55,10 @@
             };
             var vm = this;
             $(`#${vm.id}from`).pickadate({
-                selectMonths: true, // Creates a dropdown to control month
-                selectYears: 15, // Creates a dropdown of 15 years to control year
+                selectMonths: true,
+                selectYears: 50,
                 formatSubmit: 'mm/dd/yyyy',
                 onClose() {
-                  //  console.log('from');
-                  //  console.log(vm.realMindate);
                     vm.realMinDate = new Date($(`#${vm.id}from`).val());
                     if(!vm.realMinDate.isValid()){
                         vm.minDate="";
@@ -70,13 +68,11 @@
                 }
             });
             $(`#${vm.id}to`).pickadate({
-                selectMonths: true, // Creates a dropdown to control month
-                selectYears: 15, // Creates a dropdown of 15 years to control year
+                selectMonths: true,
+                selectYears: 50,
                 formatSubmit: 'mm/dd/yyyy',
                 onClose() {
-                  //  console.log('to');
                     vm.realMaxDate = new Date($(`#${vm.id}to`).val());
-                   // console.log(vm.realMaxDate);
                     if(!vm.realMaxDate.isValid()){
                         vm.maxDate=""
                     }else{
@@ -123,12 +119,9 @@
             const vm = this;
             console.log("dateGenerator Created");
             dataBus.$on('calltoGenerateData',function () {
-                //console.log("/api/names/"+choice+"/?n="+vm.number);
-              //  console.log(`/api/dates?minYear=${vm.realMinDate.getFullYear()}&maxYear=${vm.realMaxDate.getFullYear()}&format=${vm.choice}&n=${vm.number}`);
-                if(!vm.destroyed){
+               if(!vm.destroyed){
                     axios.get(`/api/dates?realMinDate=${vm.realMinDate}&realMaxDate=${vm.realMaxDate}&format=${vm.choice}&n=${vm.number}`).then(response => {
-                        // console.log(response.data.dateList);
-                        vm.date = [];
+                       vm.date = [];
                         vm.date = response.data.dateList;
                         dataBus.dataCollector({
                             type:"date",

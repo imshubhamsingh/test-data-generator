@@ -27,10 +27,7 @@
             dataBus.$emit("fieldFilled");
             dataBus.$on('calltoGenerateData',function () {
                 if(!vm.destroyed){
-                    // console.log(`/api/countries?n=${vm.number}`);
                     axios.get(`api/countries?n=${vm.number}`).then(response => {
-                        // console.log("company data");
-                        console.log(response.data);
                         vm.country = [];
                         vm.country = response.data;
                         dataBus.dataCollector({
