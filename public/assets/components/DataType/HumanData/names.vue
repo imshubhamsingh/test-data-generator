@@ -67,7 +67,6 @@
                     vm.changed = true;
                 }
             }
-
         },
         created() {
             console.log("nameGenerator Created");
@@ -80,7 +79,7 @@
                         dataBus.dataCollector({
                             type: "name",
                             data: vm.names,
-                            fieldName: vm.fieldName
+                            fieldName: vm.fieldName,
                         });
                     }).catch(e => {
                         console.log("Error: ");

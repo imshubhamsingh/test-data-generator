@@ -54,9 +54,7 @@
             dataBus.$on('calltoGenerateData',function () {
                 if(!vm.destroyed){
                     if(vm.choice.length ===1){
-                        console.log(`/api/latlng/${vm.choice}?n=${vm.number}`);
                         axios.get(`/api/latlng/${vm.choice}?n=${vm.number}`).then(response => {
-                            //console.log(response.data);
                             vm.data = [];
                             vm.data = response.data;
                             dataBus.dataCollector({
@@ -70,7 +68,6 @@
                         });
                     }else{
                         axios.get(`/api/latlng?n=${vm.number}`).then(response => {
-                            console.log(response.data.dateList);
                             vm.data = [];
                             vm.data = response.data;
                             dataBus.dataCollector({
