@@ -153,4 +153,13 @@
     .picker__box {
         margin-top: 10% !important;
     }
+    .picker__date-display {
+        background-color: #440064;
+    }
+    .picker--focused .picker__day--selected, .picker__day--selected, .picker__day--selected:hover {
+        background-color: #440064;
+    }
+    .picker__clear, .picker__close, .picker__today {
+        color: #440064;
+    }
 </style>
