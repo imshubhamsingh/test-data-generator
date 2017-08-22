@@ -107,6 +107,7 @@
     import nameGenerator from "./HumanData/names.vue";
     import dateGenerator from "./HumanData/dates.vue";
     import companyGenerator from "./HumanData/companies.vue";
+    import emailGenerator from "./HumanData/email.vue";
     //Geo Data
     import countryGenerator from "./GeoData/countries.vue"
     import latLngGenerator from "./GeoData/lat&long.vue"
@@ -135,6 +136,7 @@
             nameGenerator,
             dateGenerator,
             companyGenerator,
+            emailGenerator,
             countryGenerator,
             latLngGenerator
         },
